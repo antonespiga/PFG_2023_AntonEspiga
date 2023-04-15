@@ -15,7 +15,7 @@ function Selectores() {
             </select>
         </Card>
         <Card className="selectores">
-            <select name="tema" title="Tema">
+            <select className="selector" name="tema" title="Tema">
                 <option value="" selected>-- Tema --</option>
                 <option value="ciencias" >Ciencias</option>
                 <option value="ingenierias">Ingenierías</option>
@@ -23,7 +23,7 @@ function Selectores() {
             </select>
         </Card>
         <Card className="selectores">
-            <select name="contenido" title="Contenido">
+            <select className="selector" name="contenido" title="Contenido">
                 <option value="" selected>-- Contenido --</option>
                 <option value="informatica">Informática</option>
                 <option value="biologia">Biología</option>
@@ -31,7 +31,7 @@ function Selectores() {
             </select>
         </Card>
         <Card className="selectores">
-            <select className="select" name="caracteristicas" title="Características">
+            <select className="selector" name="caracteristicas" title="Características">
                 <option value="" selected>-- Característica --</option>
                 <option value="online">Online</option>
                 <option value="presencial">Presencial</option>

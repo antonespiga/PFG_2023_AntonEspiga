@@ -10,16 +10,10 @@
 }
 
 .selector {
-    width: 25%;
-    padding: 0px;
-    margin-inline: 5%;
-    font-size: 16px;
+   font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    display:inline-block;
-    align-items:center;
-    justify-content: space-between;
-}
+    }
 @media only screen and (max-width: 768px) {
 
 	.selectores {
