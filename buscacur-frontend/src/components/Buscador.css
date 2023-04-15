@@ -1,0 +1,34 @@
+.buscador {
+	display:flex;
+	align-items: center;
+	padding: 10px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 15px;
+	flex-grow: 0;
+	background: #075f1a;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-color: rgb(0, 0, 0);
+}
+
+.buscador input {
+	
+	background-color: rgb(208, 244, 244);
+}
+.input-group {
+	border-radius: 15px;
+}
+
+.perfil {
+	display:flex;
+	justify-content: end;
+}
+
+.icono{
+	display:flex;
+	flex-grow:1;
+	margin: 10px;
+	height: 30px;
+	
+	
+}
+

@@ -1,21 +1,21 @@
-import mongoose from 'mongoose';
+const mongoose = require ('mongoose');
 
 const { Schema } = mongoose;
-var Curso = require ('../models/curso');
+
 
 const CursoSchema = new Schema({
-    nombre: String,
-    identificador: {type: ObjectId, required : true},
+    nombre: { type:String },
+    identificador: String,
     tipo: String,
-    director: String,
-    profesor: [String],
+    director: { type:String},
+    profesor: { type:String},
     imparticion: {type:String ,enum: ['Distancia','Presencial','Híbrido']},
     descripcion: String,
-    tematica: String,
+    tematica: { type:String},
     creditos: Number,
-    semestre: {type:String, enum: ['1','2','Anual']},
-    enlaceDescripcion: String,
-    titulos: [String]
+    semestre: Number,
+    link_descripcion: String,
+    titulos_ofertan: [String]
 })
-
+CursoSchema.index({director:'text', nombre:'text'})
 module.exports = mongoose.model('Curso', CursoSchema);

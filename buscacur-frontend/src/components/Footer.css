@@ -1,0 +1,36 @@
+.footer {
+	display:block;
+	padding:10px;
+	align-items: center;
+	justify-content: center;
+	border-radius:15px;
+	flex-shrink:0;
+	margin-top: 7%;
+	bottom:0;
+	width:100%;
+	
+}
+
+	.iconos a {
+		display:inline-flex;
+		margin: 5px;
+	}
+
+  .Col img {
+		height: 25px;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+  }
+
+  @media only screen and (max-width:468px) {
+
+	.footer {
+		position:relative;
+	}
+	.pagination {
+		size:"sm";
+		overflow-y: hidden;
+	}
+  }
