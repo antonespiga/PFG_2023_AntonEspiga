@@ -1,0 +1,84 @@
+.tab-content {
+	margin-top: -0.25rem;
+	background-color: darkslategray;
+	height:20rem;
+}
+#panel {
+	margin-top: 1em;
+	display:inline-flex;
+	justify-content:start;
+}
+
+#panelUsuario {
+	margin-top: 1em;
+	display: inline-flex;
+	justify-content: space-between;
+	margin-left: 15%;
+}
+
+#panelSistema {
+	margin-top: 1em;
+	display: inline-flex;
+	justify-content: space-around;
+	
+}
+
+#panelCopias {
+	margin-top: 1em;
+	display: inline-flex;
+	justify-content: end;
+}
+
+#content {
+	margin-top:2rem;
+}
+
+#icon-admin {
+display: flex;
+float:right;
+margin-left: 7px;
+margin-top: -2px;
+}
+
+.nav-tabs {
+	outline-offset: none ;
+}
+
+#navlink {
+	border-color: darkslategray;
+	color:darkslategray
+}
+
+.nav-link.active {
+	background-color:darkslategray !important;
+	color:aliceblue !important;
+	margin-top:-0.25rem;
+}
+#navlink:hover {
+	background-color: rgb(12, 141, 130);
+	color:aliceblue;
+}
+
+.btn-light:hover {
+	background-color: grey;
+}
+
+.btn-light:focus {
+	background-color:rgb(12, 141, 130);
+	color:antiquewhite;
+}
+ 
+.btn-light {
+	width:max-content;
+}
+
+
+
+  @media only screen and (max-width: 768px) {
+   
+    
+  
+@media only screen and (max-width: 468px) {
+    
+}  
+  }

@@ -9,13 +9,13 @@ const CursoSchema = new Schema({
     tipo: String,
     director: { type:String},
     profesor: { type:String},
-    imparticion: {type:String ,enum: ['Distancia','Presencial','Híbrido']},
+    imparticion: {type:String} ,
     descripcion: String,
     tematica: { type:String},
     creditos: Number,
-    semestre: Number,
-    link_descripcion: String,
-    titulos_ofertan: [String]
+    semestre: {type:String},
+    enlace: String,
+    titulosOfertan: [String]
 })
 CursoSchema.index({director:'text', nombre:'text'})
 module.exports = mongoose.model('Curso', CursoSchema);

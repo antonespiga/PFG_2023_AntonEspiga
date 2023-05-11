@@ -1,5 +1,5 @@
 .footer {
-	display:block;
+	display:flex;
 	padding:10px;
 	align-items: center;
 	justify-content: center;
@@ -11,13 +11,19 @@
 	
 }
 
+.cardbody {
+	justify-content: center;
+	align-items: center;	
+}
 	.iconos a {
-		display:inline-flex;
+		display:inline-block;
 		margin: 5px;
+		
 	}
 
-  .Col img {
+ #img-icon {
 		height: 25px;
+		background-color: dimgrey;
   }
 
   @media only screen and (max-width: 768px) {

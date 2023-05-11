@@ -3,6 +3,7 @@
 	align-items: center;
 	justify-content: space-between;
 	background: #ffffff;
+	height:fit-content;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-color: rgb(0, 0, 0);
 	border-radius: 15px;
@@ -23,18 +24,26 @@
 
 .logo {
 	display: inline-flex;
-	height: 120px;
 	border-radius: 40px;
-}
-
+	height: 8em;
+	padding: 1.5em;
+	will-change: filter;
+	transition: filter 300ms;
+  }
+  .logo:hover {
+	filter: drop-shadow(0 0 2em #3cf703aa);
+  }
+  .logo.react:hover {
+	filter: drop-shadow(0 0 2em #f5f1f2aa);
+  }
+  
 .cabecera-texto {
-	flex-grow: 1;
-	align-content: center;
+	text-align: center;
 }
 
 .cabecera-texto h1 {
-	font-size: 28px;
-	margin: 0;
+	font-size: 38px;
+	margin: 10;
 }
 
 .menu {
@@ -46,82 +55,44 @@
 
 #expand-btn {
 	display: inline-flex;
-	margin-top: -5px;
-	padding: 5px 11px;
+	margin-right: 40px;
 	background-color: rgb(233, 209, 29);
-	border: none;
+	color:black;
+	border:none;
 	border-radius: 5px;
 	cursor: pointer;
-}
-
-#no-expand-btn {
-	margin-top: -5px;
-	display: inline-flex;
-	cursor: pointer;
-}
-
-#menu-hamburger {
-	display: none;
-	opacity: 0;
-}
-
-
-.expandable {
-	display: flex;
-	border-radius: 5px;
-	border: none;
-	border-color: none;
-	align-items: end;
-	justify-content:flex-end ;
-	background: #beacac;
-	color: aqua;
-	visibility: collapse;
-	margin: 2px;
-	cursor: pointer;
-}
-
-#menu-hamburger:checked~* .expandable {
-	visibility: visible;
-}
-
-#menu-hamburger:checked~#expand-btn {
-	background-color: #ccc;
-	visibility: collapse;
-}
-
-#menu-hamburger:not(:checked)~#no-expand-btn {
-	background-color: #ccc;
-	visibility: collapse;
-}
-
-@media only screen and (max-width: 768px) {
-	.header {
-		flex-direction: row;
-		align-items: flex-start;
-		justify-content: center;
 	}
 
+
+.modal-body {
+	display:flex;
+	justify-content: space-around;
+	
+}
+
+
+
+@media only screen and (max-width: 768px) {
+	
 .expandable {
 	display:flex;
 	flex-direction: column;
 }
+
+
 	@media only screen and (max-width: 468px) {
 		.header {
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
-
-		}
+			}
 
 		.logo {
 			height:80px;
 			border-radius: 5px;
 		}
 
-		#expand-btn {
-			margin-top: 0;
-			
-		}
+		
 	}
 }

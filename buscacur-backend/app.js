@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-
+const config = require('./config')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/usuarios');
 var cursosRouter = require('./routes/cursos');
@@ -13,7 +13,7 @@ var consultasRouter = require('./routes/consultas');
 
 const { default: mongoose } = require('mongoose');
 
-mongoose.connect('mongodb://127.0.0.1:27017/dbCursos')
+mongoose.connect(config.db)
 //mongoose.connect ('mongodb+srv://anton:EspiMin%40LoSus%231969@cluster0.wkdq7.mongodb.net/?retryWrites=true&w=majority')
 .then(() => console.log('Conectado a la base de datos'))
 .catch((err) => console.error(err));
