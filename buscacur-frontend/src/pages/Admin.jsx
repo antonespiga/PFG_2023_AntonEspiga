@@ -6,15 +6,18 @@ import MenuCRUDUsuarios from "../components/MenuCRUDUsuarios"
 import MenuSistema from "../components/MenuSistema"
 import MenuCopias from "../components/MenuCopias"
 import Perfil from "../components/Perfil"
+import Error from "./Error"
 
 export default function Admin() {
 
 	const [actTab, setActTab] = useState('1')
-
+	const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
 	const handleClick = (num) => {
 		setActTab(num)
 	}
-
+ 
+	if(!logged) return (<Error error="Usuario no logado" />)
+	else 
 	return (
 		<Container id="content">
 			<Col >

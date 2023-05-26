@@ -26,11 +26,11 @@ export default function ListadoCards({ cursos }) {
 
     return (
         <Row>
-            {cursos.map((curso,i) => {
+            {cursos.map((curso) => {
                 return (
                     <Col md="3">
 
-                        <Card style={{card:"word-wrap-none"}} id="card-curso">
+                        <Card  style={{card:"word-wrap-none"}} id="card-curso">
                             <CardTitle id="ttl-1">
                                 {curso.nombre}
                             </CardTitle>
@@ -50,40 +50,18 @@ export default function ListadoCards({ cursos }) {
                                     <h2><AiFillPlusSquare id="" /></h2>
                                 </Button>
                             </CardFooter>
-                        {isOpen&&<FormDetalleCurso isOpen={isOpen} closeModal={closeModal} curso={selCurso} setCurso={setSelCurso} 
-                                readOnly="true" handleAddCurso handleDelCurso handleModCurso handleInputChange />}   
+                        {isOpen&&<FormDetalleCurso
+                            isOpen={isOpen} 
+                            closeModal={closeModal} 
+                            curso={selCurso} 
+                            setCurso={setSelCurso} 
+                            readOnly="true" 
+                            handleAddCurso 
+                            handleDelCurso 
+                            handleModCurso 
+                            handleInputChange />}   
                         </Card>
-                        {/**<Modal  isOpen={isOpen} toggle={closeModal} >
-                            <ModalHeader isOpen={isOpen} toggle={closeModal} >
-                                <h4 >Descripción del curso</h4>
-                            </ModalHeader>
-                            <ModalBody>
-                                <Row>
-                                    <Col md={4}>
-                                        <FormGroup >
-                                            <Label for="nombre" >Nombre</Label>
-                                            <Input id="nombre" type="text" readOnly placeholder="Nombre" value={selCurso.nombre} ></Input>
-                                        </FormGroup>
-                                    </Col>
-                                    <Col md="4">
-                                        <FormGroup >
-                                            <Label for="titulo">Titulo</Label>
-                                            <Input type="text" readOnly placeholder="Titulo" value={selCurso.titulo}></Input>
-                                        </FormGroup>
-                                    </Col>
-                                    <Col md="4">
-                                        <FormGroup >
-                                            <Label class="form-label-color" for="tipo" value="Tipo">Tipo</Label>
-                                            <Input type="text" readOnly id="tipo" placeholder="Tipo" value={selCurso.tipo}></Input>
-                                        </FormGroup>
-                                    </Col>
-                                </Row>
-                            </ModalBody>
-                            <ModalFooter>
-
-                            </ModalFooter>
-                            </Modal>*/}
-
+                       
                     </Col>
                 )
             })}

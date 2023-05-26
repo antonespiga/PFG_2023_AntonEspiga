@@ -15,7 +15,7 @@ const UsuarioSchema = new mongoose.Schema({
     codigoPostal: Number,
     titulacion: String,
     clave: String,
-    rol:{ type: String, enum: ['socio','admin'], default: "socio"}
+    rol:{ type: String, enum: ['Socio','Administrador'], default: "Socio"}
 })
 
 

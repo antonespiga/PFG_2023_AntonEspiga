@@ -8,7 +8,7 @@
     padding:0;
     justify-content: space-between;
 	  background: #ffffff;
-	  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	  
 	  border-color: rgb(0, 0, 0);
 	  margin-top: 0px;
     
@@ -30,5 +30,38 @@
     align-items: bottom;
     
   }
+
+  #lista-inline {
+   display:flex;
+  }
+
+  #inline-1 {
+    background-color: rgb(173, 173, 236);
+  }
  
-  
+  #inline-2 {
+    background-color: rgb(178, 204, 173);
+  }
+
+  #inline-3 {
+    background-color: rgb(167, 231, 226);
+  }
+  #inline-4 {
+    background-color: rgb(221, 147, 203);
+  }
+  #inline-5 {
+    background-color: rgb(202, 202, 172);
+  }
+
+  #inline-6 {
+    background-color: rgb(202, 202, 172);
+  }
+  #inline-7 {
+    background-color: rgb(202, 202, 172);
+  }
+
+  #btn-1 {
+    background-color: transparent; 
+    border: none;
+    
+  }

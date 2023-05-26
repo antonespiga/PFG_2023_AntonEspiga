@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const auth = require('../middlewares/auth')
 
 const { getCursos, getCursosByAfinidad, getCursoById, getCursosByDirector ,
 getCursosByNCreditos, getCursosByNombre, getCursosByProfesor, 

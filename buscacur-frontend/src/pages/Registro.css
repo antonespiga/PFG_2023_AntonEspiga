@@ -1,0 +1,48 @@
+.form-registro {
+    margin-top:40px;
+    background-color: darkslategrey;
+}
+
+.card-footer {
+    justify-content: center;
+    align-items: center;
+   
+    height:50px;
+}
+
+.form-label {
+    color:white;
+}
+.bton-registro {
+    height:40px;
+    width:60%;
+    background-color:#12ff89;
+    overflow:hidden;
+}
+
+.bton-registro span {
+    color:black;
+}
+
+#btn-login {
+    display:inline-flex;
+    opacity: .6;
+    color:white;
+    background-color: darkslategrey;
+}
+
+#btn-login:hover {
+    opacity:1;
+    background-color: darkolivegreen;
+}
+
+#link {
+    margin-left: 25px;
+    color: white;
+    opacity: 0.6;
+}
+
+#link:hover {
+opacity: 1;
+
+}

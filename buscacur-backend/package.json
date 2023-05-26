@@ -15,6 +15,8 @@
     "express": "^4.18.2",
     "http-errors": "~1.6.3",
     "jade": "^0.29.0",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
     "mongoose": "^7.0.3",
     "mongoose-type-email": "^1.1.2",
     "morgan": "~1.9.1"

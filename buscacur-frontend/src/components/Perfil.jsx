@@ -1,50 +1,123 @@
 import React, { useState, useEffect } from "react";
-import { Col, Row, Button, Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
-     UncontrolledDropdown, Offcanvas, OffcanvasBody, OffcanvasHeader,
-    FormGroup, Label, Input } from 'reactstrap'
+import {
+    Col, Row, Button, Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
+    UncontrolledDropdown, Offcanvas, OffcanvasBody, OffcanvasHeader, Card, CardBody, CardFooter,
+    FormGroup, Label, Input
+} from 'reactstrap'
+import { useNavigate } from 'react-router-dom'
 import { FaUser, FaUserCog } from 'react-icons/fa'
 import './Buscador.css'
 import { getUsuarioById } from "../utils/apicallsUsuarios";
+import FormModUsuario from './FormModUsuario'
 
-export default function Perfil() {
+export default function Perfil( {usuario} ) {
+    
     const [hidden, setHidden] = useState(true)
     const [mostrar, setMostrar] = useState(false)
-    const [selUsuario, setSelUsuario] = useState()
+    const [userId, setUserId] = useState()
+    const [selUsuario, setSelUsuario] = useState(usuario)
+    const [readOnly, setReadOnly] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
+    const [dropdownOpen, setDropdownOpen] = useState(false)
 
-    
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        getUsuarioById(sessionStorage.getItem('id'))
+            .then((usuario) => setSelUsuario(usuario))
+        setUserId(sessionStorage.getItem('id'))
+    }, [userId])
+
+    const closeModal = () => {
+        setIsOpen(false)
+    }
+
+    const openModal = () => {
+        setIsOpen(true)
+    }
+
     const toggle = () => {
         setMostrar(!mostrar)
     }
 
-    useEffect(() => {
-        const userId = sessionStorage.getItem('id')
-        
-        setSelUsuario(getUsuarioById(userId))
-    },[])
-    
+    const logout = () => {
+        sessionStorage.clear()
+        toggle()
+        navigate('/')
+    }
+
+    const handleModificarDatos = () => {
+        openModal()
+
+    }
+
+    const dropdownToggle = () => {
+        setDropdownOpen(!dropdownOpen)
+    }
+
 
     return (
         <Container className="perfil">
-            <Col  className="perfil-col" >
+            <Col className="perfil-col" >
                 <Button id="btn-perfil" onClick={() => toggle()}>
-                {selUsuario=="socio"?<FaUser/>:<FaUserCog/>}
+                    {usuario == "Socio" ? <FaUser /> : <FaUserCog />}
                 </Button>
             </Col>
-             {mostrar?<Offcanvas direction="end" isOpen={mostrar} toggle={toggle}>
-    <OffcanvasHeader toggle={toggle}>
-     Perfil
-    </OffcanvasHeader>
-                <OffcanvasBody>
-                    <FormGroup>
-                        <Input type="text" placeHolder="nombre" value={selUsuario.nombre}></Input>
-                        <Input type="text" placeHolder="apellido1"></Input>
-                        <Input type="text" placeHolder="apellido2"></Input>
-                        <Input type="email" placeHolder="email"></Input>
-                        <Input type="text" placeHolder="poblacion"></Input>
-                        <Input type="text" placeHolder="codigo postal"></Input>
-                    </FormGroup>
-                </OffcanvasBody>
-  </Offcanvas>:''}
+            {mostrar ?
+                <Offcanvas direction="end" isOpen={mostrar} toggle={toggle}>
+                    <OffcanvasHeader toggle={toggle}>
+                        Perfil
+                    </OffcanvasHeader>
+                    <OffcanvasBody>
+                        <Card>
+                            <Dropdown isOpen={dropdownOpen} toggle={dropdownToggle} >
+                                <DropdownToggle caret >Mis datos</DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="nombre">Nombre</Label>
+                                        <Input name="nombre" type="text" placeHolder="nombre" readOnly={readOnly} value={selUsuario.nombre}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="apellido1">Apellido1</Label>
+                                        <Input name="apellido1" type="text" placeHolder="apellido1" readOnly={readOnly} value={selUsuario.apellido1}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="apellido2">Apellido2</Label>
+                                        <Input type="text" placeHolder="apellido2" readOnly={readOnly} value={selUsuario.apellido2} ></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="email">E-mail</Label>
+                                        <Input type="email" placeHolder="email" readOnly={readOnly} value={selUsuario.email}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="poblacion">Población</Label>
+                                        <Input type="text" placeHolder="poblacion" readOnly={readOnly} value={selUsuario.poblacion}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="codigoPostal">Código postal</Label>
+                                        <Input type="text" placeHolder="codigo postal" readOnly={readOnly} value={selUsuario.codigoPostal}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="titulacion">Titulación</Label>
+                                        <Input type="text" placeHolder="titulación" readOnly={readOnly} value={selUsuario.titulacion}></Input>
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </Dropdown>
+                            <Button id="btnperfil" onClick={() => handleModificarDatos()} >Modificar datos de perfil</Button>
+                            <Button id="btnperfil" onClick={() => logout()} >Logout</Button>
+                        </Card>
+
+                        {isOpen &&
+                            <FormModUsuario
+                                isOpen={isOpen}
+                                closeModal={closeModal}
+                                usuario={selUsuario}
+                                setUsuario={setSelUsuario}
+                                readOnly={!readOnly}
+                            />}
+                    </OffcanvasBody>
+
+                </Offcanvas> : ''}
         </Container>
 
     )

@@ -16,10 +16,14 @@ exports.getCursoById = async(req, res, next)  => {
          }
 
 exports.addCurso = async(req, res, next) => {
+    try{
     nuevoCurso = new Curso (req.body)
     await Curso.create(nuevoCurso)
     .then(() => res.status(200).json('Registro guardado'))
-    .catch(next)
+    }
+    catch(error) {
+        res.status(500).json({message: error.message})
+    }
 }
 
 exports.deleteCursoById  = async (req, res, next) => {

@@ -7,7 +7,7 @@ import FormDetalleUsuario from "./FormDetalleUsuario"
 
 
 
-export default function ListaUsuarios({ usuarios, usuario, setUsuario, opt }) {
+export default function ListaUsuarios({ usuarios,  opt }) {
 
     const [isOpen, setIsOpen] = useState(false)
     const [modalToggle, setModalToggle] = useState(false)
@@ -17,7 +17,7 @@ export default function ListaUsuarios({ usuarios, usuario, setUsuario, opt }) {
 
     const openModal = (selusuario) => {
         setIsOpen(true)
-        setUsuario(selusuario)
+        setSelUsuario(selusuario)
     }
 
     const closeModal = () => {
@@ -51,17 +51,17 @@ export default function ListaUsuarios({ usuarios, usuario, setUsuario, opt }) {
                             {isOpen && (opt === "del") && <FormDelUsuario
                                 isOpen={isOpen}
                                 closeModal={closeModal}
-                                usuario={usuario}
-                                setUsuario={setUsuario}
+                                usuario={selUsuario}
+                                setUsuario={setSelUsuario}
                                 readOnly={true}
                                 opt={opt}
                             />}
 
-                            {isOpen && (opt === "mod") && <FormModUsuario
+                            {isOpen && "mod" && <FormModUsuario
                                 isOpen={isOpen}
                                 closeModal={closeModal}
-                                usuario={usuario}
-                                setUsuario={setUsuario}
+                                usuario={selUsuario}
+                                setUsuario={setSelUsuario}
                                 readOnly={false}
                                 opt={opt}
                             />}
@@ -69,7 +69,7 @@ export default function ListaUsuarios({ usuarios, usuario, setUsuario, opt }) {
                             {isOpen && (opt !== "mod") && (opt !== "del") && <FormDetalleUsuario
                                 isOpen={isOpen}
                                 closeModal={closeModal}
-                                usaurio={selUsuario}
+                                usuario={selUsuario}
                                 setUsuario={setUsuario}
                                 readOnly={true}
                                 opt={opt}

@@ -8,7 +8,7 @@ import FormDetalleCurso from "./FormDetalleCurso"
 
 
 
-export default function ListadoTabla({ cursos, curso, setCurso, opt }) {
+export default function ListadoTabla({ cursos, opt }) {
 
     const [isOpen, setIsOpen] = useState(false)
     const [modalToggle, setModalToggle] = useState(false)
@@ -18,7 +18,7 @@ export default function ListadoTabla({ cursos, curso, setCurso, opt }) {
 
     const openModal = (selcurso) => {
         setIsOpen(true)
-        setCurso(selcurso)
+        setSelCurso(selcurso)
     }
 
     const closeModal = () => {
@@ -52,8 +52,8 @@ export default function ListadoTabla({ cursos, curso, setCurso, opt }) {
                             {isOpen && (opt === "del") && <FormDelCurso
                                 isOpen={isOpen}
                                 closeModal={closeModal}
-                                curso={curso}
-                                setCurso={setCurso}
+                                curso={selCurso}
+                                setCurso={setSelCurso}
                                 readOnly={true}
                                 opt={opt}
                             />}
@@ -61,19 +61,19 @@ export default function ListadoTabla({ cursos, curso, setCurso, opt }) {
                             {isOpen && (opt === "mod") && <FormModCurso
                                 isOpen={isOpen}
                                 closeModal={closeModal}
-                                curso={curso}
-                                setCurso={setCurso}
+                                curso={selCurso}
+                                setCurso={setSelCurso}
                                 readOnly={false}
                                 opt={opt}
                             />}
 
-                            {isOpen && (opt !== "mod") && (opt !== "del") && <FormDetalleCurso
+                            {isOpen && (opt === 'ver') && <FormDetalleCurso
                                 isOpen={isOpen}
                                 closeModal={closeModal}
                                 curso={selCurso}
-                                setCurso={setCurso}
+                                setCurso={setSelCurso}
                                 readOnly={true}
-                                opt={opt}
+                                opt={'ver'}
                             />}
                         </tr>
                     )

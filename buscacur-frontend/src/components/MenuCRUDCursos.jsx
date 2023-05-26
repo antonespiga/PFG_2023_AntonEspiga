@@ -21,7 +21,7 @@ export default function MenuCRUDCursos() {
     const [titulosOfertan, setTitulosOfertan] = useState()
     const [imparticion, setImparticion] = useState()
     const [enlace, setEnlace] = useState()
-    const [curso, setCurso] = useState()
+    const [curso, setCurso] = useState({})
     const [read, setRead] = useState(false)
     const [verLista, setVerLista] = useState(false)
     const [cursos, setCursos] = useState()
@@ -42,10 +42,7 @@ export default function MenuCRUDCursos() {
         setIsOpen(false)
     }
 
-    const handleInputChange = (e) => {
-        setCurso({ ...curso, [e.target.name]: e.target.value })
-    }
-
+   
     const handleAddCurso = (curso) => {
         alert("Enviar formulario, ¿Está seguro?")
         addCurso(curso)
@@ -54,18 +51,7 @@ export default function MenuCRUDCursos() {
                 closeModal()})
     }
 
-    const handleDelCurso = (curso) => {
-        alert("Se va a eliminar un registro. ¿Está seguro?")
-        delCurso(curso)
-        .then(closeModal())
-    }
-
-    const handleModCurso = (curso) => {
-        alert("Se va a modificar un registro. ¿Está seguro?")
-        modCurso(curso)
-        (closeModal())
-    }
-
+   
     const modalLista = (opt) => {
         setVerLista(!verLista)
         setOpt(opt)
@@ -106,7 +92,7 @@ export default function MenuCRUDCursos() {
                                 <h3>Listado de cursos</h3>
                                     <Button style={{ color: "blue" }} onClick={() => actualizar()}>Actualiza</Button>
                             </ModalHeader>
-                            <ListadoTabla cursos={cursos} curso={curso} setCurso={setCurso} opt={opt} />
+                            <ListadoTabla cursos={cursos}  opt={opt} />
                             <ModalFooter>
 
                             </ModalFooter>
@@ -123,7 +109,7 @@ export default function MenuCRUDCursos() {
                                 <h3>Listado de cursos</h3>
                                     <Button onClick={() => actualizar(cursos)}>Actualizar</Button>
                             </ModalHeader>
-                            <ListadoTabla cursos={cursos} curso={curso} setCurso={setCurso} opt={opt} />
+                            <ListadoTabla cursos={cursos}  setCurso={setCurso} opt={opt} />
                             <ModalFooter>
                                 
                             </ModalFooter>

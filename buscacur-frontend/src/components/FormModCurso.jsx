@@ -12,24 +12,12 @@ export default function FormModCurso({
 
 
 
-    const [nombre, setNombre] = useState()
-    const [tipo, setTipo] = useState()
-    const [tematica, setTematica] = useState()
-    const [titulo, setTitulo] = useState()
-    const [semestre, setSemestre] = useState()
-    const [creditos, setCreditos] = useState()
-    const [director, setDirector] = useState()
-    const [profesor, setProfesor] = useState()
-    const [imparticion, setImparticion] = useState()
-    const [enlace, setEnlace] = useState()
-    const [descripcion, setDescripcion] = useState()
-    const [titulosOfertan, setTitulosOfertan] = useState()
-    const [selCurso, setSelCurso] = useState({curso})
+    
     
     //const params = useParams()
         
     const handleInputChange = (e) => {
-        setCurso({ ...curso, [e.target.name]: e.target.value, })
+        setCurso({ ...curso, [e.target.name]: e.target.value })
     }
 
     const handleModCurso = () => {
@@ -40,8 +28,8 @@ export default function FormModCurso({
 
     return (
 
-        <Modal fullscreen isOpen={isOpen} toggle={closeModal} >
-            <ModalHeader isOpen={isOpen} toggle={closeModal} >
+        <Modal fullscreen isopen={isOpen} toggle={closeModal} >
+            <ModalHeader isopen={isOpen} toggle={closeModal} >
                 <h4 >{"Modificar curso"}</h4>
             </ModalHeader>
             <ModalBody>

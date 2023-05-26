@@ -19,9 +19,11 @@ import ListadoCards from '../components/ListadoCards'
 import { getNombres, getTipos, getTitulos, getSemestres, getDirectores, getProfesores, getTematicas, getCreditos} from '../utils/apicallsData'
 import FormDetalleCurso from '../components/FormDetalleCurso'
 import Perfil from '../components/Perfil'
+import Error from "./Error"
 
 export default function Consultas() {
 
+    const [msg, setMsg] = useState('kgjh,')
     const [listado, setListado] = useState(false)
     const [onShowT, setOnShowT] = useState(false)
     const [onShowD, setOnShowD] = useState(false)
@@ -62,6 +64,7 @@ export default function Consultas() {
     const toggleDirectores = () => setIsOpenDirectores(!isOpenDirectores)
     const toggleTitulos = () => setIsOpenTitulos(!isOpenTitulos)
 
+    const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
 
     useEffect(() => {
         getNombres()
@@ -238,6 +241,8 @@ export default function Consultas() {
     }
 
 
+    if( !logged ) return(<Error error={"Usuario no logado"} />)
+    else 
     return (
         <Container>
             <Container>
@@ -246,7 +251,7 @@ export default function Consultas() {
                         <Buscador />
                     </Col>
                     <Col md="2">
-                        <Perfil usuario="socio"/>
+                        <Perfil usuario="Socio"/>
                     </Col>
                 </Row>
             </Container>

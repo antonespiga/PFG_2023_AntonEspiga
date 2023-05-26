@@ -28,9 +28,7 @@ export default function FormModUsuario({
     const handleModUsuario = (usuario) => {
         alert("Modificar datos de usuario, ¿Está seguro?")
         modUsuario(usuario)
-            .then(() => {
-            closeModal()
-            })
+            .then(closeModal())
     }
 
     return (
@@ -74,7 +72,7 @@ export default function FormModUsuario({
                     <Col md="2">
                         <FormGroup >
                             <Label style={{ color: "black" }} for="codPostal" id="codPostal" value="codPostal">CodPostal</Label>
-                            <Input type="text" name="codPostal" readOnly={readOnly} id="codPostal" placeholder="CodPostal"
+                            <Input type="text" name="codigoPostal" readOnly={readOnly} id="codPostal" placeholder="CodPostal"
                                 value={usuario.codigoPostal} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>

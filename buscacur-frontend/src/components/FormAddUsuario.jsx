@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from "react"
 import { Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
-    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input } from 'reactstrap'
+    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Alert } from 'reactstrap'
 import { addCurso } from "../utils/apicallsCursos"
 import { addUsuario } from "../utils/apicallsUsuarios"
+import Error from '../pages/Error'
     
 
 export default function FormAddUsuario({ 
@@ -16,6 +17,10 @@ export default function FormAddUsuario({
     const [poblacion, setPoblacion] = useState()
     const [codPostal, setCodPostal] = useState()
     const [email, setEmail] = useState()
+    const [titulacion, setTitulacion] = useState()
+    const [rol, setRol] = useState()
+    const [msg, setMsg] = useState('')
+    const [isOpenErrorModal, setIsOpenErrorModal] = useState(false)
     
   const handleInputChange = (e) => {
     setUsuario({ ...usuario, [e.target.name]: e.target.value })
@@ -24,9 +29,26 @@ export default function FormAddUsuario({
   const handleAddUsuario = (usuario) => {
     alert("Enviar formulario, ¿Está seguro?")
     addUsuario(usuario)
-        .then(() => {
-            setUsuario({})
-            closeModal()})
+        .then((res) => {
+            setMsg(res.message)
+            if (res.message === "Usuario añadido") {
+                setUsuario({})
+                closeModal()}
+            else {
+                openErrorModal(res.message)
+                }
+                    }
+        )
+        .catch()
+    }
+   
+const openErrorModal = (mnsj) => {
+    setMsg(mnsj)
+    setIsOpenErrorModal(true)
+}
+
+const toggleModError = () => {
+    setIsOpenErrorModal(!isOpenErrorModal)
 }
 
 return (
@@ -47,9 +69,9 @@ return (
    
     <Col md="6">
         <FormGroup >
-            <Label style={{color:"black"}} for="apellido2" value="apellido2">Apellido1</Label>
-            <Input type="text"  name="apellido2" readOnly={readOnly} id="apellido2" placeholder="Apellido2" 
-            value={readOnly?usuario.apellido2:apellido2} onChange={handleInputChange}></Input>
+            <Label style={{color:"black"}} for="apellido1" value="apellido1">Apellido1</Label>
+            <Input type="text"  name="apellido1" readOnly={readOnly} id="apellido1" placeholder="Apellido1" 
+            value={readOnly?usuario.apellido1:apellido1} onChange={handleInputChange}></Input>
         </FormGroup>
     </Col>
     
@@ -77,49 +99,35 @@ return (
     
     <Col md={6}>
         <FormGroup >
+            <Label style={{color:"black"}} for="titulacion" >Email</Label>
+            <Input id="titulacion" name="titulacion" type="text" readOnly={readOnly} placeholder="Titulación" 
+            value={readOnly?usuario.titulacion:titulacion} onChange={handleInputChange}></Input>
+        </FormGroup>
+    </Col>
+    <Col md={6}>
+        <FormGroup >
             <Label style={{color:"black"}} for="email" >Email</Label>
-            <Input id="email" name="email" type="text" readOnly={readOnly} placeholder="Email" 
+            <Input id="email" name="email" type="email" readOnly={readOnly} placeholder="Email" 
             value={readOnly?usuario.email:email} onChange={handleInputChange}></Input>
         </FormGroup>
     </Col>
-    {/*<Col md="4">
+    <Col md={6}>
         <FormGroup >
-            <Label style={{color:"black"}}  for="profesor">Profesor</Label>
-            <Input type="text" name="profesor" readOnly={readOnly} placeholder="Profesor" id="profesor"
-            value={readOnly?curso.profesor:profesor} onChange={handleInputChange}></Input>
+            <Label style={{color:"black"}} for="rol" >Rol</Label>
+            <Input id="rol" name="rol" type="select" readOnly={readOnly} placeholder="Rol" 
+            value={readOnly?usuario.rol:rol} onChange={handleInputChange}>
+                <option>Socio</option>
+                <option>Administrador</option>
+            </Input>
         </FormGroup>
     </Col>
-    <Col md="2">
-        <FormGroup >
-            <Label style={{color:"black"}} for="imparticion" value="Imparticion">Impartición</Label>
-            <Input type="text" name="imparticion" readOnly={readOnly} id="imparticion" placeholder="Impartición" 
-            value={readOnly?curso.imparticion:imparticion} onChange={handleInputChange}></Input>
-        </FormGroup>
-    </Col>
-    <Col md={12}>
-        <FormGroup >
-            <Label style={{color:"black"}} for="enlace" >Link a descripción</Label>
-            <Input id="enlace" name="enlace" type="url" readOnly={readOnly} placeholder="Link a descripción" 
-            value={readOnly?curso.enlace:enlace} onChange={handleInputChange}></Input>
-        </FormGroup>
-    </Col>
-    <Col md="12">
-        <FormGroup >
-            <Label style={{color:"black"}}  for="titulosOfertan">Titulos que la ofertan</Label>
-            <Input type="text" name="titulosOfertan" readOnly={readOnly} placeholder="Titulos que la ofertan" 
-            value={readOnly?curso.titulosOfertan:titulosOfertan} onChange={handleInputChange}></Input>
-        </FormGroup>
-    </Col>
-    <Col md="2">
-        
-    </Col>
-    <Col md="12">
-        <FormGroup >
-            <Label style={{color:"black"}} for="descripcion" >Descripción</Label>
-            <Input id="descripcion" name="descripcion" type="textarea" readOnly={readOnly} placeholder="Descripción" 
-            value={readOnly?curso.descripcion:descripcion} onChange={handleInputChange}></Input>
-        </FormGroup>
-    </Col>*/}
+   { isOpenErrorModal && 
+       <Modal isOpen={isOpenErrorModal}>
+            <ModalHeader isOpen={isOpenErrorModal} toggle={toggleModError} />
+            <ModalBody>
+                <h4>{msg}</h4>
+            </ModalBody>
+   </Modal> }
      </Row>
 </ModalBody>
 <ModalFooter>

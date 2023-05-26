@@ -95,7 +95,7 @@ export default function MenuCRUDUsuarios() {
                                 <h3>Listado de usuarios</h3>
                                     <Button onClick={() => actualizar()}>Actualiza</Button>
                             </ModalHeader>
-                            <ListaUsuarios usuarios={usuarios} usuario={usuario} setUsuario={setUsuario} opt={opt} />
+                            <ListaUsuarios usuarios={usuarios} opt={opt} />
                             <ModalFooter>
 
                             </ModalFooter>
@@ -112,7 +112,7 @@ export default function MenuCRUDUsuarios() {
                                 <h3>Listado de usuarios</h3>
                                     <Button onClick={() => actualizar(usuarios)}>Actualizar</Button>
                             </ModalHeader>
-                            <ListaUsuarios usuarios={usuarios} usuario={usuario} setUsuario={setUsuario} opt={opt} />
+                            <ListaUsuarios usuarios={usuarios} opt={opt} />
                             <ModalFooter>
                                 
                             </ModalFooter>

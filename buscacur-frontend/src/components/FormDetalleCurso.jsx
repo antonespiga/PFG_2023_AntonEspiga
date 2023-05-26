@@ -29,7 +29,7 @@ return (
     
 <Modal fullscreen isOpen={isOpen} toggle={closeModal} >
 <ModalHeader  isOpen={isOpen} toggle={closeModal} >
-    <h4 >{readOnly?"Detalle del curso":"Introducir contenido"}</h4>
+    <h4 >{"Detalle del curso"}</h4>
 </ModalHeader>
 <ModalBody>
     <Row>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useEffect, useState } from 'react'
 import { Container, Row, Col, Card, ListGroup, CardHeader, ListGroupItem,
-  Pagination, PaginationItem, PaginationLink, CardFooter, CardBody } from 'reactstrap'
+  Pagination, PaginationItem, PaginationLink, CardFooter, CardBody, ListInlineItem, List } from 'reactstrap'
 import API from '../utils/api'
 import { getCursos } from '../utils/apicallsCursos'
 import '../pages/Home.css'
@@ -32,12 +32,16 @@ const [data, setData] = useState([])
               <h1>Listado cursos</h1>
             </CardHeader>
             <CardBody>
-              <ul  className="list-group">
+              <List className="list-group" >
                 {data?.map((curso) => (
-                  <li key={curso._id} className="list-group-item justify-content-between">{curso.nombre}: {curso.titulo},  {curso.imparticion}</li>
+                  <List className="list-group-item justify-content-between" key={curso._id}>
+                  <ListInlineItem >{curso.nombre}: {curso.titulo},  {curso.imparticion}</ListInlineItem>
+                  <ListInlineItem >{curso.nombre}: {curso.titulo},  {curso.imparticion}</ListInlineItem>
+                  <ListInlineItem >{curso.nombre}: {curso.titulo},  {curso.imparticion}</ListInlineItem>
+                  </List>
                 ))}
                 
-              </ul>
+              </List>
             </CardBody>
            
           <CardFooter>

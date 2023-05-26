@@ -10,7 +10,7 @@
 }
 
 .selector {
-   font-size: 16px;
+  	font-size: 16px;
     border-radius: 5px;
     border: 1px solid #ccc;
     }
@@ -23,15 +23,12 @@
 	}
 
 .dropdown-toggle {
-	
-	background-color: rgb(255, 255, 255);
-	color:black;
-	border: none;
+	background-color: rgb(255, 255, 255) !important;
+	color:black !important;
+	border: none !important;
 }
 
-.btn-secondary :hover {
-	
-}
+
 
 .btn-secondary:focus {
 	background-color: white;
