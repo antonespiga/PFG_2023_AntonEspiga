@@ -30,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route exact path = '/login' element = { <Login/> } />
         <Route exact path = '/registro' element = { <Registro/> } />
         <Route exact path='/cursos/tipo' element={ <Consultas/>} />
-        <Route exact path = '/consultas' element = { <Consultas/>}/>
+        <Route exact path = '/socio' element = { <Consultas/>}/>
         <Route exact path = '/admin' element = { <Admin />}/>
         <Route exact path = '/error' element = { <Error />}/>
       </Routes>

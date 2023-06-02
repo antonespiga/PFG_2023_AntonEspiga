@@ -7,8 +7,8 @@ const { getCursos, getCursoById, addCurso, deleteCursoById, updateCursoById} = r
 
 router.get('/', getCursos);
 router.get('/:_id', auth, getCursoById);
-router.post('/', addCurso);
-router.delete('/:id', deleteCursoById);
-router.put('/:id', updateCursoById);
+router.post('/', auth, addCurso);
+router.delete('/:id', auth, deleteCursoById);
+router.put('/:id', auth, updateCursoById);
 
 module.exports = router;

@@ -7,7 +7,8 @@ function createToken(user) {
     const payload = {
         id: user._id,
         email: user.email,
-        clave: user.clave
+        clave: user.clave,
+        rol: user.rol
     }
 
     return token = jwt.sign(payload, config.SECRET_TOKEN, {

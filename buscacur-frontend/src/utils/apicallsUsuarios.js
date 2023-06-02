@@ -8,6 +8,7 @@ export {
    modUsuario,
    loginUsuario,
    registroUsuario, 
+   verificarToken,
 }
 
 function getUsuarioById(id) {
@@ -48,6 +49,12 @@ function loginUsuario({email, clave}) {
 
 function registroUsuario(usuario) {
     return API.post('/registro', usuario)
+    .then((response) => response.data)
+    .catch((error) => error.response.data)
+}
+
+function verificarToken(token) {
+    return API.get('/private')
     .then((response) => response.data)
     .catch((error) => error.response.data)
 }

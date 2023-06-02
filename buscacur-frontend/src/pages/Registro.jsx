@@ -29,7 +29,7 @@ function Registro() {
     }
 
     const handleAddUsuario = (usuario) => {
-        alert("Enviar formulario, ¿Está seguro?")
+        alert("Enviando formulario")
         registroUsuario(usuario)
             .then((res) => {
                 setMsg(res.message)

@@ -14,19 +14,24 @@ export default function Perfil( {usuario} ) {
     
     const [hidden, setHidden] = useState(true)
     const [mostrar, setMostrar] = useState(false)
-    const [userId, setUserId] = useState()
-    const [selUsuario, setSelUsuario] = useState(usuario)
+    const [userId, setUserId] = useState(usuario)
+    const [selUsuario, setSelUsuario] = useState({})
     const [readOnly, setReadOnly] = useState(true)
     const [isOpen, setIsOpen] = useState(false)
     const [dropdownOpen, setDropdownOpen] = useState(false)
-
+    const [rol, setRol] = useState(sessionStorage.getItem('rol'))
     const navigate = useNavigate()
-
+    
     useEffect(() => {
-        getUsuarioById(sessionStorage.getItem('id'))
-            .then((usuario) => setSelUsuario(usuario))
-        setUserId(sessionStorage.getItem('id'))
-    }, [userId])
+        getUsuario(userId)
+   }, [])
+   
+    const getUsuario = (userId) => {
+        getUsuarioById(userId)
+        .then((res) => setSelUsuario(res))
+       
+    }
+   
 
     const closeModal = () => {
         setIsOpen(false)
@@ -38,7 +43,8 @@ export default function Perfil( {usuario} ) {
 
     const toggle = () => {
         setMostrar(!mostrar)
-    }
+     
+        }
 
     const logout = () => {
         sessionStorage.clear()
@@ -60,7 +66,7 @@ export default function Perfil( {usuario} ) {
         <Container className="perfil">
             <Col className="perfil-col" >
                 <Button id="btn-perfil" onClick={() => toggle()}>
-                    {usuario == "Socio" ? <FaUser /> : <FaUserCog />}
+                    {(rol === "Socio") || (rol==="socio") ? <FaUser /> : <FaUserCog />}
                 </Button>
             </Col>
             {mostrar ?
@@ -101,7 +107,7 @@ export default function Perfil( {usuario} ) {
                                         <Label id="form-label" for="titulacion">Titulación</Label>
                                         <Input type="text" placeHolder="titulación" readOnly={readOnly} value={selUsuario.titulacion}></Input>
                                     </DropdownItem>
-                                </DropdownMenu>
+                                   </DropdownMenu>
                             </Dropdown>
                             <Button id="btnperfil" onClick={() => handleModificarDatos()} >Modificar datos de perfil</Button>
                             <Button id="btnperfil" onClick={() => logout()} >Logout</Button>

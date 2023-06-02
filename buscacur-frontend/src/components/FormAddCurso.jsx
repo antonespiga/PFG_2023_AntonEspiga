@@ -27,7 +27,7 @@ export default function FormAddCurso({
   }
 
   const handleAddCurso = (curso) => {
-    alert("Enviar formulario, ¿Está seguro?")
+    alert("Enviando formulario")
     addCurso(curso)
         .then(() => {
             setCurso({})

@@ -35,12 +35,15 @@
    display:flex;
   }
 
+
   #inline-1 {
     background-color: rgb(173, 173, 236);
+    width:30vw;
   }
  
   #inline-2 {
     background-color: rgb(178, 204, 173);
+   
   }
 
   #inline-3 {
@@ -50,18 +53,22 @@
     background-color: rgb(221, 147, 203);
   }
   #inline-5 {
-    background-color: rgb(202, 202, 172);
+    background-color: rgb(192, 238, 192);
   }
 
   #inline-6 {
-    background-color: rgb(202, 202, 172);
+    background-color: rgb(235, 204, 148);
   }
   #inline-7 {
-    background-color: rgb(202, 202, 172);
+    background-color: rgb(241, 193, 237);
   }
 
-  #btn-1 {
-    background-color: transparent; 
-    border: none;
+  #listgrouptitle {
     
+    border:none;
   }
+
+#listgroup {
+  justify-content: space-around;
+ 
+}

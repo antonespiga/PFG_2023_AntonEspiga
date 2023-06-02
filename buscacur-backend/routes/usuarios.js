@@ -3,14 +3,15 @@ const router = express.Router();
 const auth = require('../middlewares/auth')
 
 const { getUsers, getUserById, addUser, updateUser, deleteUser,
-        loginUser, registroUser } = require('../controllers/usuarios');
+        loginUser, registroUser, getUserIdFromToken } = require('../controllers/usuarios');
 
 /* CRUD usuarios  */
-router.get('/', getUsers);
+router.get('/', auth, getUsers);
 router.get('/:_id', auth, getUserById)
-router.post('/', addUser)
-router.put('/:id', updateUser)
-router.delete('/:id', deleteUser)
+router.post('/', auth, addUser)
+router.put('/:id', auth, updateUser)
+router.delete('/:id', auth, deleteUser)
+
 
 
 module.exports = router;

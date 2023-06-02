@@ -31,7 +31,7 @@ export default function FormDelCurso({
 
 
     const handleDelCurso = (curso) => {
-        alert("Eliminar registro, ¿Está seguro?")
+        alert("Eliminando curso")
         delCurso(curso)
             .then(() => {
                 

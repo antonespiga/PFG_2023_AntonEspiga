@@ -27,7 +27,7 @@ export default function FormAddUsuario({
   }
 
   const handleAddUsuario = (usuario) => {
-    alert("Enviar formulario, ¿Está seguro?")
+    alert("Enviando formulario")
     addUsuario(usuario)
         .then((res) => {
             setMsg(res.message)
@@ -99,7 +99,7 @@ return (
     
     <Col md={6}>
         <FormGroup >
-            <Label style={{color:"black"}} for="titulacion" >Email</Label>
+            <Label style={{color:"black"}} for="titulacion" >Titulación</Label>
             <Input id="titulacion" name="titulacion" type="text" readOnly={readOnly} placeholder="Titulación" 
             value={readOnly?usuario.titulacion:titulacion} onChange={handleInputChange}></Input>
         </FormGroup>

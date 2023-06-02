@@ -1,27 +1,32 @@
 import React, { useState, useEffect } from "react"
-import '../components/MenuCarpetas.css'
+import './Admin.css'
 import { Container, Col, Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap"
 import MenuCRUDCursos from "../components/MenuCRUDCursos"
 import MenuCRUDUsuarios from "../components/MenuCRUDUsuarios"
 import MenuSistema from "../components/MenuSistema"
 import MenuCopias from "../components/MenuCopias"
+import MenuEstadisticas from "../components/MenuEstadisticas"
+
 import Perfil from "../components/Perfil"
 import Error from "./Error"
+import {getUsuarioById} from '../utils/apicallsUsuarios'
 
 export default function Admin() {
 
 	const [actTab, setActTab] = useState('1')
 	const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
+	const [usuario, setUsuario] = useState()
+ 
 	const handleClick = (num) => {
 		setActTab(num)
 	}
- 
+	
 	if(!logged) return (<Error error="Usuario no logado" />)
-	else 
+	else if(sessionStorage.getItem('rol')!== "admin") return(<Error error="No tiene acceso"></Error>)
 	return (
 		<Container id="content">
 			<Col >
-				<Perfil  />
+				<Perfil usuario={sessionStorage.getItem('id')} />
 			</Col>
 			<Nav justified tabs>
 				<NavItem>
@@ -44,6 +49,11 @@ export default function Admin() {
 						Copias
 					</NavLink>
 				</NavItem>
+				<NavItem>
+					<NavLink id="navlink" active={actTab === "5"} onClick={() => handleClick("5")}>
+						Estadísticas
+					</NavLink>
+				</NavItem>
 			</Nav>
 			<TabContent activeTab={actTab} >
 				<TabPane tabId="1">
@@ -57,6 +67,9 @@ export default function Admin() {
 				</TabPane>
 				<TabPane tabId="4">
 					<MenuCopias />
+				</TabPane>
+				<TabPane tabId="5">
+					<MenuEstadisticas />
 				</TabPane>
 			</TabContent>
 		</Container>

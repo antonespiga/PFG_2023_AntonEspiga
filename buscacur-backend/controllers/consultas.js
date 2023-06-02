@@ -75,7 +75,7 @@ exports.getCursosByNCreditos = async (req, res, next) => {
 }
 
 exports.getCursosByTipo = async (req, res, next) => {
-     await Cursos.find({ tipo: req.params.tipo }).then(function (listCursos) {
+     await Cursos.find({ tipo: req.params.tipo }).sort('tematica').then(function (listCursos) {
           res.status(200).json(listCursos);
      })
           .catch(next)

@@ -57,7 +57,7 @@ export default function ListaUsuarios({ usuarios,  opt }) {
                                 opt={opt}
                             />}
 
-                            {isOpen && "mod" && <FormModUsuario
+                            {isOpen && (opt==="mod") && <FormModUsuario
                                 isOpen={isOpen}
                                 closeModal={closeModal}
                                 usuario={selUsuario}

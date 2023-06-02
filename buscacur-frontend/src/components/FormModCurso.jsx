@@ -21,15 +21,15 @@ export default function FormModCurso({
     }
 
     const handleModCurso = () => {
-        alert("Modificar registro, ¿Está seguro?")
+        alert("Modificando registro")
         modCurso(curso)
         .then(closeModal())
     }
 
     return (
 
-        <Modal fullscreen isopen={isOpen} toggle={closeModal} >
-            <ModalHeader isopen={isOpen} toggle={closeModal} >
+        <Modal fullscreen isOpen={isOpen} toggle={closeModal} >
+            <ModalHeader isOpen={isOpen} toggle={closeModal} >
                 <h4 >{"Modificar curso"}</h4>
             </ModalHeader>
             <ModalBody>

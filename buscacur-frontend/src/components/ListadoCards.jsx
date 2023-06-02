@@ -26,11 +26,11 @@ export default function ListadoCards({ cursos }) {
 
     return (
         <Row>
-            {cursos.map((curso) => {
+            {cursos.map((curso, i) => {
                 return (
                     <Col md="3">
 
-                        <Card  style={{card:"word-wrap-none"}} id="card-curso">
+                        <Card key={i} style={{card:"word-wrap-none"}} id="card-curso">
                             <CardTitle id="ttl-1">
                                 {curso.nombre}
                             </CardTitle>

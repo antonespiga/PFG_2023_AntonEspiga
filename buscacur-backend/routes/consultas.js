@@ -9,22 +9,22 @@ getCursosBySemestre, getCursosByTematica, getCursosByTipo, getNombres, getCursos
 const {getTipos, getSemestres, getCreditos, getTematicas, getProfesores, getDirectores, getTitulos} = require ('../controllers/consultas')
 
 router.get('/', getCursos);
-router.get('/:_id', getCursoById);
-router.get('/nombre/:nombre', getCursosByNombre);
-router.get('/data/nombres', getNombres);
-router.get('/semestre/:semestre', getCursosBySemestre);
-router.get('/data/semestres', getSemestres);
-router.get('/creditos/:creditos', getCursosByNCreditos);
-router.get('/data/creditos', getCreditos);
-router.get('/tematica/:tematica', getCursosByTematica);
-router.get('/data/tematicas', getTematicas);
-router.get('/profesor/:profesor', getCursosByProfesor);
-router.get('/data/profesores', getProfesores);
-router.get('/director/:director', getCursosByDirector);
-router.get('/data/directores', getDirectores);
-router.get('/tipo/:tipo', getCursosByTipo);
-router.get('/data/tipos', getTipos);
-router.get('/titulo/:titulo', getCursosByTitulo);
-router.get('/data/titulos', getTitulos)
+router.get('/:_id', auth, getCursoById);
+router.get('/nombre/:nombre', auth, getCursosByNombre);
+router.get('/data/nombres',auth, getNombres);
+router.get('/semestre/:semestre', auth, getCursosBySemestre);
+router.get('/data/semestres', auth, getSemestres);
+router.get('/creditos/:creditos', auth, getCursosByNCreditos);
+router.get('/data/creditos', auth, getCreditos);
+router.get('/tematica/:tematica', auth, getCursosByTematica);
+router.get('/data/tematicas', auth, getTematicas);
+router.get('/profesor/:profesor', auth, getCursosByProfesor);
+router.get('/data/profesores', auth, getProfesores);
+router.get('/director/:director', auth, getCursosByDirector);
+router.get('/data/directores', auth, getDirectores);
+router.get('/tipo/:tipo', auth, getCursosByTipo);
+router.get('/data/tipos', auth, getTipos);
+router.get('/titulo/:titulo', auth, getCursosByTitulo);
+router.get('/data/titulos',auth,  getTitulos)
 
 module.exports = router;

@@ -40,18 +40,32 @@ const [selcurso, setSelCurso] = useState({})
           <Card className='home'>
             <CardHeader>
               <h1>Listado cursos</h1>
+              
+              
             </CardHeader>
             <CardBody>
-              
+            <ListGroup id="listgroup" horizontal>
+                <ListGroupItem id="listgrouptitle" >Nombre</ListGroupItem>
+                <ListGroupItem id="listgrouptitle">Título</ListGroupItem>
+                <ListGroupItem id="listgrouptitle">Impartición</ListGroupItem>
+                <ListGroupItem id="listgrouptitle">Temática</ListGroupItem>
+                <ListGroupItem id="listgrouptitle">Créditos</ListGroupItem>
+                <ListGroupItem id="listgrouptitle">Director</ListGroupItem>
+                <ListGroupItem id="listgrouptitle">Profesor</ListGroupItem>
+              </ListGroup>
                 {data?.map((curso) => (
-                  <List id="lista-inline" type="inline" >
-                  <Button id="btn-1" onClick={()=>handleCurso(curso)}><ListInlineItem id="inline-1" key={curso._id} >{curso.nombre}</ListInlineItem></Button>
-                  <ListInlineItem id="inline-2" key={curso._id} > {curso.titulo}</ListInlineItem>
-                  <ListInlineItem id="inline-3" key={curso._id} >{curso.imparticion}</ListInlineItem>
-                  <ListInlineItem id="inline-4" key={curso._id} >{curso.tematica}</ListInlineItem>
-                  <ListInlineItem id="inline-5" key={curso._id} >{curso.creditos}</ListInlineItem>
-                  <ListInlineItem id="inline-6" key={curso._id} >{curso.director}</ListInlineItem>
-                  <ListInlineItem id="inline-7" key={curso._id} >{curso.profesor}</ListInlineItem>
+                 
+                  <ListGroup horizontal id="listgroup" >
+                    <ListGroupItem id="btn-1" action active href="#" tag="button" onClick={()=>handleCurso(curso)} key={curso._id} >{curso.nombre}</ListGroupItem>
+                    <ListGroupItem id="inline-2" action key={curso._id} >{curso.titulo}</ListGroupItem>
+                    <ListGroupItem id="inline-3" action key={curso._id} >{curso.imparticion}</ListGroupItem>
+                    <ListGroupItem id="inline-4" action key={curso._id} >{curso.tematica}</ListGroupItem>
+                    <ListGroupItem id="inline-5" action key={curso._id} >{curso.creditos}</ListGroupItem>
+                    <ListGroupItem id="inline-6" action key={curso._id} >{curso.director}</ListGroupItem>
+                    <ListGroupItem id="inline-7" action key={curso._id} >{curso.profesor}</ListGroupItem>
+                  
+                  
+                  
                   { detalle && <FormDetalleCurso
                       
                       isOpen={detalle}
@@ -62,7 +76,8 @@ const [selcurso, setSelCurso] = useState({})
                       readOnly={true}
 
                       />}
-                  </List>
+                      </ListGroup>
+                 
                 
 
                 ))}

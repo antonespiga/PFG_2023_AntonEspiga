@@ -1,0 +1,10 @@
+#contenido {
+display:block;
+font-size: small;
+justify-content: space-between;
+}
+
+#primera-fila {
+    justify-content: space-between; 
+}
+

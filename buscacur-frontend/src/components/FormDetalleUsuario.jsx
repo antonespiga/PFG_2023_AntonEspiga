@@ -14,8 +14,9 @@ export default function FormDetalleUsuario({
     const [apellido1, setApellido1] = useState()
     const [apellido2, setApellido2] = useState()
     const [poblacion, setPoblacion] = useState()
-    const [codPostal, setCodPostal] = useState()
+    const [codigoPostal, setCodigoPostal] = useState()
     const [email, setEmail] = useState()
+    const [titulacion, setTitulacion] = useState()
 
     const handleInputChange = (e) => {
         setUsuario({ ...usuario, [e.target.name]: e.target.value })
@@ -63,7 +64,7 @@ export default function FormDetalleUsuario({
                         <FormGroup >
                             <Label style={{ color: "black" }} for="codPostal" id="codPostal" value="codPostal">CodPostal</Label>
                             <Input type="text" name="codPostal" readOnly={readOnly} id="codPostal" placeholder="CodPostal"
-                                value={readOnly ? usuario.codPostal : codPostal} onChange={handleInputChange}></Input>
+                                value={readOnly ? usuario.codigoPostal : codigoPostal} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
 
@@ -74,14 +75,14 @@ export default function FormDetalleUsuario({
                                 value={readOnly ? usuario.email : email} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
-                    {/*<Col md="4">
+                    <Col md="4">
                     <FormGroup >
                         <Label style={{color:"black"}}  for="profesor">Profesor</Label>
                         <Input type="text" name="profesor" readOnly={readOnly} placeholder="Profesor" id="profesor"
                         value={readOnly?curso.profesor:profesor} onChange={handleInputChange}></Input>
                     </FormGroup>
                 </Col>
-                <Col md="2">
+                {/*<Col md="2">
                     <FormGroup >
                         <Label style={{color:"black"}} for="imparticion" value="Imparticion">Impartición</Label>
                         <Input type="text" name="imparticion" readOnly={readOnly} id="imparticion" placeholder="Impartición" 

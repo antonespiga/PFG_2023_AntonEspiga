@@ -6,7 +6,7 @@ import {
 import {  useNavigate} from 'react-router-dom'
 import './Login.css'
 import { FaKey, FaUser} from 'react-icons/fa'
-import { loginUsuario } from '../utils/apicallsUsuarios'
+import { loginUsuario, verificarToken } from '../utils/apicallsUsuarios'
 
 
 export default function Login() {
@@ -28,21 +28,30 @@ export default function Login() {
 
         const checkLogin = (res) => {
 
-            if(res.message === "Login correcto") {
-                sessionStorage.setItem('id', res.user._id)
-                sessionStorage.setItem('rol', res.user.rol)
+            if((res.message === "Login correcto") || (res.message === "Tienes acceso")) {
+               
                 sessionStorage.setItem('token', res.token)
-                sessionStorage.setItem('isLogged', true)
-                if((sessionStorage.getItem('rol') === "Socio") || (sessionStorage.getItem('rol') === "socio")) {navigate('/consultas')}
-                if(sessionStorage.getItem('rol') === ("admin" || "Administrador")) {navigate('/admin')}
-
-                
                }
+                
+                if(sessionStorage.getItem('token')) {
+                navigate('/private')
+                verificarToken(sessionStorage.getItem('token'))
+                .then((response)=>{
+                    sessionStorage.setItem('id', response.userId)
+                    sessionStorage.setItem('rol', response.rol)
+                    sessionStorage.setItem('isLogged', true)
+
+                    if(sessionStorage.getItem('rol'))
+                    navigate(`/${sessionStorage.getItem('rol')}`)
+                        else navigate('/error')}
+                    )
+                }
+            
             else if( res.message === "Credenciales incorrectas" ) { setMsg(<Alert>{res.message}</Alert>)}
             else if( res.message === "No encontrado" ) { setMsg(<Alert>{res.message}</Alert>)}
-    
+            }
             
-    }
+    
        
     const openModal = () => {
         setIsOpen(true)
@@ -71,7 +80,7 @@ export default function Login() {
                             <Label>Password</Label>
                             <InputGroup >
                                 <span className="input-group-text"><FaKey /></span>
-                                <Input type="text" name="clave" id="clave" placeholder="Introduzca clave"
+                                <Input type="password" name="clave" id="clave" placeholder="Introduzca clave"
                                 value={clave} onChange={(e) => setClave(e.target.value)}></Input>
                                 </InputGroup>
                         </FormGroup>

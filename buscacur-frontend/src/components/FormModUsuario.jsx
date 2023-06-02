@@ -26,7 +26,7 @@ export default function FormModUsuario({
 
 
     const handleModUsuario = (usuario) => {
-        alert("Modificar datos de usuario, ¿Está seguro?")
+        alert("Modificando datos de usuario")
         modUsuario(usuario)
             .then(closeModal())
     }
@@ -80,8 +80,16 @@ export default function FormModUsuario({
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="email" >Email</Label>
-                            <Input id="email" name="email" type="text" readOnly={readOnly} placeholder="Email"
+                            <Input id="email" name="email" type="email" readOnly={readOnly} placeholder="Email"
                                 value={usuario.email} onChange={handleInputChange}></Input>
+                        </FormGroup>
+                    </Col>
+
+                    <Col md={6}>
+                        <FormGroup >
+                            <Label style={{ color: "black" }} for="titulacion" >Titulación</Label>
+                            <Input id="titulacion" name="titulacion" type="text" readOnly={readOnly} placeholder="Titulación"
+                                value={usuario.titulacion} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                   

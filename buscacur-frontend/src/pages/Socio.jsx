@@ -10,20 +10,22 @@ import { getCursos } from '../utils/apicallsCursos'
 import { useParams, useNavigate } from 'react-router-dom'
 import {
     getCursosByTematica, getCursosByTitulo, getCursosByDirector, getCursosByProfesor,
-    getCursosBySemestre, getCursosByCreditos, getCursosByTipo, getCursosByNombre
+    getCursosBySemestre, getCursosByCreditos, getCursosByTipo, getCursosByNombre, getCursosByImparticion
 } from '../utils/apicallsConsultas'
-import '../components/BarraSelectores.css'
 import Buscador from '../components/Buscador'
 import ListadoTabla from '../components/ListadoTabla'
 import ListadoCards from '../components/ListadoCards'
 import { getNombres, getTipos, getTitulos, getSemestres, getDirectores, getProfesores, getTematicas, getCreditos} from '../utils/apicallsData'
+import { addVisualizacion } from '../utils/apicallsVisualizaciones'
 import FormDetalleCurso from '../components/FormDetalleCurso'
 import Perfil from '../components/Perfil'
 import Error from "./Error"
+import { getUsuarioById} from '../utils/apicallsUsuarios'
+import { modUsuarioCont } from '../utils/apicallsVisualizaciones'
 
 export default function Consultas() {
 
-    const [msg, setMsg] = useState('kgjh,')
+    const [msg, setMsg] = useState('')
     const [listado, setListado] = useState(false)
     const [onShowT, setOnShowT] = useState(false)
     const [onShowD, setOnShowD] = useState(false)
@@ -35,7 +37,11 @@ export default function Consultas() {
     const [director, setDirector] = useState()
     const [profesor, setProfesor] = useState()
     const [semestre, setSemestre] = useState()
-    const [creditos, setCreditos] = useState()
+    const [creditos, setCreditos] = useState('')
+    const [imparticion, setImparticion] = useState()
+
+    const [user, setUser] = useState({})
+    const [userCont, setUserCont] = useState()
 
     const [cursos, setCursos] = useState([])
     const [nombres, setNombres] = useState([])
@@ -46,6 +52,7 @@ export default function Consultas() {
     const [tematicas, setTematicas] = useState([])
     const [semestres, setSemestres] = useState([])
     const [titulos, setTitulos] = useState([])
+    const [tipoConsulta, setTipoConsulta] = useState()
     const navigate = useNavigate()
     const [isOpenTematicas, setIsOpenTematicas] = useState(false)
     const [isOpenTipos, setIsOpenTipos] = useState(false)
@@ -65,6 +72,11 @@ export default function Consultas() {
     const toggleTitulos = () => setIsOpenTitulos(!isOpenTitulos)
 
     const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
+
+    useEffect(() => {
+        getUsuarioById(sessionStorage.getItem('id'))
+            .then(res => setUser(res))
+    },[])
 
     useEffect(() => {
         getNombres()
@@ -128,9 +140,7 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consNombre()
-    }, [])
+   
 
     const consTematica = () => {
         getCursosByTematica(tematica).then((selCursos) => {
@@ -138,9 +148,7 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consTematica()
-    }, [])
+   
 
     const consTipo = () => {
         getCursosByTipo(tipo).then((selCursos) => {
@@ -148,9 +156,7 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consTipo()
-    }, [])
+   
 
     const consTitulo = () => {
         getCursosByTitulo(titulo).then((selCursos) => {
@@ -158,9 +164,7 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consTitulo()
-    }, [])
+   
 
     const consDirector = () => {
         getCursosByDirector(director).then((selCursos) => {
@@ -168,9 +172,7 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consDirector()
-    }, [])
+  
 
     const consProfesor = () => {
         getCursosByProfesor(profesor).then((selCursos) => {
@@ -178,19 +180,15 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consProfesor()
-    }, [])
+   
 
     const consCreditos = () => {
-        getCursosByCreditos(creditos).then((selCursos) => {
+        getCursosByCreditos(String(creditos)).then((selCursos) => {
             setCursos(selCursos)
         })
     }
 
-    useEffect(() => {
-        consCreditos()
-    }, [])
+   
 
     const consSemestre = () => {
         getCursosBySemestre(semestre).then((selCursos) => {
@@ -198,46 +196,72 @@ export default function Consultas() {
         })
     }
 
-    useEffect(() => {
-        consSemestre()
-    }, [])
+    const consImparticion = () => {
+        getCursosByImparticion(Imparticion).then((selCursos) => {
+            setCursos(selCursos)
+        })
+    }
+
+   
 
 
     const handleClickConsultas = () => {
 
         if (semestre) {
+            setTipoConsulta('semestre')
             consSemestre();
             setSemestre('')
         }
         else if (nombre) {
+            setTipoConsulta('nombre')
             consNombre();
             setNombre('')
         }
         else if (tematica) {
+            setTipoConsulta('tematica')
             consTematica();
             setTematica('')
         }
         else if (creditos) {
+            setTipoConsulta('creditos')
             consCreditos();
             setCreditos('')
         }
         else if (profesor) {
+            setTipoConsulta('profesor')
             consProfesor();
             setProfesor('')
         }
         else if (director) {
+            setTipoConsulta('director')
             consDirector();
             setDirector('')
         }
         else if (tipo) {
+            setTipoConsulta('tipo')
             consTipo();
             setTipo('')
         }
         else if (titulo) {
+            setTipoConsulta('titulo')
             consTitulo();
             setTitulo('')
         }
-
+        else if (imparticion) {
+            setTipoConsulta('imparticion')
+            consTitulo();
+            setTitulo('')
+        }
+        const visualizacion = {
+            usuario:sessionStorage.getItem('id'),
+            tipoConsulta: tipoConsulta,
+            fecha: Date.now()
+        }
+        addVisualizacion(visualizacion)
+        .then(() =>modUsuarioCont(user) )
+        
+        
+       
     }
 
 
@@ -251,7 +275,7 @@ export default function Consultas() {
                         <Buscador />
                     </Col>
                     <Col md="2">
-                        <Perfil usuario="Socio"/>
+                        <Perfil usuario={sessionStorage.getItem('id')}/>
                     </Col>
                 </Row>
             </Container>
@@ -381,7 +405,7 @@ export default function Consultas() {
                 </Col>
             </CardTitle>
 
-            {listado && <ListadoTabla cursos={cursos} />}
+            {listado && <ListadoTabla cursos={cursos} opt={"ver"} />}
 
             {!listado && <ListadoCards cursos={cursos} />}
 

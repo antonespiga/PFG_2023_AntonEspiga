@@ -10,6 +10,7 @@ export {
     getCursosByProfesor,
     getCursosByDirector,
     getCursosByNombre,
+    getCursosByImparticion
    }
 
 function getCursoById() {
@@ -63,6 +64,12 @@ function getCursosBySemestre(parSemestre) {
 
 function getCursosByCreditos(parCreditos) {
     return API.get('/consultas/creditos/'+ parCreditos)
+    .then((response) => (response.data))
+    .catch((error) => error.response.data )
+}
+
+function getCursosByImparticion(parImparticion) {
+    return API.get('/consultas/imparticion/'+ parImparticion)
     .then((response) => (response.data))
     .catch((error) => error.response.data )
 }

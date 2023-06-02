@@ -15,7 +15,7 @@ export default function FormDelUsuario({
         const [apellido1, setApellido1] = useState()
         const [apellido2, setApellido2] = useState()
         const [poblacion, setPoblacion] = useState()
-        const [codPostal, setCodPostal] = useState()
+        const [codigoPostal, setCodigoPostal] = useState()
         const [email, setEmail] = useState()
 
 
@@ -26,7 +26,7 @@ export default function FormDelUsuario({
 
 
     const handleDelUsuario = (usuario) => {
-        alert("Eliminar usuario, ¿Está seguro?")
+        alert("Eliminando usuario")
         delUsuario(usuario)
             .then(() => {
             closeModal()
@@ -75,7 +75,7 @@ export default function FormDelUsuario({
                         <FormGroup >
                             <Label style={{ color: "black" }} for="codPostal" id="codPostal" value="codPostal">CodPostal</Label>
                             <Input type="text" name="codPostal" readOnly={readOnly} id="codPostal" placeholder="CodPostal"
-                                value={readOnly ? usuario.codPostal : codPostal} onChange={handleInputChange}></Input>
+                                value={readOnly ? usuario.codigoPostal : codigoPostal} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
 

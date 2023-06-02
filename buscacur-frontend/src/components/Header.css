@@ -55,12 +55,13 @@
 
 #expand-btn {
 	display: inline-flex;
-	margin-right: 40px;
+	margin-right: 0px;
 	background-color: rgb(233, 209, 29);
 	color:black;
 	border:none;
 	border-radius: 5px;
 	cursor: pointer;
+	
 	}
 
 
