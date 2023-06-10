@@ -14,7 +14,7 @@ var visualizacionesRouter = require('./routes/visualizaciones')
 
 const { default: mongoose } = require('mongoose');
 
-mongoose.connect(config.db)
+mongoose.connect(config.db )
 //mongoose.connect ('mongodb+srv://anton:EspiMin%40LoSus%231969@cluster0.wkdq7.mongodb.net/?retryWrites=true&w=majority')
 .then(() => console.log('Conectado a la base de datos'))
 .catch((err) => console.error(err));
@@ -31,6 +31,7 @@ app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
 
 app.use('/', indexRouter);
 app.use('/usuarios', usersRouter);

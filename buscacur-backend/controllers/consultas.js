@@ -89,6 +89,14 @@ exports.getCursosByTitulo = async (req, res, next) => {
           .catch(next)
 }
 
+exports.getCursosByImparticion = async (req, res, next) => {
+     const imp = new RegExp(req.params.imparticion, 'i')
+     await Cursos.find({ imparticion: imp }).then(function (listCursos) {
+          res.status(200).json(listCursos);
+     })
+          .catch(next)
+}
+
 exports.getNombres = async (req, res, next) => {
      await Cursos.find({ },{'nombre':1 , _id:0}).distinct('nombre')
      .then(function(listCursos) {
@@ -147,6 +155,14 @@ exports.getDirectores = async (req, res, next) => {
 
 exports.getTitulos = async (req, res, next) => {
      await Cursos.find({ },{'titulo':1 , _id:0}).distinct('titulo')
+     .then(function(listCursos) {
+          res.status(200).json(listCursos)
+     })
+     .catch(next)
+}
+
+exports.getImparticions = async (req, res, next) => {
+     await Cursos.find({ },{'imparticion':1 , _id:0}).distinct('imparticion')
      .then(function(listCursos) {
           res.status(200).json(listCursos)
      })

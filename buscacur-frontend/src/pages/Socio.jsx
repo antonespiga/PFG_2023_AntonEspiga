@@ -15,14 +15,15 @@ import {
 import Buscador from '../components/Buscador'
 import ListadoTabla from '../components/ListadoTabla'
 import ListadoCards from '../components/ListadoCards'
-import { getNombres, getTipos, getTitulos, getSemestres, getDirectores, getProfesores, getTematicas, getCreditos} from '../utils/apicallsData'
+import { getNombres, getTipos, getTitulos, getSemestres, getDirectores, 
+    getProfesores, getTematicas, getCreditos, getImparticions } from '../utils/apicallsData'
 import { addVisualizacion } from '../utils/apicallsVisualizaciones'
 import FormDetalleCurso from '../components/FormDetalleCurso'
 import Perfil from '../components/Perfil'
 import Error from "./Error"
 import { getUsuarioById} from '../utils/apicallsUsuarios'
 import { modUsuarioCont } from '../utils/apicallsVisualizaciones'
-
+import './Socio.css'
 export default function Consultas() {
 
     const [msg, setMsg] = useState('')
@@ -52,6 +53,7 @@ export default function Consultas() {
     const [tematicas, setTematicas] = useState([])
     const [semestres, setSemestres] = useState([])
     const [titulos, setTitulos] = useState([])
+    const [imparticions, setImparticions] = useState([])
     const [tipoConsulta, setTipoConsulta] = useState()
     const navigate = useNavigate()
     const [isOpenTematicas, setIsOpenTematicas] = useState(false)
@@ -62,6 +64,7 @@ export default function Consultas() {
     const [isOpenDirectores, setIsOpenDirectores] = useState(false)
     const [isOpenNombres, setIsOpenNombres] = useState(false)
     const [isOpenTitulos, setIsOpenTitulos] = useState(false)
+    const [isOpenImparticions, setIsOpenImparticions] = useState(false)
     const toggleNombres = () => setIsOpenNombres(!isOpenNombres)
     const toggleTipos = () => setIsOpenTipos(!isOpenTipos)
     const toggleTematicas = () => setIsOpenTematicas(!isOpenTematicas)
@@ -70,6 +73,7 @@ export default function Consultas() {
     const toggleProfesores = () => setIsOpenProfesores(!isOpenProfesores)
     const toggleDirectores = () => setIsOpenDirectores(!isOpenDirectores)
     const toggleTitulos = () => setIsOpenTitulos(!isOpenTitulos)
+    const toggleImparticions = () => setIsOpenImparticions(!isOpenImparticions)
 
     const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
 
@@ -134,6 +138,14 @@ export default function Consultas() {
             })
     }, [])
 
+    useEffect(() => {
+        getImparticions()
+            .then((allimparticions) => {
+                setImparticions(allimparticions)
+            })
+    }, [])
+
+   
     const consNombre = () => {
         getCursosByNombre(nombre).then((selCursos) => {
             setCursos(selCursos)
@@ -197,7 +209,7 @@ export default function Consultas() {
     }
 
     const consImparticion = () => {
-        getCursosByImparticion(Imparticion).then((selCursos) => {
+        getCursosByImparticion(imparticion).then((selCursos) => {
             setCursos(selCursos)
         })
     }
@@ -249,8 +261,8 @@ export default function Consultas() {
         }
         else if (imparticion) {
             setTipoConsulta('imparticion')
-            consTitulo();
-            setTitulo('')
+            consImparticion();
+            setImparticion('')
         }
         const visualizacion = {
             usuario:sessionStorage.getItem('id'),
@@ -325,6 +337,18 @@ export default function Consultas() {
                             return (
                                 <DropdownItem onClick={(e) => setSemestre(semestres)}>
                                     {semestres}
+                                </DropdownItem>
+                            )
+                        })}
+                    </DropdownMenu>
+                </Dropdown>
+                <Dropdown isOpen={isOpenImparticions} toggle={toggleImparticions}>
+                    <DropdownToggle caret>Impartición</DropdownToggle>
+                    <DropdownMenu>
+                        {imparticions.map((imparticions) => {
+                            return (
+                                <DropdownItem onClick={(e) => setImparticion(imparticions)}>
+                                    {imparticions}
                                 </DropdownItem>
                             )
                         })}

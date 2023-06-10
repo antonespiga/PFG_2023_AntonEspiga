@@ -1,4 +1,8 @@
+const { stdout, stdin } = require('process');
 const Curso = require ('../models/cursos')
+const {exec} = require('child_process')
+const config = require('../config')
+
 
 exports.getCursos = async(req, res, next)  => {
     await Curso.find({})
@@ -37,3 +41,4 @@ exports.updateCursoById  = async (req, res, next) => {
     .then(() => res.status(200).json('Registro modificado'))
     .catch(next)
 }
+

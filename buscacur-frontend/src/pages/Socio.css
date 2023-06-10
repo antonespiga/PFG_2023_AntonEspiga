@@ -1,0 +1,90 @@
+.barra-selectores {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin:22px;
+    flex-grow:2;
+}
+
+.selector {
+  	font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    }
+
+	.navbar {
+		justify-content: space-between;
+		background-color: rgb(255, 255, 255);
+		margin:0rem 6rem;
+		
+	}
+
+.dropdown-toggle {
+	background-color: rgb(255, 255, 255) !important;
+	color:rgb(0, 0, 0) !important;
+	border: none !important;
+}
+
+
+
+.btn-secondary:focus {
+	background-color: white;
+	color:black;
+	border-color:none;
+}
+
+#card-curso {
+margin:15px;
+word-wrap: normal;
+}
+ 
+#ttl {
+	font-size: medium;
+	color:black ;
+	text-align:center;
+}
+
+#ttl-1 {
+	background-color: beige;
+	font-size: medium;
+	color:black ;
+	text-align:center;
+}
+
+
+
+#c-footer {
+	display: flex;
+	background-color: rgb(220, 211, 228);
+	justify-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+
+	.barra-selectores {
+		flex-wrap: wrap;
+		align-items: center;
+		}
+
+	.selector {
+		width:35%;
+		transform:scale(0.85,0.65);
+		margin: auto;
+	}
+}
+
+	@media only screen and (max-width: 468px) {
+		
+		
+		.barra-selectores {
+			display:block;
+		}
+	
+		.selector {
+			width:50%;
+			
+		}
+	}

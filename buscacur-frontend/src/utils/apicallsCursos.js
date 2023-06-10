@@ -30,3 +30,4 @@ function modCurso(curso) {
     .then((response) => response.data)
     .catch((error) => error.response.data )
 }
+

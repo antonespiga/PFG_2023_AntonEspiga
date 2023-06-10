@@ -10,6 +10,7 @@ export {
     getSemestres,
     getCreditos,
     getTitulos,
+    getImparticions
 }
 
 function getNombres() {
@@ -56,6 +57,12 @@ function getCreditos() {
 
 function getTitulos() {
     return API.get('consultas/data/titulos')
+    .then((response) => (response.data))
+    .catch((error) => error.response.data )
+}
+
+function getImparticions() {
+    return API.get('consultas/data/imparticions')
     .then((response) => (response.data))
     .catch((error) => error.response.data )
 }

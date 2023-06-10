@@ -3,10 +3,11 @@ const router = express.Router();
 const auth = require('../middlewares/auth')
 
 const { getCursos, getCursosByAfinidad, getCursoById, getCursosByDirector ,
-getCursosByNCreditos, getCursosByNombre, getCursosByProfesor, 
+getCursosByNCreditos, getCursosByNombre, getCursosByProfesor, getCursosByImparticion,
 getCursosBySemestre, getCursosByTematica, getCursosByTipo, getNombres, getCursosByTitulo} = require ('../controllers/consultas')
 
-const {getTipos, getSemestres, getCreditos, getTematicas, getProfesores, getDirectores, getTitulos} = require ('../controllers/consultas')
+const {getTipos, getSemestres, getCreditos, getTematicas, getProfesores,
+     getDirectores, getTitulos, getImparticions } = require ('../controllers/consultas')
 
 router.get('/', getCursos);
 router.get('/:_id', auth, getCursoById);
@@ -26,5 +27,7 @@ router.get('/tipo/:tipo', auth, getCursosByTipo);
 router.get('/data/tipos', auth, getTipos);
 router.get('/titulo/:titulo', auth, getCursosByTitulo);
 router.get('/data/titulos',auth,  getTitulos)
+router.get('/imparticion/:imparticion', auth, getCursosByImparticion);
+router.get('/data/imparticions',auth,  getImparticions)
 
 module.exports = router;

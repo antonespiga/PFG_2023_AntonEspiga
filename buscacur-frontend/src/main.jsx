@@ -9,7 +9,7 @@ import Header from './components/Header'
 //import BarraSelectores from './components/BarraSelectores'
 import Home from './pages/Home'
 import Footer from './components/Footer'
-import Consultas from './pages/Consultas'
+import Socio from './pages/Socio'
 import Login from './pages/Login'
 import Registro from './pages/Registro'
 import Admin from './pages/Admin'
@@ -29,8 +29,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route exact path = '/' element = { <Home/> } /> 
         <Route exact path = '/login' element = { <Login/> } />
         <Route exact path = '/registro' element = { <Registro/> } />
-        <Route exact path='/cursos/tipo' element={ <Consultas/>} />
-        <Route exact path = '/socio' element = { <Consultas/>}/>
+        <Route exact path='/cursos/tipo' element={ <Socio/>} />
+        <Route exact path = '/socio' element = { <Socio/>}/>
         <Route exact path = '/admin' element = { <Admin />}/>
         <Route exact path = '/error' element = { <Error />}/>
       </Routes>
