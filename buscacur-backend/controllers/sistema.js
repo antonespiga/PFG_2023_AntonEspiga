@@ -48,10 +48,10 @@ console.log(pathOther)
 
 function getConfig (req,res) {
     const configData = {
-        secret : config.SECRET_TOKEN,
-        database: config.db,
-        port : config.port,
-        path: config.path_BACKUP
+        secret : process.env.VITE_SECRET_TOKEN || config.SECRET_TOKEN,
+        database: process.env.VITE_MONGODB_URI || config.db,
+        port : process.env.VITE_PORT || config.port,
+        path: process.env.VITE_PATH_BACKUP || config.path_BACKUP
     }
     return res.status(200).json({message:'Datos de configuración enviados', configData})
   }
