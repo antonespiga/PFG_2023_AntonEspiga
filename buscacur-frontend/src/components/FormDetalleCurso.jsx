@@ -3,7 +3,7 @@ import {
     Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
     Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
 } from 'reactstrap'
-
+import { getTitulo } from '../utils/apicallsTitulos'
 
 export default function FormDetalleCurso({
     isOpen, closeModal, curso, setCurso, readOnly, opt, handleCurso }) {

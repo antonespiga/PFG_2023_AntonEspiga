@@ -16,7 +16,17 @@ const UsuarioSchema = new mongoose.Schema({
     titulacion: String,
     clave: { type: String, required:true},
     rol:{ type: String, enum: ['Socio','Administrador'], default: "Socio"},
-    cont:{type:Number, default:0}
+    cont:{type:Number, default:0},
+    contSemestre:{type:Number, default:0},
+    contCreditos:{type:Number, default:0},
+    contTipo:{type:Number, default:0},
+    contNombre:{type:Number, default:0},
+    contImparticion:{type:Number, default:0},
+    contTitulo:{type:Number, default:0},
+    contTematica:{type:Number, default:0},
+    contProfesor:{type:Number, default:0},
+    contDirector:{type:Number, default:0},
+    contAfinidad:{type:Number, default:0},
 })
 
 UsuarioSchema.pre('save', function(next) {

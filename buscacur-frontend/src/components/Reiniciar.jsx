@@ -1,9 +1,5 @@
-import React, { useState, useEffect } from "react"
-import {useParams} from 'react-router-dom'
-import {
-    Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
-    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
-} from 'reactstrap'
+import React from "react"
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import { restart } from "../utils/apicallsSistema"
 
 export default function Reiniciar({
@@ -18,22 +14,18 @@ export default function Reiniciar({
         closeModal()
     }
 
-  
-    const handleReiniciar = () => {
+      const handleReiniciar = () => {
         restart()
        .then(closeModal())
         }
    
-    
-    return (
-
+        return (
         <Modal xl isOpen={isOpen} toggle={closeModal} >
             <ModalHeader isOpen={isOpen} toggle={closeModal} >
                 <h4 >{"Reiniciar sistema"}</h4>
             </ModalHeader>
             <ModalBody>
-             
-                    
+               
             </ModalBody>
             <ModalFooter>
                 {<Button onClick={() => handleReiniciar()}>{'Reiniciar sistema'}</Button>}

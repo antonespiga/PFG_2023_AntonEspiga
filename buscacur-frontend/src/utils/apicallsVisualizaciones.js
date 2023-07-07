@@ -13,7 +13,8 @@ export {
    getVisualizacionesByNombre,
    getVisualizacionesUsuario,
    modUsuarioCont,
-   getVisualizacionesByImparticion
+   getVisualizacionesByImparticion,
+   getVisualizacionMasFrecuente
 }
 
 
@@ -86,14 +87,20 @@ function getVisualizacionesByImparticion() {
     .catch((error) => error.response.data )
 }
 
-function getVisualizacionesUsuario(usuario) {
-    return API.get('visualizaciones/:id' + usuario)
+function getVisualizacionesUsuario(id) {
+    return API.get('visualizaciones/'+id)
     .then((response) => (response.data))
     .catch((error) => error.response.data )
 }
 
-function modUsuarioCont(usuario) {
-    return API.put('/visualizaciones/'+ usuario._id, usuario)
+function modUsuarioCont({user,tipoConsulta}) {
+ return API.put('/visualizaciones/'+ user._id, {user,tipoConsulta})
+    .then((response) => response.data)
+    .catch((error) => error.response.data )
+}
+
+function  getVisualizacionMasFrecuente(id) {
+    return API.get('/visualizaciones/frec/'+ id)
     .then((response) => response.data)
     .catch((error) => error.response.data )
 }

@@ -1,5 +1,4 @@
 const Cursos = require('../models/cursos')
-
 exports.getCursos = async (req, res, next) => {
      await Cursos.find({}).then(function (listCursos) {
           res.status(200).json(listCursos);
@@ -163,6 +162,15 @@ exports.getTitulos = async (req, res, next) => {
 
 exports.getImparticions = async (req, res, next) => {
      await Cursos.find({ },{'imparticion':1 , _id:0}).distinct('imparticion')
+     .then(function(listCursos) {
+          res.status(200).json(listCursos)
+     })
+     .catch(next)
+}
+
+exports.getCursosFilter = async (req, res, next) => {
+     console.log(req.query)
+     await Cursos.find(req.query.params) 
      .then(function(listCursos) {
           res.status(200).json(listCursos)
      })

@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
 import {
-    Col, Row, Button, Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
-    UncontrolledDropdown, Offcanvas, OffcanvasBody, OffcanvasHeader, Card, CardBody, CardFooter,
-    FormGroup, Label, Input
+    Col, Button, Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
+     Offcanvas, OffcanvasBody, OffcanvasHeader, Card, Label, Input
 } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 import { FaUser, FaUserCog } from 'react-icons/fa'
-import './Buscador.css'
+import './Perfil.css'
 import { getUsuarioById } from "../utils/apicallsUsuarios";
 import FormModUsuario from './FormModUsuario'
 
-export default function Perfil( {usuario} ) {
-    
+export default function Perfil({ usuario }) {
+
     const [hidden, setHidden] = useState(true)
     const [mostrar, setMostrar] = useState(false)
     const [userId, setUserId] = useState(usuario)
@@ -21,17 +20,15 @@ export default function Perfil( {usuario} ) {
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const [rol, setRol] = useState(sessionStorage.getItem('rol'))
     const navigate = useNavigate()
-    
+
     useEffect(() => {
         getUsuario(userId)
-   }, [])
-   
+    }, [])
+
     const getUsuario = (userId) => {
         getUsuarioById(userId)
-        .then((res) => setSelUsuario(res))
-       
+            .then((res) => setSelUsuario(res))
     }
-   
 
     const closeModal = () => {
         setIsOpen(false)
@@ -43,8 +40,7 @@ export default function Perfil( {usuario} ) {
 
     const toggle = () => {
         setMostrar(!mostrar)
-     
-        }
+    }
 
     const logout = () => {
         sessionStorage.clear()
@@ -64,11 +60,16 @@ export default function Perfil( {usuario} ) {
 
     return (
         <Container className="perfil">
-            <Col className="perfil-col" >
-                <Button id="btn-perfil" onClick={() => toggle()}>
-                    {(rol === "Socio") || (rol==="socio") ? <FaUser /> : <FaUserCog />}
-                </Button>
-            </Col>
+            <Container>
+                <Col className="perfil-col" >
+                    <Button id="btn-perfil" onClick={() => toggle()}>
+                        {(rol === "Socio") || (rol === "socio") ? <FaUser /> : <FaUserCog />}
+                    </Button>
+                </Col>
+                <h6 id="nombre-perfil">{selUsuario.nombre}{' '}{selUsuario.apellido1}</h6>
+
+            </Container>
+
             {mostrar ?
                 <Offcanvas direction="end" isOpen={mostrar} toggle={toggle}>
                     <OffcanvasHeader toggle={toggle}>
@@ -106,8 +107,8 @@ export default function Perfil( {usuario} ) {
                                     <DropdownItem>
                                         <Label id="form-label" for="titulacion">Titulación</Label>
                                         <Input type="text" placeHolder="titulación" readOnly={readOnly} value={selUsuario.titulacion}></Input>
-                                    </DropdownItem>
-                                   </DropdownMenu>
+                                    </DropdownItem> 
+                                </DropdownMenu>
                             </Dropdown>
                             <Button id="btnperfil" onClick={() => handleModificarDatos()} >Modificar datos de perfil</Button>
                             <Button id="btnperfil" onClick={() => logout()} >Logout</Button>

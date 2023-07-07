@@ -11,7 +11,7 @@ var usersRouter = require('./routes/usuarios');
 var cursosRouter = require('./routes/cursos');
 var consultasRouter = require('./routes/consultas');
 var visualizacionesRouter = require('./routes/visualizaciones')
-
+var titulosRouter = require('./routes/titulos')
 const { default: mongoose } = require('mongoose');
 
 mongoose.connect(config.db )
@@ -38,6 +38,7 @@ app.use('/usuarios', usersRouter);
 app.use('/cursos', cursosRouter);
 app.use('/consultas', consultasRouter);
 app.use('/visualizaciones', visualizacionesRouter)
+app.use('/titulos', titulosRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -10,10 +10,17 @@ export {
     getCursosByProfesor,
     getCursosByDirector,
     getCursosByNombre,
-    getCursosByImparticion
+    getCursosByImparticion,
+    getCursosFilter
    }
 
-function getCursoById() {
+   function getCursosFilter(params) {
+    return API.get('/consultas/filter/' , {params:{params}})
+    .then((response) =>(response.data) )
+    .catch((error) => error.response.data )
+   }
+
+   function getCursoById() {
     return API.get('/cursos/:id')
     .then((response) =>(response.data) )
     .catch((error) => error.response.data )

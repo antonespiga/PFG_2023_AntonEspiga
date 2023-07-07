@@ -67,16 +67,24 @@ function getConfig (req,res) {
     detached:true,
     stdio:['ignore', out, err]
    }).unref()
-   process.exit() 
+   process.exit()
+   .then(() => {
+    console.log('reinicio')
+    start()
+   }) 
 }
 
 function start(req, res) {
-    exec('npm start',{cwd:direct})
+    exec(' cd ..',{cwd:direct})
+    .then(() => console.log('reinicio'))
 }
 
 function restart() {
   stop()
+  .then(()=> {
     start()
+  })
+    
 }
     
     

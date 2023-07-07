@@ -87,9 +87,9 @@ exports.getVisualizacionesByProfesor = async(req, res, next) => {
 }
 
 exports.getVisualizacionesUsuario = async(req, res, next) => {
-    const nom = req.params._id;
-    const regex = new RegExp(nom, 'i')
-    await Visualizaciones.findById({ '_id': regex }).countDocuments()
+
+    
+    await Visualizaciones.find({'usuario': req.params.id},)
          .then((response) => {
               res.status(200).json(response);
          })
@@ -127,8 +127,52 @@ exports.getVisualizacionesByCreditos = async(req, res, next) => {
 }
 
 exports.updateUserCont = async(req, res, next) => {
-    await User.findByIdAndUpdate( req.params.id,{ $inc: { cont: 1}}, {new: true} )
-    .then(() => res.status(200).json(`Contador ${req.params.id} incrementado`))
+    // console.log(req.body)
+    var cont = {}
+    
+     cont={ $inc: { contSemestre: 1}}
+     //console.log(req.body.user.contSemestre)
+    if(req.body.tipoConsulta==='tipo') cont = { $inc: { contTipo: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='nombre') cont = { $inc: { contNombre: 1, cont: 1}}     
+    if(req.body.tipoConsulta==='creditos') cont = { $inc: { contCreditos: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='semestre') cont = { $inc: { contSemestre: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='imparticion') cont = { $inc: { contImparticion: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='titulo') cont = { $inc: { contTitulo: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='tematica') cont = { $inc: { contTematica: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='profesor') cont = { $inc: { contProfesor: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='director') cont = { $inc: { contDirector: 1, cont: 1}} 
+    if(req.body.tipoConsulta==='afinidad') cont = { $inc: { contAfinidad: 1, cont: 1}} 
+
+    await User.findByIdAndUpdate( req.params.id, cont, {new: true} )
+    .then(() => res.status(200).json(`Contador ${cont} incrementado`))
+    .catch(next)
+}
+
+exports.getVisualizacionMasFrecuente = async (req, res, next) => {
+     console.log(req.params)
+     await Visualizaciones.aggregate([
+          {
+               $match: { usuario:req.params.id }
+          },
+          {
+               $group: {
+                    _id: { usuario: '$usuario', campo: '$campo'},
+                    count: { $sum: 1}
+               }
+          },
+          {
+               $sort: { count: -1 }
+          },
+          {
+             $group: {
+               _id: '$_id.usuario',
+               campo: { $first: '$_id.campo' },
+               count: { $first: '$count' }
+             }  
+          }
+     ])
+    .then((response) =>{ console.log(response)
+     res.status(200).json(response[0].campo)})
     .catch(next)
 }
  

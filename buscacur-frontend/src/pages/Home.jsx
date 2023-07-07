@@ -56,7 +56,7 @@ const [selcurso, setSelCurso] = useState({})
                 {data?.map((curso) => (
                  
                   <ListGroup horizontal id="listgroup" >
-                    <ListGroupItem id="btn-1" action active href="#" tag="button" onClick={()=>handleCurso(curso)} key={curso._id} >{curso.nombre}</ListGroupItem>
+                    <ListGroupItem id="btn-1" action active href="#" tag="button" title="Ver detalle" onClick={()=>handleCurso(curso)} key={curso._id} >{curso.nombre}</ListGroupItem>
                     <ListGroupItem id="inline-2" action key={curso._id} >{curso.titulo}</ListGroupItem>
                     <ListGroupItem id="inline-3" action key={curso._id} >{curso.imparticion}</ListGroupItem>
                     <ListGroupItem id="inline-4" action key={curso._id} >{curso.tematica}</ListGroupItem>

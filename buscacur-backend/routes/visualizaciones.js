@@ -5,7 +5,7 @@ const auth = require('../middlewares/auth')
 const { getVisualizaciones,addVisualizacion, getVisualizacionesByNombre, getVisualizacionesByDirector,
     getVisualizacionesByCreditos, getVisualizacionesByTipo, getVisualizacionesBySemestre,
 getVisualizacionesUsuario, getVisualizacionesByTematica, getVisualizacionesByImparticion,
-getVisualizacionesByProfesor, getVisualizacionesByTitulo,
+getVisualizacionesByProfesor, getVisualizacionesByTitulo, getVisualizacionMasFrecuente,
 updateUserCont} = require('../controllers/visualizaciones');
 
 
@@ -20,8 +20,10 @@ router.get('/profesor', auth, getVisualizacionesByProfesor);
 router.get('/director', auth, getVisualizacionesByDirector);
 router.get('/tipo', auth, getVisualizacionesByTipo);
 router.get('/titulo', auth, getVisualizacionesByTitulo);
-router.get('/:id', auth, getVisualizacionesUsuario)
+router.get('/frec/:id', getVisualizacionMasFrecuente)
+router.get('/:id', getVisualizacionesUsuario)
 router.put('/:id', auth, updateUserCont)
+
 
 
 module.exports = router;
