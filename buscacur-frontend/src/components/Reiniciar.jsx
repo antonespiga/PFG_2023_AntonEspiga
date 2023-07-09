@@ -5,21 +5,13 @@ import { restart } from "../utils/apicallsSistema"
 export default function Reiniciar({
     isOpen, closeModal}) {
    
-    const openModal = () => {
-        setIsOpen(true)
-    }
-
-    const toggleModal = () => {
-        setIsOpen(!isOpen)
-        closeModal()
-    }
-
       const handleReiniciar = () => {
         restart()
        .then(closeModal())
         }
    
         return (
+            
         <Modal xl isOpen={isOpen} toggle={closeModal} >
             <ModalHeader isOpen={isOpen} toggle={closeModal} >
                 <h4 >{"Reiniciar sistema"}</h4>

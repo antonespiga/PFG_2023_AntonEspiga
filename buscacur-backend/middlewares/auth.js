@@ -1,13 +1,12 @@
-const services = require ('../services/index')
+const services = require('../services/index')
 
-
-function isAuth (req, res, next)  {
-    if(!req.get('authorization')) {
-        return res.status(403).json({message:'No existe autorización'})
+function isAuth(req, res, next) {
+    if (!req.get('authorization')) {
+        return res.status(403).json({ message: 'No existe autorización' })
     }
 
     const token = req.headers.authorization.split(' ')[1]
-   
+
     services.verificarToken(token)
         .then(response => {
             req.user = response
@@ -16,7 +15,6 @@ function isAuth (req, res, next)  {
         .catch((response) => {
             res.status(response.status)
         })
-
 }
 
 module.exports = isAuth

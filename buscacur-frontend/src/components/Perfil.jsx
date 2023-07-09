@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
     Col, Button, Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle,
-     Offcanvas, OffcanvasBody, OffcanvasHeader, Card, Label, Input
+    Offcanvas, OffcanvasBody, OffcanvasHeader, Card, Label, Input
 } from 'reactstrap'
 import { useNavigate } from 'react-router-dom'
 import { FaUser, FaUserCog } from 'react-icons/fa'
@@ -11,7 +11,6 @@ import FormModUsuario from './FormModUsuario'
 
 export default function Perfil({ usuario }) {
 
-    const [hidden, setHidden] = useState(true)
     const [mostrar, setMostrar] = useState(false)
     const [userId, setUserId] = useState(usuario)
     const [selUsuario, setSelUsuario] = useState({})
@@ -50,24 +49,23 @@ export default function Perfil({ usuario }) {
 
     const handleModificarDatos = () => {
         openModal()
-
     }
 
     const dropdownToggle = () => {
         setDropdownOpen(!dropdownOpen)
     }
 
-
     return (
         <Container className="perfil">
             <Container>
                 <Col className="perfil-col" >
+                    
                     <Button id="btn-perfil" onClick={() => toggle()}>
                         {(rol === "Socio") || (rol === "socio") ? <FaUser /> : <FaUserCog />}
                     </Button>
+                    <h6 id="nombre-perfil">{selUsuario.nombre}{' '}{selUsuario.apellido1}</h6>
                 </Col>
-                <h6 id="nombre-perfil">{selUsuario.nombre}{' '}{selUsuario.apellido1}</h6>
-
+                
             </Container>
 
             {mostrar ?
@@ -107,7 +105,7 @@ export default function Perfil({ usuario }) {
                                     <DropdownItem>
                                         <Label id="form-label" for="titulacion">Titulación</Label>
                                         <Input type="text" placeHolder="titulación" readOnly={readOnly} value={selUsuario.titulacion}></Input>
-                                    </DropdownItem> 
+                                    </DropdownItem>
                                 </DropdownMenu>
                             </Dropdown>
                             <Button id="btnperfil" onClick={() => handleModificarDatos()} >Modificar datos de perfil</Button>
@@ -123,9 +121,7 @@ export default function Perfil({ usuario }) {
                                 readOnly={!readOnly}
                             />}
                     </OffcanvasBody>
-
                 </Offcanvas> : ''}
         </Container>
-
     )
 }

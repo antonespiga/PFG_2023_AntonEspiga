@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import './Admin.css'
 import { Container, Col, Nav, NavItem, NavLink, TabContent, TabPane } from "reactstrap"
 import MenuCRUDCursos from "../components/MenuCRUDCursos"
@@ -6,23 +6,20 @@ import MenuCRUDUsuarios from "../components/MenuCRUDUsuarios"
 import MenuSistema from "../components/MenuSistema"
 import MenuCopias from "../components/MenuCopias"
 import MenuEstadisticas from "../components/MenuEstadisticas"
-
 import Perfil from "../components/Perfil"
 import Error from "./Error"
-import {getUsuarioById} from '../utils/apicallsUsuarios'
 
 export default function Admin() {
 
 	const [actTab, setActTab] = useState('1')
 	const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
-	const [usuario, setUsuario] = useState()
- 
+
 	const handleClick = (num) => {
 		setActTab(num)
 	}
-	
-	if(!logged) return (<Error error="Usuario no logado" />)
-	else if(sessionStorage.getItem('rol')!== "admin") return(<Error error="No tiene acceso"></Error>)
+
+	if (!logged) return (<Error error="Usuario no logado" />)
+	else if (sessionStorage.getItem('rol') !== "admin") return (<Error error="No tiene acceso"></Error>)
 	return (
 		<Container id="content">
 			<Col >

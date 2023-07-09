@@ -26,7 +26,7 @@ await Titulo.findOne({id:ID},{'_id':0 , 'titulo':1})
 
 exports.addTitulo = async(req, res, next) => {
     try{
-    nuevoTitulo = new CursTituloo (req.body)
+    nuevoTitulo = new Titulo (req.body)
     await Titulo.create(nuevoTitulo)
     .then(() => res.status(200).json('Registro guardado'))
     }

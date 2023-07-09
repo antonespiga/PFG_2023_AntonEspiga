@@ -1,34 +1,16 @@
 import React, { useState, useEffect } from "react"
-import {useParams} from 'react-router-dom'
 import {
-    Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
-    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
+    Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
 } from 'reactstrap'
 import { configurarSistema, getConfig } from "../utils/apicallsSistema"
-import config from '../utils/config'
+
 
 
 export default function Configuracion({
-    isOpen, closeModal}) {
-        
-   
-   
+    isOpen, closeModal }) {
+
     const [readOnly, setReadOnly] = useState(false)
     const [confData, setConfData] = useState({})
-    
-
-    const handleChange = (e) => {
-        setBaseurl(e.target.value)
-    }
-
-    const openModal = () => {
-        setIsOpen(true)
-    }
-
-    const toggleModal = () => {
-        setIsOpen(!isOpen)
-        closeModal()
-    }
 
     const handleInputChange = (e) => {
         setConfData({ ...confData, [e.target.name]: e.target.value })
@@ -36,13 +18,13 @@ export default function Configuracion({
 
     const handleConfigurar = (configNew) => {
         configurarSistema(configNew)
-       .then(closeModal())
-        }
-   
+            .then(closeModal())
+    }
+
     useEffect(() => {
         getConfig()
-        .then(res => setConfData(res.configData))
-    },[])
+            .then(res => setConfData(res.configData))
+    }, [])
 
     return (
 
@@ -51,9 +33,7 @@ export default function Configuracion({
                 <h4 >{"Configuración"}</h4>
             </ModalHeader>
             <ModalBody>
-             
-                    <Row>
-                    
+                <Row>
                     <Col md="8">
                         <FormGroup >
                             <Label style={{ color: "black" }} for="path">Path backups</Label>
@@ -68,7 +48,6 @@ export default function Configuracion({
                                 value={confData.secret} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
-
                     <Col md={8}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="database" >Database</Label>
@@ -76,9 +55,7 @@ export default function Configuracion({
                                 value={confData.database} onChange={handleInputChange} ></Input>
                         </FormGroup>
                     </Col>
-                   
-                    </Row>  
-                    
+                </Row>
             </ModalBody>
             <ModalFooter>
                 {<Button onClick={() => handleConfigurar(confData)}>{'Cambiar configuración'}</Button>}

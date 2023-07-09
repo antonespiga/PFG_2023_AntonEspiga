@@ -2,8 +2,7 @@ import React, {useState} from "react";
 import { useNavigate, Link } from 'react-router-dom'
 import { Container, Form, FormGroup, Input, Label, Col, Row, Card, CardFooter, Button, Alert } from "reactstrap";
 import './Registro.css'
-import { addUsuario, registroUsuario } from "../utils/apicallsUsuarios";
-
+import { registroUsuario } from "../utils/apicallsUsuarios";
 
 function Registro() {
 
@@ -39,7 +38,6 @@ function Registro() {
                 else {setMsg(<Alert>{res.message}</Alert>)}})
                 .catch()
     }
-
 
     return (
         <Container className="container-fluid">

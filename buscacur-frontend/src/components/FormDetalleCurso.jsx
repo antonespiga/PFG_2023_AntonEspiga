@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import {
-    Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
-    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
+    Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
 } from 'reactstrap'
-import { getTitulo } from '../utils/apicallsTitulos'
 
 export default function FormDetalleCurso({
     isOpen, closeModal, curso, setCurso, readOnly, opt, handleCurso }) {
-
-
 
     const [nombre, setNombre] = useState()
     const [tipo, setTipo] = useState()
@@ -56,7 +52,6 @@ export default function FormDetalleCurso({
                                 value={readOnly ? curso.tipo : tipo} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
-
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="tematica" >Temática</Label>
@@ -78,7 +73,6 @@ export default function FormDetalleCurso({
                                 value={readOnly ? curso.creditos : creditos} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
-
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="director" >Director</Label>
@@ -115,7 +109,6 @@ export default function FormDetalleCurso({
                         </FormGroup>
                     </Col>
                     <Col md="2">
-
                     </Col>
                     <Col md="12">
                         <FormGroup >

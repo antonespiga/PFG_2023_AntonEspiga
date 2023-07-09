@@ -1,20 +1,14 @@
-import React, { useState, useEffect } from "react"
-import { Table, Button, Modal, Card } from 'reactstrap'
-import { useParams } from 'react-router-dom'
+import React, { useState } from "react"
+import { Table, Button, Card, CardBody } from 'reactstrap'
 import { AiFillPlusSquare, AiFillDelete, AiFillEdit } from "react-icons/ai"
 import FormDelCurso from "./FormDelCurso"
 import FormModCurso from "./FormModCurso"
 import FormDetalleCurso from "./FormDetalleCurso"
-
-
-
+import './ListadoTabla.css'
 export default function ListadoTabla({ cursos, opt }) {
 
     const [isOpen, setIsOpen] = useState(false)
-    const [modalToggle, setModalToggle] = useState(false)
     const [selCurso, setSelCurso] = useState()
-    const [actCursos, setActCursos] = useState(cursos)
-
 
     const openModal = (selcurso) => {
         setIsOpen(true)
@@ -27,7 +21,8 @@ export default function ListadoTabla({ cursos, opt }) {
 
     return (
         <Card>
-            <Table responsive borderless >
+            <CardBody>
+            <Table id="tabla-cursos" striped responsive borderless >
                 <thead >
                     <tr>
                         <th>Nombre</th>
@@ -42,12 +37,20 @@ export default function ListadoTabla({ cursos, opt }) {
                 {cursos.map((selcurso, _id) => {
                     return (
                         <tr key={_id}>
-                            <td>{selcurso.nombre}</td>
-                            <td>{selcurso.titulo}</td>
-                            <td>{selcurso.tipo}</td>
-                            <td>{selcurso.tematica}</td>
-                            <td>{selcurso.semestre}</td>
-                            <td><Button color="none" onClick={() => openModal(selcurso)}><h5>{opt === "mod" ? <AiFillEdit /> : (opt === "del" ? <AiFillDelete /> : <AiFillPlusSquare />)}</h5></Button></td>
+                            <td width="25%" >{selcurso.nombre}</td>
+                            <td width="25%">{selcurso.titulo}</td>
+                            <td width="10%">{selcurso.tipo}</td>
+                            <td width="25%">{selcurso.tematica}</td>
+                            <td width="10%">{selcurso.semestre}</td>
+                            <td><Button color="none" onClick={() =>
+                                openModal(selcurso)}>
+                                <h5>
+                                    {opt === "mod" ?
+                                        <AiFillEdit /> : (opt === "del" ?
+                                            <AiFillDelete /> : <AiFillPlusSquare />)}
+                                </h5>
+                                </Button>
+                            </td>
 
                             {isOpen && (opt === "del") && <FormDelCurso
                                 isOpen={isOpen}
@@ -79,6 +82,7 @@ export default function ListadoTabla({ cursos, opt }) {
                     )
                 })}
             </Table>
+            </CardBody>
         </Card>
     )
 }

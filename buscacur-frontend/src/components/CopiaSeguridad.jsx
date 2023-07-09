@@ -1,25 +1,15 @@
 import React, { useState, useEffect } from "react"
-import {useParams} from 'react-router-dom'
-import {
-    Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
-    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
-} from 'reactstrap'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import { crearCopia } from "../utils/apicallsSistema"
-
 
 export default function CopiaSeguridad({
     isOpen, closeModal}) {
-        
-    {/*const handleInputChange = (e) => {
-        setCurso({ ...curso, [e.target.name]: e.target.value })
-    }
-*/}
+ 
     const [isOpenInfoModal, setIsOpenInfoModal] = useState(false)
     const [msg, setMsg] = useState()
    
     const openInfoModal = () => {
         setIsOpenInfoModal(true)
-        
     }
 
     const toggleInfoModal = () => {
@@ -32,7 +22,6 @@ export default function CopiaSeguridad({
         .then((res) => {
             setMsg(res.stderr)
             openInfoModal()
-            
             })
     }
 

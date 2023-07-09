@@ -25,12 +25,12 @@ export default function MenuSistema() {
 
     return (
     <Container id="panelSistema">
-        
         <Row>
             <Col>
                 <Button onClick={handleConfigurar} color="light">
                     Configurar sistema 
                 </Button>
+
                 { isOpenConf && <Configuracion
                     isOpen={isOpenConf}
                     closeModal={closeConf} />}
@@ -39,6 +39,7 @@ export default function MenuSistema() {
                 <Button onClick={handleReiniciar} color="light">
                     Reinstalar sistema
                 </Button>
+                
                 { isOpenReiniciar && <Reiniciar
                  isOpen={isOpenReiniciar}
                  closeModal={closeReiniciar} />}

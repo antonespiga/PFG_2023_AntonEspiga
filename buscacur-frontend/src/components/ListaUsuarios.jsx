@@ -1,19 +1,13 @@
-import React, { useState, useEffect } from "react"
-import { Table, Button, Modal, Card } from 'reactstrap'
+import React, { useState } from "react"
+import { Table, Button, Card, CardBody } from 'reactstrap'
 import { AiFillPlusSquare, AiFillDelete, AiFillEdit } from "react-icons/ai"
 import FormDelUsuario from "./FormDelUsuario"
 import FormModUsuario from "./FormModUsuario"
-import FormDetalleUsuario from "./FormDetalleUsuario"
 
-
-
-export default function ListaUsuarios({ usuarios,  opt }) {
+export default function ListaUsuarios({ usuarios, opt }) {
 
     const [isOpen, setIsOpen] = useState(false)
-    const [modalToggle, setModalToggle] = useState(false)
     const [selUsuario, setSelUsuario] = useState()
-    const [actUsuarios, setActUsuarios] = useState(usuarios)
-
 
     const openModal = (selusuario) => {
         setIsOpen(true)
@@ -26,6 +20,7 @@ export default function ListaUsuarios({ usuarios,  opt }) {
 
     return (
         <Card>
+            <CardBody>
             <Table responsive borderless >
                 <thead >
                     <tr>
@@ -46,7 +41,15 @@ export default function ListaUsuarios({ usuarios,  opt }) {
                             <td>{selusuario.apellido2}</td>
                             <td>{selusuario.codigoPostal}</td>
                             <td>{selusuario.poblacion}</td>
-                            <td><Button color="none" onClick={() => openModal(selusuario)}><h5>{opt === "mod" ? <AiFillEdit /> : (opt === "del" ? <AiFillDelete /> : <AiFillPlusSquare />)}</h5></Button></td>
+                            <td><Button color="none" onClick={() =>
+                                openModal(selusuario)}>
+                                <h5
+                                >{opt === "mod" ?
+                                    <AiFillEdit /> : (opt === "del" ?
+                                        <AiFillDelete /> : <AiFillPlusSquare />)}
+                                </h5>
+                                </Button>
+                            </td>
 
                             {isOpen && (opt === "del") && <FormDelUsuario
                                 isOpen={isOpen}
@@ -57,7 +60,7 @@ export default function ListaUsuarios({ usuarios,  opt }) {
                                 opt={opt}
                             />}
 
-                            {isOpen && (opt==="mod") && <FormModUsuario
+                            {isOpen && (opt === "mod") && <FormModUsuario
                                 isOpen={isOpen}
                                 closeModal={closeModal}
                                 usuario={selUsuario}
@@ -65,19 +68,11 @@ export default function ListaUsuarios({ usuarios,  opt }) {
                                 readOnly={false}
                                 opt={opt}
                             />}
-
-                            {isOpen && (opt !== "mod") && (opt !== "del") && <FormDetalleUsuario
-                                isOpen={isOpen}
-                                closeModal={closeModal}
-                                usuario={selUsuario}
-                                setUsuario={setUsuario}
-                                readOnly={true}
-                                opt={opt}
-                            />}
                         </tr>
                     )
                 })}
             </Table>
+            </CardBody>
         </Card>
     )
 }

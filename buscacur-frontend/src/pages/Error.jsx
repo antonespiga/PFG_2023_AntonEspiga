@@ -15,11 +15,8 @@ export default function Error( {error} ) {
                             <h3>
                             <span>{error}</span>
                             </h3>
-                        
                         </Alert>
-                    
                     </CardBody>
-                    
                 </Card>
               </Col>
         </Row>

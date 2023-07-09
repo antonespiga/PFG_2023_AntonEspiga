@@ -1,7 +1,5 @@
 const User = require('../models/usuarios')
-const { verificarToken } = require('../services')
 const services = require('../services')
-
 
 exports.getUsers = async(req, res, next) => {
     await User.find({})
@@ -38,9 +36,13 @@ exports.deleteUser = async(req, res, next) => {
 }
 
 exports.updateUser = async(req, res, next) => {
-    await User.findByIdAndUpdate( req.params.id, req.body, {new: true} )
-    .then(() => res.status(200).json(`Usuario ${req.params.id} modificado`))
-    .catch(next)
+    try {
+    await User.findByIdAndUpdate( req.params.id, req.body, { runValidators: true, new: true} )
+    .then(() => res.status(200).json(`Usuario modificado`))
+    }
+    catch(error) {
+        res.status(500).json({message: error.message})
+    }
 }
 
 exports.loginUser = async(req, res, next) => {
@@ -69,9 +71,6 @@ exports.privateUser = (req, res, next) => {
     res.status(200).json({message: 'Tienes acceso', userId:userId, rol:userRol})
     }
 
-
-
-
 exports.registroUser = async(req, res, next) => {
     let reqEmail = req.body.email
     try {
@@ -85,7 +84,6 @@ exports.registroUser = async(req, res, next) => {
     }
     catch(error){
         return res.status(500).json({message:"Error en el servidor"})
-
     }
     }
     

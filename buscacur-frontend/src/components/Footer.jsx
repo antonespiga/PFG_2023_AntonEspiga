@@ -1,5 +1,5 @@
 import React from "react"
-import { Container, Row, Col, Card, CardBody } from 'reactstrap'
+import { Row, Card, CardBody } from 'reactstrap'
 
 import './Footer.css'
 
@@ -14,7 +14,6 @@ const imgStyle = {
 export default function Footer() {
     return (
 
-
         <Card className="container footer">
             <Row>
                 <CardBody >
@@ -24,9 +23,6 @@ export default function Footer() {
                 </CardBody>
             </Row>
         </Card>
-
-
-
     )
 }
 

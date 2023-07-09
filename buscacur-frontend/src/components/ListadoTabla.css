@@ -1,0 +1,3 @@
+#tabla-cursos tr:nth-child(even) {
+   background-color: #eee;
+}

@@ -56,6 +56,10 @@
 }	
 
 #nombre-perfil {
+	margin: 8px;
+	display:flex;
+	float: end;
 	background-color: darkgreen;
-	color:rgb(255, 255, 255)
+	color:rgb(255, 255, 255);
+	opacity: 0.5;
 }

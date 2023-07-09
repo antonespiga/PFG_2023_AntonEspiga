@@ -1,15 +1,11 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import {
-    Row, Col, Card, CardTitle, CardBody, CardText, CardFooter, Button,
-    Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
-} from 'reactstrap'
+    Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
+        } from 'reactstrap'
 import { delCurso } from "../utils/apicallsCursos"
 
-
 export default function FormDelCurso({
-    isOpen, closeModal, curso, setCurso, readOnly, opt, handleCurso }) {
-
-
+    isOpen, closeModal, curso, setCurso, readOnly }) {
 
     const [nombre, setNombre] = useState()
     const [tipo, setTipo] = useState()
@@ -24,17 +20,14 @@ export default function FormDelCurso({
     const [descripcion, setDescripcion] = useState()
     const [titulosOfertan, setTitulosOfertan] = useState()
 
-
     const handleInputChange = (e) => {
         setCurso({ ...curso, [e.target.name]: e.target.value })
     }
-
 
     const handleDelCurso = (curso) => {
         alert("Eliminando curso")
         delCurso(curso)
             .then(() => {
-                
                 closeModal()
             })
     }
@@ -68,7 +61,6 @@ export default function FormDelCurso({
                                 value={readOnly ? curso.tipo : tipo} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
-
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="tematica" >Temática</Label>
@@ -90,7 +82,6 @@ export default function FormDelCurso({
                                 value={readOnly ? curso.creditos : creditos} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
-
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="director" >Director</Label>
@@ -127,7 +118,6 @@ export default function FormDelCurso({
                         </FormGroup>
                     </Col>
                     <Col md="2">
-
                     </Col>
                     <Col md="12">
                         <FormGroup >

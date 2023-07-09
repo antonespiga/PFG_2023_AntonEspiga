@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from 'react'
 
 import {
-    Row, Col, Button, Container, Form, FormGroup, Label, Input, Card, CardBody, CardText,
-    CardFooter, Dropdown, DropdownToggle, DropdownItem, DropdownMenu, InputGroup,
-    Alert, Badge, Table, CardTitle, Modal, ModalHeader, ModalBody, ModalFooter, Navbar
+    Row, Col, Button, Container, FormGroup, Label, Input,
+    Dropdown, DropdownToggle, DropdownItem, DropdownMenu, InputGroup,
+    Badge, CardTitle, Navbar
 } from 'reactstrap'
-import { FaTh, FaThLarge, FaThList, FaSearch } from 'react-icons/fa'
+import { FaThLarge, FaThList, FaSearch } from 'react-icons/fa'
 import { getCursos } from '../utils/apicallsCursos'
-import { useParams, useNavigate } from 'react-router-dom'
-import {
-    getCursosFilter, getCursosByTematica, getCursosByTitulo, getCursosByDirector, getCursosByProfesor,
-    getCursosBySemestre, getCursosByCreditos, getCursosByTipo, getCursosByNombre, getCursosByImparticion
-} from '../utils/apicallsConsultas'
-
+import { getCursosFilter } from '../utils/apicallsConsultas'
 import ListadoTabla from '../components/ListadoTabla'
 import ListadoCards from '../components/ListadoCards'
 import {
@@ -23,26 +18,12 @@ import { addVisualizacion, getVisualizacionMasFrecuente, modUsuarioCont } from '
 import Perfil from '../components/Perfil'
 import Error from "./Error"
 import { getUsuarioById } from '../utils/apicallsUsuarios'
-//import { modUsuarioCont } from '../utils/apicallsVisualizaciones'
 import './Socio.css'
-import { useConsultaMasFrecuente } from '../components/useConsultaMasFrecuente'
-
 
 export default function Consultas() {
 
-
     const [listado, setListado] = useState(false)
-    const [nombre, setNombre] = useState()
-    const [tematica, setTematica] = useState()
-    const [tipo, setTipo] = useState()
-    const [titulo, setTitulo] = useState()
-    const [director, setDirector] = useState()
-    const [profesor, setProfesor] = useState()
-    const [semestre, setSemestre] = useState()
-    const [creditos, setCreditos] = useState()
-    const [imparticion, setImparticion] = useState()
     const [afinidad, setAfinidad] = useState()
-
     const [user, setUser] = useState({})
     const [cursos, setCursos] = useState([])
     const [nombres, setNombres] = useState([])
@@ -55,7 +36,7 @@ export default function Consultas() {
     const [titulos, setTitulos] = useState([])
     const [imparticions, setImparticions] = useState([])
     const [afinidades, setAfinidades] = useState(['Consultas más repetidas', 'Titulación'])
-    const [cont, setCont] = useState()
+
     const [tipoConsulta, setTipoConsulta] = useState()
     const [isOpenTematicas, setIsOpenTematicas] = useState(false)
     const [isOpenTipos, setIsOpenTipos] = useState(false)
@@ -180,67 +161,6 @@ export default function Consultas() {
     // *********************   Consultas por atributos de los cursos   **********//
     // **********************                                          **********//
 
-    const consNombre = () => {
-        setCampoConsulta({ nombre: nombre })
-        getCursosByNombre(nombre).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consTematica = () => {
-        getCursosByTematica(tematica).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consTipo = () => {
-        getCursosByTipo(tipo).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consTitulo = () => {
-        getCursosByTitulo(titulo).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consDirector = () => {
-        getCursosByDirector(director).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consProfesor = () => {
-        getCursosByProfesor(profesor).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consCreditos = () => {
-        getCursosByCreditos(String(creditos)).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consSemestre = () => {
-        getCursosBySemestre(semestre).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consImparticion = () => {
-        getCursosByImparticion(imparticion).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
-    const consMasFrecuente = () => {
-        getCursosFilter(campoConsultaMasFrec).then((selCursos) => {
-            setCursos(selCursos)
-        })
-    }
-
     const filtroTitulacion = () => {
         const claves = ['Licenciatura', 'Ingenieria', 'Máster', 'Medicina']
         if (claves.includes(user.titulacion)) {
@@ -251,13 +171,17 @@ export default function Consultas() {
         }
     }
 
+    const consMasFrecuente = () => {
+        getCursosFilter(campoConsultaMasFrec).then((selCursos) => {
+            setCursos(selCursos)
+        })
+    }
+
     const consAfinTitulo = () => {
         getCursosFilter(campoConsultaTitulacionAfin).then((selCursos) => {
             setCursos(selCursos)
         })
     }
-
-
 
     //**          Manejadores del cuadro de búsqueda por texto libre           */  
 
@@ -278,7 +202,6 @@ export default function Consultas() {
             semestre: null, creditos: null, tipo: null, titulo: null, nombre: null, imparticion: null,
             tematica: null, profesor: null, director: null
         }))
-
 
         const filtro = ['', 'de', 'a', 'y', 'por', 'para', 'en']
         const searchWords = searchText.trim().split(' ').filter(word =>
@@ -376,61 +299,21 @@ export default function Consultas() {
     //**         Manejador de las consultas por atributos       */    
 
     const handleClickConsultas = () => {
-        if (semestre) {
-            setTipoConsulta('semestre')
-            setCampoConsulta({ semestre: semestre })
-            consSemestre();
-            setSemestre('')
-        }
-        else if (nombre) {
-            setTipoConsulta('nombre')
-            consNombre();
-            setNombre('')
-        }
-        else if (tematica) {
-            setTipoConsulta('tematica')
-            consTematica();
-            setTematica('')
-        }
-        else if (creditos) {
-            setTipoConsulta('creditos')
-            consCreditos();
-            setCreditos('')
-        }
-        else if (profesor) {
-            setTipoConsulta('profesor')
-            consProfesor();
-            setProfesor('')
-        }
-        else if (director) {
-            setTipoConsulta('director')
-            consDirector();
-            setDirector('')
-        }
-        else if (tipo) {
-            setTipoConsulta('tipo')
-            consTipo();
-            setTipo('')
-        }
-        else if (titulo) {
-            setTipoConsulta('titulo')
-            consTitulo();
-            setTitulo('')
-        }
-        else if (imparticion) {
-            setTipoConsulta('imparticion')
-            consImparticion();
-            setImparticion('')
-        }
-        else if (afinidad === afinidades[0]) {
-            setTipoConsulta('afinidad')
+
+        if (afinidad === afinidades[0]) {
+            //setTipoConsulta('afinidad')
             consMasFrecuente()
             setAfinidad('')
         }
         else if (afinidad === afinidades[1]) {
-            setTipoConsulta('afinidad')
+            // setTipoConsulta('afinidad')
             consAfinTitulo()
             setAfinidad('')
+        }
+        else {
+            getCursosFilter(campoConsulta).then((selCursos) => {
+                setCursos(selCursos)
+            })
         }
 
         //**        Creacion de una visualización y grabado en la base de datos   */        
@@ -449,8 +332,12 @@ export default function Consultas() {
 
     //**        Si el usuario no está logado se redirige una página de error         */
     //**        Si está logado se muestra la página de inicio de socio               */
-    //**        Se muestra un dropdown por atributo y el usuario puede seleccionar   */
-    //**        el valor del atributo por el que quiere filtrar la consulta          */
+    //**        Bajo la cabecera tenemos el cuadro de búsqueda en texto libre        */
+    //**        Junto al cuadro de búsqueda, un icono que representa el perfil del   */
+    //**        usuario y bajo éste, el nombre y apellido. Clickando en el icono se  */
+    //**        despliega un menú de opciones.                                       */
+    //**        Debajo se muestra una batería de filtros para seleccionar el valor   */
+    //**        del atributo por el que quiere filtrar la consulta                   */
 
     if (!logged) return (<Error error={"Usuario no logado"} />)
     else
@@ -470,7 +357,6 @@ export default function Consultas() {
                         </Col>
                     </Row>
                 </Container>
-
                 <Navbar>
                     <Dropdown isOpen={isOpenNombres} toggle={toggleNombres}>
                         <DropdownToggle caret>Nombre</DropdownToggle>
@@ -478,7 +364,7 @@ export default function Consultas() {
                             {nombres.map((nombres) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setNombre(nombres)
+                                        setCampoConsulta({ nombre: nombres })
                                         setTipoConsulta('nombre')
                                     }}>
                                         {nombres}
@@ -493,7 +379,7 @@ export default function Consultas() {
                             {tipos.map((tipos) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setTipo(tipos)
+                                        setCampoConsulta({ tipo: tipos })
                                         setTipoConsulta('tipo')
                                     }
                                     }>
@@ -509,7 +395,7 @@ export default function Consultas() {
                             {creditosD.map((creditosD) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setCreditos(creditosD)
+                                        setCampoConsulta({ creditos: creditosD })
                                         setTipoConsulta('creditos')
                                     }}>
                                         {creditosD}
@@ -524,7 +410,7 @@ export default function Consultas() {
                             {semestres.map((semestres) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setSemestre(semestres)
+                                        setCampoConsulta({ semestre: semestres })
                                         setTipoConsulta('semestre')
                                     }}>
                                         {semestres}
@@ -539,7 +425,7 @@ export default function Consultas() {
                             {imparticions.map((imparticions) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setImparticion(imparticions)
+                                        setCampoConsulta({ imparticion: imparticions })
                                         setTipoConsulta('imparticion')
                                     }}>
                                         {imparticions}
@@ -549,7 +435,6 @@ export default function Consultas() {
                         </DropdownMenu>
                     </Dropdown>
                 </Navbar>
-
                 <Navbar>
                     <Dropdown isOpen={isOpenTitulos} toggle={toggleTitulos}>
                         <DropdownToggle caret>Titulo</DropdownToggle>
@@ -557,7 +442,7 @@ export default function Consultas() {
                             {titulos.map((titulos) => {
                                 return (
                                     <DropdownItem onClick={() => {
-                                        setTitulo(titulos)
+                                        setCampoConsulta({ titulo: titulos })
                                         setTipoConsulta('titulo')
                                     }}>
                                         {titulos}
@@ -572,7 +457,7 @@ export default function Consultas() {
                             {tematicas.map((tematicas) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setTematica(tematicas)
+                                        setCampoConsulta({ tematica: tematicas })
                                         setTipoConsulta('tematica')
                                     }}>
                                         {tematicas}
@@ -587,7 +472,7 @@ export default function Consultas() {
                             {profesores.map((profesores) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setProfesor(profesores)
+                                        setCampoConsulta({ profesor: profesores })
                                         setTipoConsulta('profesor')
                                     }}>
                                         {profesores}
@@ -602,7 +487,7 @@ export default function Consultas() {
                             {directores.map((directores) => {
                                 return (
                                     <DropdownItem onClick={(e) => {
-                                        setDirector(directores)
+                                        setCampoConsulta({ director: directores })
                                         setTipoConsulta('director')
                                     }}>
                                         {directores}
@@ -611,13 +496,15 @@ export default function Consultas() {
                             })}
                         </DropdownMenu>
                     </Dropdown>
-
                     <Dropdown isOpen={isOpenAfinidades} toggle={toggleAfinidades}>
                         <DropdownToggle caret>Afinidad</DropdownToggle>
                         <DropdownMenu>
                             {afinidades.map((afinidades) => {
                                 return (
-                                    <DropdownItem onClick={(e) => setAfinidad(afinidades)
+                                    <DropdownItem onClick={(e) => {
+                                        setAfinidad(afinidades)
+                                        setTipoConsulta('afinidad')
+                                    }
                                     }>
                                         {afinidades}
                                     </DropdownItem>
@@ -648,7 +535,6 @@ export default function Consultas() {
                 {listado && <ListadoTabla cursos={cursos} opt={"ver"} />}
 
                 {!listado && <ListadoCards cursos={cursos} />}
-
             </Container>
         )
 }
