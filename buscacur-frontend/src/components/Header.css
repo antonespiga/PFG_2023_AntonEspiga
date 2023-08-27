@@ -48,9 +48,8 @@
 }
 
 .menu {
-	flex-grow: 0;
+	display:flex;
 	height: min-content;
-	width: 15vw;
 	align-items: end;
 }
 

@@ -19,15 +19,15 @@ function Header() {
     }
 
     return (
-        <Container className="header sticky-top">
+        <Container md="2" className="header sticky-top">
             <Col className="cabecera-logo">
                 <a href="/" ><img className="logo" src={LogoUned} /></a>
             </Col>
-            <Col className="cabecera-texto">
+            <Col md="8" className="cabecera-texto">
                 <h1>Buscador de cursos</h1>
                 <Button color="none" onClick={volver} ><h8> < FaArrowLeft />{' '}{location.pathname}</h8></Button>
             </Col>
-            <Col className="menu" >
+            <Col md="2" className="menu" >
                 <Button id="expand-btn" onClick={openModal}>
                     &#9776;
                 </Button>

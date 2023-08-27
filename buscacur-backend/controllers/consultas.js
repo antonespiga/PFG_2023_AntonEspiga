@@ -1,4 +1,5 @@
 const Cursos = require('../models/cursos')
+
 exports.getCursos = async (req, res, next) => {
      await Cursos.find({}).then(function (listCursos) {
           res.status(200).json(listCursos);
@@ -19,8 +20,6 @@ exports.getCursosByAfinidad = async (req, res, next) => {
      })
           .catch(next)
 }
-
-
 
 exports.getNombres = async (req, res, next) => {
      await Cursos.find({}, { 'nombre': 1, _id: 0 }).distinct('nombre')
@@ -95,10 +94,21 @@ exports.getImparticions = async (req, res, next) => {
 }
 
 exports.getCursosFilter = async (req, res, next) => {
-     console.log(req.query)
-     await Cursos.find(req.query.params)
+
+     if((req.query.tipo==='texto libre') && (req.query.params)){
+          const filter = Object.keys(req.query.params).map(key=>({[key]: req.query.params[key]}))
+          console.log(filter)
+               await Cursos.find({ $or: filter })
+               .then(function (listCursos) {
+                    res.status(200).json(listCursos) 
+               })
+               .catch(next)
+                }
+     else {console.log('else')
+          await Cursos.find(req.query.params)
           .then(function (listCursos) {
                res.status(200).json(listCursos)
           })
           .catch(next)
+     }
 }

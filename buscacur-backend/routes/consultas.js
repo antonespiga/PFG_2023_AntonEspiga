@@ -7,7 +7,7 @@ const { getCursos, getCursosFilter, getCursoById } = require ('../controllers/co
 const {getTipos, getSemestres, getCreditos, getTematicas, getProfesores,
      getDirectores, getTitulos, getImparticions, getNombres } = require ('../controllers/consultas')
 
-router.get('/', getCursos);
+//router.get('/', getCursos);
 router.get('/filter/', auth, getCursosFilter)
 router.get('/:_id', auth, getCursoById);
 router.get('/data/nombres',auth, getNombres);

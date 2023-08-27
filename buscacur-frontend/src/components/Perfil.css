@@ -20,14 +20,13 @@
 }
 
 .perfil-col {
-	padding:7px;
-	margin-top: 0.25rem;
 	display:flex;
-	justify-content: end;
+	float: end;
 }
 
 #btn-perfil {
 	background-color:darkgreen ;
+	margin:5px;
 }
 
 #btn-perfil:focus  {
@@ -37,7 +36,7 @@
 #btnperfil {
 	display: inline-flex;
 	
-	color:black;
+	color:rgb(0, 0, 0);
 	background-color: #ffffff;
 	border: none;
 }
@@ -45,7 +44,7 @@
 .icono{
 	display:flex;
 	flex-grow:1;
-	margin: 10px;
+	margin: 0px;
 	height: 40px;
 	border-radius: 20px;
 	}

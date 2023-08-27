@@ -15,8 +15,9 @@ var titulosRouter = require('./routes/titulos')
 const { default: mongoose } = require('mongoose');
 
 mongoose.connect(config.db )
-//mongoose.connect ('mongodb+srv://anton:EspiMin%40LoSus%231969@cluster0.wkdq7.mongodb.net/?retryWrites=true&w=majority')
-.then(() => console.log('Conectado a la base de datos'))
+// config.db = mongodb://127.0.0.1:27017/dbCursos
+//mongoose.connect ('mongodb+srv://anton:<PASSWORD>@cluster0.wkdq7.mongodb.net/dbCursos')
+.then(() => console.log(`Conectado a la base de datos: ${mongoose.connection.host}:${mongoose.connection.port}/${mongoose.connection.name}`))
 .catch((err) => console.error(err));
 
 var app = express();
@@ -27,11 +28,11 @@ app.set('view engine', 'jade');
 
 app.use(logger('dev'));
 app.use(cors());
-app.use(bodyParser.json({limit: '50mb'}));
-app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
+//app.use(bodyParser.json({limit: '50mb'}));
+//app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.json())
 
 app.use('/', indexRouter);
 app.use('/usuarios', usersRouter);

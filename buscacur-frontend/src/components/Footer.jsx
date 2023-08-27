@@ -17,9 +17,9 @@ export default function Footer() {
         <Card className="container footer">
             <Row>
                 <CardBody >
-                    <a href="#" ><img src={instagramIcon} style={imgStyle} alt="instagram" /></a>
-                    <a href="#" ><img src={facebookIcon} style={imgStyle} /></a>
-                    <a href="#"><img src={twitterIcon} style={imgStyle} /></a>
+                    <a href="https://www.instagram.com/" target="_blank" ><img src={instagramIcon} style={imgStyle} alt="instagram" /></a>
+                    <a href="https://es-es.facebook.com/" target="_blank"  ><img src={facebookIcon} style={imgStyle} /></a>
+                    <a href="https://twitter.com/" target="_blank" ><img src={twitterIcon} style={imgStyle} /></a>
                 </CardBody>
             </Row>
         </Card>

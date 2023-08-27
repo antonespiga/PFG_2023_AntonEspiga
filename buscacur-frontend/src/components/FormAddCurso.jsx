@@ -7,6 +7,7 @@ export default function FormAddCurso({
     isOpen, closeModal, curso, setCurso, readOnly }) {
 
     const [nombre, setNombre] = useState()
+    const [identificador, setIdentificador] = useState()
     const [tipo, setTipo] = useState()
     const [tematica, setTematica] = useState()
     const [titulo, setTitulo] = useState()
@@ -60,7 +61,7 @@ export default function FormAddCurso({
                     </ModalBody>
                 </Modal>}
             <ModalHeader isOpen={isOpen} toggle={closeModal} >
-                <h4 >{"Introducir contenido"}</h4>
+                <h4 >{"Introducir curso"}</h4>
             </ModalHeader>
             <ModalBody>
                 <Row>
@@ -83,6 +84,13 @@ export default function FormAddCurso({
                             <Label style={{ color: "black" }} className="form-label-color" for="tipo" value="Tipo">Tipo</Label>
                             <Input type="text" name="tipo" readOnly={readOnly} id="tipo" placeholder="Tipo"
                                 value={readOnly ? curso.tipo : tipo} onChange={handleInputChange}></Input>
+                        </FormGroup>
+                    </Col>
+                    <Col md="2">
+                        <FormGroup >
+                            <Label style={{ color: "black" }} className="form-label-color" for="identificador" value="Identificador">Identificador</Label>
+                            <Input type="text" name="identificador" readOnly={readOnly} id="identificador" placeholder="Identificador:"
+                                value={readOnly ? curso.identificador : identificador} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>

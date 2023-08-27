@@ -1,11 +1,11 @@
 .barra-selectores {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+   
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
-    margin:22px;
+
     flex-grow:2;
 }
 
@@ -28,7 +28,10 @@
 	border: none !important;
 }
 
-
+#buscador-texto {
+	padding: 15px;
+	margin:10px;
+}
 
 .btn-secondary:focus {
 	background-color: white;
@@ -58,6 +61,11 @@ word-wrap: normal;
 	display: flex;
 	background-color: rgb(220, 211, 228);
 	justify-content: center;
+}
+
+#perfil-col {
+	padding: 5px;
+	color:blueviolet;
 }
 
 @media only screen and (max-width: 768px) {

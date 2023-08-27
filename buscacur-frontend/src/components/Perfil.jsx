@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { FaUser, FaUserCog } from 'react-icons/fa'
 import './Perfil.css'
 import { getUsuarioById } from "../utils/apicallsUsuarios";
+import { getVisualizacionesUsuario } from "../utils/apicallsVisualizaciones";
 import FormModUsuario from './FormModUsuario'
 
 export default function Perfil({ usuario }) {
@@ -18,6 +19,7 @@ export default function Perfil({ usuario }) {
     const [isOpen, setIsOpen] = useState(false)
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const [rol, setRol] = useState(sessionStorage.getItem('rol'))
+    const [visualizaciones, setVisualizaciones] = useState()
     const navigate = useNavigate()
 
     useEffect(() => {
@@ -27,6 +29,15 @@ export default function Perfil({ usuario }) {
     const getUsuario = (userId) => {
         getUsuarioById(userId)
             .then((res) => setSelUsuario(res))
+    }
+
+    useEffect(() => {
+        getVisualizaciones(userId)
+    },[])
+
+    const getVisualizaciones= (userId) => {
+        getVisualizacionesUsuario(userId)
+        .then((res) => setVisualizaciones(res))
     }
 
     const closeModal = () => {
@@ -106,6 +117,89 @@ export default function Perfil({ usuario }) {
                                         <Label id="form-label" for="titulacion">Titulación</Label>
                                         <Input type="text" placeHolder="titulación" readOnly={readOnly} value={selUsuario.titulacion}></Input>
                                     </DropdownItem>
+                                    {(rol!=='admin') && <>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contador">Total consultas</Label>
+                                        <Input type="text" placeHolder="contador" readOnly={readOnly} value={visualizaciones.length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contNombre">Por nombre</Label>
+                                        <Input type="text" placeHolder="contador nombre" readOnly={readOnly} value={
+                                                    visualizaciones.filter(view => {
+                                                        return view.tipoConsulta === 'nombre'
+                                                        }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contTipo">Por tipo</Label>
+                                        <Input type="text" placeHolder="contTipo" readOnly={readOnly} value={
+                                                    visualizaciones.filter(view => {
+                                                        return view.tipoConsulta === 'tipo'
+                                                        }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contCreditos">Por créditos</Label>
+                                        <Input type="text" placeHolder="contCreditos" readOnly={readOnly} value={
+                                                visualizaciones.filter(view => {
+                                                    return view.tipoConsulta === 'creditos'
+                                                    }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contSemestre">Por semestre</Label>
+                                        <Input type="text" placeHolder="contSemestre" readOnly={readOnly} value={
+                                               visualizaciones.filter(view => {
+                                                return view.tipoConsulta === 'semestre'
+                                                }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contImparticion">Por impartición</Label>
+                                        <Input type="text" placeHolder="contImparticion" readOnly={readOnly} value={
+                                               visualizaciones.filter(view => {
+                                                return view.tipoConsulta === 'imparticion'
+                                                }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contTitulo">Por título</Label>
+                                        <Input type="text" placeHolder="contTitulo" readOnly={readOnly} value={
+                                                visualizaciones.filter(view => {
+                                                    return view.tipoConsulta === 'titulo'
+                                                    }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contTematica">Por temática</Label>
+                                        <Input type="text" placeHolder="contTematica" readOnly={readOnly} value={
+                                               visualizaciones.filter(view => {
+                                                return view.tipoConsulta === 'tematica'
+                                                }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contDirector">Por director</Label>
+                                        <Input type="text" placeHolder="contDirector" readOnly={readOnly} value={
+                                                visualizaciones.filter(view => {
+                                                    return view.tipoConsulta === 'director'
+                                                    }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contProfesor">Por profesor</Label>
+                                        <Input type="text" placeHolder="contProfesor" readOnly={readOnly} value={
+                                               visualizaciones.filter(view => {
+                                                return view.tipoConsulta === 'profesor'
+                                                }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contAfinidad">Por afinidad</Label>
+                                        <Input type="text" placeHolder="contAfinidad" readOnly={readOnly} value={
+                                               visualizaciones.filter(view => {
+                                                return view.tipoConsulta === 'afinidad'
+                                                }).length}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="contLibre">Por texto libre</Label>
+                                        <Input type="text" placeHolder="ContLibre" readOnly={readOnly} value={
+                                                visualizaciones.filter(view => {
+                                                    return view.tipoConsulta === 'texto libre'
+                                                    }).length}></Input>
+                                    </DropdownItem>
+                            </>}
                                 </DropdownMenu>
                             </Dropdown>
                             <Button id="btnperfil" onClick={() => handleModificarDatos()} >Modificar datos de perfil</Button>

@@ -4,9 +4,9 @@ const { Schema } = mongoose;
 
 
 const TituloSchema = new Schema({
-    identificador: String,
-    tipo: String,
-    titulo: { type:String }
+    identificador: { type: String, required: true },
+    tipo: { type: String, required: true },
+    titulo: { type:String, required:true }
     })
 
 module.exports = mongoose.model('Titulo', TituloSchema);

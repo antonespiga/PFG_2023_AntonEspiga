@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-
 import {
     Row, Col, Button, Container, FormGroup, Label, Input,
     Dropdown, DropdownToggle, DropdownItem, DropdownMenu, InputGroup,
@@ -18,11 +17,12 @@ import { addVisualizacion, getVisualizacionMasFrecuente, modUsuarioCont } from '
 import Perfil from '../components/Perfil'
 import Error from "./Error"
 import { getUsuarioById } from '../utils/apicallsUsuarios'
+import { normalizarTexto } from '../utils/normalizarTexto'
 import './Socio.css'
 
 export default function Consultas() {
 
-    const [listado, setListado] = useState(false)
+    const [listado, setListado] = useState(true)
     const [afinidad, setAfinidad] = useState()
     const [user, setUser] = useState({})
     const [cursos, setCursos] = useState([])
@@ -62,13 +62,21 @@ export default function Consultas() {
 
     const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
     const [searchText, setSearchText] = useState('')
-    const [parametros, setParametros] = useState({
+       const [parametros, setParametros] = useState({
         semestre: null, creditos: null, tipo: null, titulo: null, nombre: null, imparticion: null,
         tematica: null, profesor: null, director: null
     })
     const [campoConsultaMasFrec, setCampoConsultaMasFrec] = useState()
     const [campoConsultaTitulacionAfin, setcampoConsultaTitulacionAfin] = useState()
     const [campoConsulta, setCampoConsulta] = useState()
+    const [yQuery, setYQuery] = useState(false)
+
+    const normalizarTexto = (texto) =>  {
+        return texto
+        .normalize('NFD')
+        .replace(/([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+/gi,"$1")
+        .normalize()
+    }
 
     // ******        Obtener los datos del ususario para mostar su perfil           *******//
     // ******        y los datos de los cursos para realizar las consultas          *******//
@@ -196,99 +204,179 @@ export default function Consultas() {
     //**          Divide el texto en palabras y compara cada palabra con los valores de */
     //**          los atributos y creando unos parametros de búsqueda                   */
 
+useEffect(() => {
+    setParametros((prevParametros) => ({
+        ...prevParametros,
+        semestre: null, creditos: null, tipo: null, titulo: null, nombre: null, imparticion: null,
+        tematica: null, profesor: null, director: null
+    }))
+
+},[searchText])
+
+   
+
     const handleFind = () => {
         setParametros((prevParametros) => ({
             ...prevParametros,
-            semestre: null, creditos: null, tipo: null, titulo: null, nombre: null, imparticion: null,
+            semestre: null, creditos: null, tipo: null, titulo: [], nombre: null, imparticion: null,
             tematica: null, profesor: null, director: null
         }))
-
-        const filtro = ['', 'de', 'a', 'y', 'por', 'para', 'en']
+       
+        const filtro = ['', 'de', 'a', 'y', 'por', 'para', 'en', 'del', 'e']
         const searchWords = searchText.trim().split(' ').filter(word =>
             !filtro.includes(word));
-
+        if(searchWords.includes('&')) setYQuery(true); else setYQuery(false)
         searchWords.forEach(element => {
             semestres.forEach(word => {
-                if (word.toLowerCase().startsWith((element.toLowerCase()))) {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(element.toLowerCase()))) {
                     setParametros((prevParametros) => ({
                         ...prevParametros,
                         semestre: word
                     }))
                 }
             })
-
+            const qCreditos = []
             creditosD.forEach((word) => {
-                if (String(word).toLowerCase().startsWith(String(element.toLowerCase()))) {
+                if (normalizarTexto(String(word)).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qCreditos.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        creditos: word
+                        creditos: qCreditos
                     }))
                 }
             })
-
+            const qNombres = []
             nombres.forEach(word => {
-                if (word.toLowerCase().includes(String(element.toLowerCase()))) {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qNombres.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        nombre: word
+                        nombre: qNombres
                     }))
                 }
             })
 
+            const qTipos = []
             tipos.forEach(word => {
-                if (word.toLowerCase().includes(String(element.toLowerCase()))) {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qTipos.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        tipo: word
+                        tipo: qTipos
                     }))
                 }
             })
 
+            const qImparticion = []
             imparticions.forEach(word => {
-                if (word.toLowerCase().includes(String(element.toLowerCase()))) {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qImparticion.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        imparticion: word
+                        imparticion: qImparticion
                     }))
                 }
             })
 
+            const qTitulo = []
             titulos.forEach(word => {
-                if (word.toLowerCase().includes(String(element.toLowerCase()))) {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qTitulo.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        titulo: word
+                        titulo: qTitulo
                     }))
                 }
             })
 
+            const qTematica = []
             tematicas.forEach(word => {
-                if (word.toLowerCase().includes(String(element.toLowerCase()))) {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qTematica.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        tematica: word
+                        tematica: qTematica
                     }))
                 }
             })
 
-            directores.forEach(word => {
-                if (word.toLowerCase().includes(String(element.toLowerCase()))) {
+            const qProfesor = []
+            profesores.forEach(word => {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qProfesor.push(word)
                     setParametros((prevParametros) => ({
                         ...prevParametros,
-                        director: word
+                        profesor: qProfesor
+                    }))
+                }
+            })
+
+            const qDirector = []
+            directores.forEach(word => {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qDirector.push(word)
+                    setParametros((prevParametros) => ({
+                        ...prevParametros,
+                        director: qDirector
                     }))
                 }
             })
         }
         )
+        getCursosFilter(parametros, 'texto libre', yQuery)
+        .then(cursos => { setCursos(cursos)
+            const visualizacion = {
+                usuario: sessionStorage.getItem('id'),
+                tipoConsulta: 'texto libre',
+                campo: parametros,
+                fecha: Date.now()
+            }
+            if(!(visualizacion.campo.creditos===null &&
+                visualizacion.campo.tipo===null &&
+                visualizacion.campo.semestre===null &&
+                visualizacion.campo.imparticion===null &&
+                visualizacion.campo.titulo===null &&
+                visualizacion.campo.profesor===null &&
+                visualizacion.campo.director===null &&
+                visualizacion.campo.tematica===null &&
+                visualizacion.campo.nombre===null 
+                                    )) {
+            addVisualizacion(visualizacion)
+                .then((res) => {
+                    if(res.message!=='Visualizacion añadida') alert ('Error al agregar consulta')
+                })
+            setCursos(cursos)
+            }})                    
     }
 
     //**        Consulta con los parametros obtenidos del texto  */    
 
     useEffect(() => {
-        getCursosFilter(parametros)
+        
+        getCursosFilter(parametros, 'texto libre', yQuery)
             .then(cursos => {
+                const visualizacion = {
+                    usuario: sessionStorage.getItem('id'),
+                    tipoConsulta: 'texto libre',
+                    campo: parametros,
+                    fecha: Date.now()
+                }
+                if(!(visualizacion.campo.creditos===null &&
+                    visualizacion.campo.tipo===null &&
+                    visualizacion.campo.semestre===null &&
+                    visualizacion.campo.imparticion===null &&
+                    visualizacion.campo.titulo===null &&
+                    visualizacion.campo.profesor===null &&
+                    visualizacion.campo.director===null &&
+                    visualizacion.campo.tematica===null &&
+                    visualizacion.campo.nombre===null 
+                                        )) {
+                addVisualizacion(visualizacion)
+                    .then((res) => {
+                        if(res.message!=='Visualizacion añadida') alert ('Error al agregar consulta')
+                    })
                 setCursos(cursos)
+                                        }
             })
     }, [parametros])
 
@@ -323,9 +411,10 @@ export default function Consultas() {
             campo: campoConsulta || campoConsultaMasFrec || campoConsultaTitulacionAfin,
             fecha: Date.now()
         }
+        if(tipoConsulta)
         addVisualizacion(visualizacion)
-            .then(() => {
-                modUsuarioCont({ user, tipoConsulta })
+            .then((res) => {
+               if(res.message!=='Visualizacion añadida') alert ('Error al agregar consulta')
             })
 
     }
@@ -343,7 +432,7 @@ export default function Consultas() {
     else
         return (
             <Container>
-                <Container>
+                <Container id="buscador-texto">
                     <Row>
                         <Col md="10">
                             <InputGroup className="input-group mb-9">

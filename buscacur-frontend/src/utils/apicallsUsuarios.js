@@ -54,7 +54,7 @@ function registroUsuario(usuario) {
 }
 
 function verificarToken(token) {
-    return API.get('/private')
+    return API.post('/private', token)
         .then((response) => response.data)
         .catch((error) => error.response.data)
 }

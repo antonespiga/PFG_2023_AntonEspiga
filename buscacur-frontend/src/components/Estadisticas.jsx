@@ -41,8 +41,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Nombre</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="nombre" style={{ color: "black" }}>Nombre</Label>
+                                    <Input id="nombre" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'nombre'
                                     }).length}></Input>
                                 </FormGroup>
@@ -51,8 +51,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Tematica</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="tematica" style={{ color: "black" }}>Tematica</Label>
+                                    <Input id="tematica" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'tematica'
                                     }).length}></Input>
                                 </FormGroup>
@@ -61,8 +61,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Tipo</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="tipo" style={{ color: "black" }}>Tipo</Label>
+                                    <Input id="tipo" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'tipo'
                                     }).length}></Input>
                                 </FormGroup>
@@ -71,8 +71,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Semestre</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="semestre" style={{ color: "black" }}>Semestre</Label>
+                                    <Input id="semestre" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'semestre'
                                     }).length}></Input>
                                 </FormGroup>
@@ -81,8 +81,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Creditos</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="creditos" style={{ color: "black" }}>Creditos</Label>
+                                    <Input id="creditos" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'creditos'
                                     }).length}></Input>
                                 </FormGroup>
@@ -91,8 +91,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Director</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="director" style={{ color: "black" }}>Director</Label>
+                                    <Input id="director" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'director'
                                     }).length}></Input>
                                 </FormGroup>
@@ -101,8 +101,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Profesor</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="profesor" style={{ color: "black" }}>Profesor</Label>
+                                    <Input id="profesor" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'profesor'
                                     }).length}></Input>
                                 </FormGroup>
@@ -111,8 +111,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Titulo</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="titulo" style={{ color: "black" }}>Titulo</Label>
+                                    <Input id="titulo" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'titulo'
                                     }).length}></Input>
                                 </FormGroup>
@@ -121,8 +121,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Imparticion</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="imparticion" style={{ color: "black" }}>Imparticion</Label>
+                                    <Input id="imparticion" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'imparticion'
                                     }).length}></Input>
                                 </FormGroup>
@@ -131,9 +131,19 @@ export default function Estadisticas({ isOpen, closeModal }) {
                         <Col sm="1">
                             <Row>
                                 <FormGroup>
-                                    <Label for="total" style={{ color: "black" }}>Afinidad</Label>
-                                    <Input id="total" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                    <Label for="afinidad" style={{ color: "black" }}>Afinidad</Label>
+                                    <Input id="afinidad" name="total" type="text" value={totalVisualizaciones.filter(view => {
                                         return view.tipoConsulta === 'afinidad'
+                                    }).length}></Input>
+                                </FormGroup>
+                            </Row>
+                        </Col>
+                        <Col sm="1">
+                            <Row>
+                                <FormGroup>
+                                    <Label for="libre" style={{ color: "black" }}>Libre</Label>
+                                    <Input id="libre" name="total" type="text" value={totalVisualizaciones.filter(view => {
+                                        return view.tipoConsulta === 'texto libre'
                                     }).length}></Input>
                                 </FormGroup>
                             </Row>
@@ -154,6 +164,7 @@ export default function Estadisticas({ isOpen, closeModal }) {
                                 <th>Titulo</th>
                                 <th>Imparticion</th>
                                 <th>Afinidad</th>
+                                <th>Libre</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -162,7 +173,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
 
                                     <tr key={_id}>
                                         <td>{usuario.nombre}{' '}{usuario.apellido1}{' '}{usuario.apellido2}</td>
-                                        <td>{usuario.cont}</td>
+                                        
+                                        <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) ) }).length}</td>
                                         <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'nombre')) }).length}</td>
                                         <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'tematica')) }).length}</td>
                                         <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'tipo')) }).length}</td>
@@ -173,6 +185,8 @@ export default function Estadisticas({ isOpen, closeModal }) {
                                         <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'titulo')) }).length}</td>
                                         <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'imparticion')) }).length}</td>
                                         <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'afinidad')) }).length}</td>
+                                        <td>{totalVisualizaciones.filter(view => { return ((view.usuario === usuario._id) && (view.tipoConsulta === 'texto libre')) }).length}</td>
+
                                     </tr>
                                 )
                             })}

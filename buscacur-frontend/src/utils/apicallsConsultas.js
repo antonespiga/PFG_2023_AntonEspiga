@@ -5,8 +5,8 @@ export {
     getCursosFilter
 }
 
-function getCursosFilter(params) {
-    return API.get('/consultas/filter/', { params: { params } })
+function getCursosFilter(params, tipo, yQuery) {
+    return API.get('/consultas/filter/', { params: { params, tipo, yQuery } })
         .then((response) => (response.data))
         .catch((error) => error.response.data)
 }

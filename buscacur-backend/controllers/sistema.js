@@ -87,4 +87,5 @@ function restart() {
 
 }
 
+
 module.exports = { configurar, backupBd, getConfig, restart, start }

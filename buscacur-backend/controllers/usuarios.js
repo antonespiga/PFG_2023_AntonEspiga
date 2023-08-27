@@ -50,7 +50,7 @@ exports.loginUser = async(req, res, next) => {
     let reqClave = req.body.clave
     try {
         const user = await User.findOne( {email: reqEmail});
-        if(!user) { return res.status(404).json({message:'No encontrado'})}
+        if(!user) { return res.status(404).json({message:'Credenciales incorrectas'})}
         else {
             user.compareClave(reqClave, (error, isMatch) => {
                 if(error) return next(error)
@@ -64,10 +64,11 @@ exports.loginUser = async(req, res, next) => {
     }
 }
 
-exports.privateUser = (req, res, next) => {
+exports.privateUser = async(req, res, next) => {
     const userId = req.user.id
     const userRol = req.user.rol
-    if(userId)
+    const usuario = await User.findById({'_id':userId})
+    if(usuario)
     res.status(200).json({message: 'Tienes acceso', userId:userId, rol:userRol})
     }
 
@@ -86,6 +87,9 @@ exports.registroUser = async(req, res, next) => {
         return res.status(500).json({message:"Error en el servidor"})
     }
     }
+
+        
+   
     
     
 

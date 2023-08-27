@@ -10,8 +10,8 @@ exports.getCursos = async (req, res, next) => {
 
 exports.getCursoById = async (req, res, next) => {
     await Curso.findById({ '_id': req.params._id })
-        .then((listCursos)  => {
-            res.status(200).json(listCursos);
+        .then((curso)  => {
+            res.status(200).json(curso);
         })
         .catch(next)
 }

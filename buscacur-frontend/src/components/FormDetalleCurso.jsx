@@ -1,7 +1,9 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import {
     Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
 } from 'reactstrap'
+import  {Link} from 'react-router-dom'
+import { getArrayTitulos } from "../utils/apicallsTitulos"
 
 export default function FormDetalleCurso({
     isOpen, closeModal, curso, setCurso, readOnly, opt, handleCurso }) {
@@ -17,11 +19,18 @@ export default function FormDetalleCurso({
     const [imparticion, setImparticion] = useState()
     const [enlace, setEnlace] = useState()
     const [descripcion, setDescripcion] = useState()
-    const [titulosOfertan, setTitulosOfertan] = useState()
+    const [titulosOfertan, setTitulosOfertan] = useState([curso.titulosOfertan])
+    const [listaTitulos, setListaTitulos] = useState([])
 
     const handleInputChange = (e) => {
         setCurso({ ...curso, [e.target.name]: e.target.value })
     }
+
+    useEffect(() =>{
+        const arrayCodigos = curso.titulosOfertan
+        getArrayTitulos(arrayCodigos)
+        .then(res => setListaTitulos(res))
+    },[curso])
 
     return (
 
@@ -98,14 +107,15 @@ export default function FormDetalleCurso({
                         <FormGroup >
                             <Label style={{ color: "black" }} for="enlace" >Link a descripción</Label>
                             <Input id="enlace" name="enlace" type="url" readOnly={readOnly} placeholder="Link a descripción"
-                                value={readOnly ? curso.enlace : enlace} onChange={handleInputChange}></Input>
+                                value={readOnly ? curso.enlace: enlace} onChange={handleInputChange} ></Input>
                         </FormGroup>
                     </Col>
                     <Col md="12">
                         <FormGroup >
                             <Label style={{ color: "black" }} for="titulosOfertan">Titulos que la ofertan</Label>
                             <Input type="text" name="titulosOfertan" readOnly={readOnly} placeholder="Titulos que la ofertan"
-                                value={readOnly ? curso.titulosOfertan : titulosOfertan} onChange={handleInputChange}></Input>
+                                value={readOnly? listaTitulos: titulosOfertan}
+                                  onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md="2">

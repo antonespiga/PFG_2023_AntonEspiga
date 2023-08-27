@@ -2,8 +2,9 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middlewares/auth')
 
-const { getTitulos, getTitulo, addTitulo, deleteTitulo, updateTitulo} = require ('../controllers/titulos');
+const { getTitulos, getTitulo, addTitulo, deleteTitulo, updateTitulo, getArrayTitulos } = require ('../controllers/titulos');
 
+router.get('/list/', getArrayTitulos)
 router.get('/', getTitulos);
 router.get('/:id', getTitulo);
 router.post('/', auth, addTitulo);

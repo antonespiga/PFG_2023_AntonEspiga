@@ -6,25 +6,14 @@ const saltRounds = 10
 
 const UsuarioSchema = new mongoose.Schema({
     email: { type: mongoose.SchemaTypes.Email, required: true },
-    nombre: String,
-    apellido1: String,
-    apellido2: String,
-    poblacion: String,
-    codigoPostal: Number,
-    titulacion: String,
+    nombre: { type: String, required:true },
+    apellido1: { type: String, required:true },
+    apellido2: { type: String, required:true },
+    poblacion: { type: String, required:true },
+    codigoPostal: { type: Number, required: true },
+    titulacion: { type: String, required:true },
     clave: { type: String, required: true },
-    rol: { type: String, enum: ['Socio', 'Administrador'], default: "Socio" },
-    cont: { type: Number, default: 0 },
-    contSemestre: { type: Number, default: 0 },
-    contCreditos: { type: Number, default: 0 },
-    contTipo: { type: Number, default: 0 },
-    contNombre: { type: Number, default: 0 },
-    contImparticion: { type: Number, default: 0 },
-    contTitulo: { type: Number, default: 0 },
-    contTematica: { type: Number, default: 0 },
-    contProfesor: { type: Number, default: 0 },
-    contDirector: { type: Number, default: 0 },
-    contAfinidad: { type: Number, default: 0 },
+    rol: { type: String, enum: ['Socio', 'Administrador'], default: "Socio", required:true },
 })
 
 UsuarioSchema.pre('save', function (next) {

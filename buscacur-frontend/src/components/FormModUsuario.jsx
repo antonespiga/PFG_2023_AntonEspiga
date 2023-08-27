@@ -90,6 +90,13 @@ export default function FormModUsuario({
                     </Col>
                     <Col md={6}>
                         <FormGroup >
+                            <Label style={{ color: "black" }} for="clave" >Clave</Label>
+                            <Input id="clave" name="clave" type="password" readOnly={readOnly} placeholder="Clave"
+                                value={ usuario.clave } onChange={handleInputChange}></Input>
+                        </FormGroup>
+                    </Col>
+                    <Col md={6}>
+                        <FormGroup >
                             <Label style={{ color: "black" }} for="email" >Rol</Label>
                             <Input id="rol" name="rol" type="rol" readOnly={readOnly} placeholder="Rol"
                                 value={usuario.rol} onChange={handleInputChange}></Input>

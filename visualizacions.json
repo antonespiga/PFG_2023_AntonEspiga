@@ -1,0 +1,327 @@
+{"_id":{"$oid":"64a00412114de065c3de274e"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:46:42.36Z"},"__v":0}
+{"_id":{"$oid":"64a00414114de065c3de2754"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:46:44.441Z"},"__v":0}
+{"_id":{"$oid":"64a00416114de065c3de2759"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:46:46.825Z"},"__v":0}
+{"_id":{"$oid":"64a00418114de065c3de275d"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:46:48.863Z"},"__v":0}
+{"_id":{"$oid":"64a004e4114de065c3de2795"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:50:12.008Z"},"__v":0}
+{"_id":{"$oid":"64a004e6114de065c3de279b"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-01T10:50:14.105Z"},"__v":0}
+{"_id":{"$oid":"64a004e8114de065c3de279f"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-01T10:50:16.629Z"},"__v":0}
+{"_id":{"$oid":"64a004ea114de065c3de27a4"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-01T10:50:18.837Z"},"__v":0}
+{"_id":{"$oid":"64a004ed114de065c3de27a9"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T10:50:21.311Z"},"__v":0}
+{"_id":{"$oid":"64a00526114de065c3de27d0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:51:18.054Z"},"__v":0}
+{"_id":{"$oid":"64a0053c114de065c3de27d5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T10:51:40.183Z"},"__v":0}
+{"_id":{"$oid":"64a0053e114de065c3de27da"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-01T10:51:42.343Z"},"__v":0}
+{"_id":{"$oid":"64a00541114de065c3de27e0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T10:51:45.623Z"},"__v":0}
+{"_id":{"$oid":"64a00543114de065c3de27e4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T10:51:47.95Z"},"__v":0}
+{"_id":{"$oid":"64a00546114de065c3de27e9"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T10:51:50.255Z"},"__v":0}
+{"_id":{"$oid":"64a00548114de065c3de27ef"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T10:51:52.361Z"},"__v":0}
+{"_id":{"$oid":"64a00778114de065c3de27f4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T11:01:12.626Z"},"__v":0}
+{"_id":{"$oid":"64a00785114de065c3de27fa"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T11:01:25.758Z"},"__v":0}
+{"_id":{"$oid":"64a00791114de065c3de27ff"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T11:01:37.618Z"},"__v":0}
+{"_id":{"$oid":"64a007a0114de065c3de2804"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T11:01:52.745Z"},"__v":0}
+{"_id":{"$oid":"64a008b4114de065c3de2814"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T11:06:28.707Z"},"__v":0}
+{"_id":{"$oid":"64a05dc95ab15321c0ff762e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:09:29.726Z"},"__v":0}
+{"_id":{"$oid":"64a05f4f5ab15321c0ff7641"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:15:59.794Z"},"__v":0}
+{"_id":{"$oid":"64a0614b5ab15321c0ff766f"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-01T17:24:27.868Z"},"__v":0}
+{"_id":{"$oid":"64a061645ab15321c0ff7693"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:24:52.741Z"},"__v":0}
+{"_id":{"$oid":"64a062045ab15321c0ff7a7e"},"usuario":"64772061fdb6c331528e78b6","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:27:32.498Z"},"__v":0}
+{"_id":{"$oid":"64a062125ab15321c0ff7a84"},"usuario":"64989d5cf804a519c0fe12ad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:27:46.694Z"},"__v":0}
+{"_id":{"$oid":"64a062555ab15321c0ff7aa7"},"usuario":"64772061fdb6c331528e78b9","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-01T17:28:53.901Z"},"__v":0}
+{"_id":{"$oid":"64a0626e5ab15321c0ff7ad3"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-01T17:29:18.381Z"},"__v":0}
+{"_id":{"$oid":"64a063365ab15321c0ff7b4d"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:32:38.084Z"},"__v":0}
+{"_id":{"$oid":"64a0644b5ab15321c0ff7e92"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:37:15.004Z"},"__v":0}
+{"_id":{"$oid":"64a064505ab15321c0ff7eb2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:37:20.3Z"},"__v":0}
+{"_id":{"$oid":"64a065705ab15321c0ff807d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:42:08.695Z"},"__v":0}
+{"_id":{"$oid":"64a0657d5ab15321c0ff8081"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:42:21.462Z"},"__v":0}
+{"_id":{"$oid":"64a065e35ab15321c0ff8197"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:44:03.233Z"},"__v":0}
+{"_id":{"$oid":"64a065e55ab15321c0ff819b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:44:05.761Z"},"__v":0}
+{"_id":{"$oid":"64a066945ab15321c0ff81ef"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:47:00.697Z"},"__v":0}
+{"_id":{"$oid":"64a066b85ab15321c0ff81f3"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:47:36.527Z"},"__v":0}
+{"_id":{"$oid":"64a066bb5ab15321c0ff81f7"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:47:39.48Z"},"__v":0}
+{"_id":{"$oid":"64a066ea5ab15321c0ff8298"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:48:26.578Z"},"__v":0}
+{"_id":{"$oid":"64a0679d5ab15321c0ff8423"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:51:25.608Z"},"__v":0}
+{"_id":{"$oid":"64a067ac5ab15321c0ff8428"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-01T17:51:40.192Z"},"__v":0}
+{"_id":{"$oid":"64a067c55ab15321c0ff842d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-01T17:52:05.145Z"},"__v":0}
+{"_id":{"$oid":"64a068095ab15321c0ff84b4"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:53:13.076Z"},"__v":0}
+{"_id":{"$oid":"64a068e55ab15321c0ff8701"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"nombre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-01T17:56:53.411Z"},"__v":0}
+{"_id":{"$oid":"64a31c2a57d3ec8ddb1ca553"},"usuario":"64772061fdb6c331528e78b6","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:06:18.011Z"},"__v":0}
+{"_id":{"$oid":"64a31c2e57d3ec8ddb1ca558"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:06:22.226Z"},"__v":0}
+{"_id":{"$oid":"64a31c5257d3ec8ddb1ca55d"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:06:58.116Z"},"__v":0}
+{"_id":{"$oid":"64a31c5557d3ec8ddb1ca561"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:07:01.659Z"},"__v":0}
+{"_id":{"$oid":"64a31c5857d3ec8ddb1ca566"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:07:04.875Z"},"__v":0}
+{"_id":{"$oid":"64a31c6457d3ec8ddb1ca56c"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:07:16.739Z"},"__v":0}
+{"_id":{"$oid":"64a31c6a57d3ec8ddb1ca570"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:07:22.731Z"},"__v":0}
+{"_id":{"$oid":"64a31c7157d3ec8ddb1ca576"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:07:29.659Z"},"__v":0}
+{"_id":{"$oid":"64a31c8357d3ec8ddb1ca57a"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"tematica","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:07:47.347Z"},"__v":0}
+{"_id":{"$oid":"64a31c8557d3ec8ddb1ca57f"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"tematica","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:07:49.551Z"},"__v":0}
+{"_id":{"$oid":"64a31cac57d3ec8ddb1ca584"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:08:28.182Z"},"__v":0}
+{"_id":{"$oid":"64a31cb957d3ec8ddb1ca589"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-03T19:08:41.487Z"},"__v":0}
+{"_id":{"$oid":"64a31cc257d3ec8ddb1ca58e"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-03T19:08:50.486Z"},"__v":0}
+{"_id":{"$oid":"64a31cc657d3ec8ddb1ca593"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:08:54.966Z"},"__v":0}
+{"_id":{"$oid":"64a31ccb57d3ec8ddb1ca599"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:08:59.72Z"},"__v":0}
+{"_id":{"$oid":"64a31cce57d3ec8ddb1ca59d"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:09:02.91Z"},"__v":0}
+{"_id":{"$oid":"64a31cd157d3ec8ddb1ca5a2"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:09:05.55Z"},"__v":0}
+{"_id":{"$oid":"64a31cd557d3ec8ddb1ca5a7"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:09:09.302Z"},"__v":0}
+{"_id":{"$oid":"64a31cd857d3ec8ddb1ca5ac"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:09:11.998Z"},"__v":0}
+{"_id":{"$oid":"64a31cda57d3ec8ddb1ca5b2"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:09:14.551Z"},"__v":0}
+{"_id":{"$oid":"64a31db557d3ec8ddb1ca5b6"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:12:53.445Z"},"__v":0}
+{"_id":{"$oid":"64a31e1657d3ec8ddb1ca5bb"},"usuario":"64989d5cf804a519c0fe12ad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:14:30.113Z"},"__v":0}
+{"_id":{"$oid":"64a31eb557d3ec8ddb1ca5c0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:17:09.749Z"},"__v":0}
+{"_id":{"$oid":"64a31edf27e4f18bd123a130"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:17:51.494Z"},"__v":0}
+{"_id":{"$oid":"64a31efb27e4f18bd123a135"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:18:19.911Z"},"__v":0}
+{"_id":{"$oid":"64a31f7e29903a2c4d697ea0"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:20:30.668Z"},"__v":0}
+{"_id":{"$oid":"64a31fc129903a2c4d697ea6"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:21:37.551Z"},"__v":0}
+{"_id":{"$oid":"64a32007615e852158adb8de"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:22:47.688Z"},"__v":0}
+{"_id":{"$oid":"64a3200f615e852158adb8e3"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:22:55.562Z"},"__v":0}
+{"_id":{"$oid":"64a3202c4242c6b54b1fa16a"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:23:24.114Z"},"__v":0}
+{"_id":{"$oid":"64a320764242c6b54b1fa170"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:24:38.259Z"},"__v":0}
+{"_id":{"$oid":"64a320d04242c6b54b1fa175"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T19:26:08.462Z"},"__v":0}
+{"_id":{"$oid":"64a320ec4242c6b54b1fa17a"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:26:36.479Z"},"__v":0}
+{"_id":{"$oid":"64a321484242c6b54b1fa17f"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:28:08.738Z"},"__v":0}
+{"_id":{"$oid":"64a321554242c6b54b1fa183"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:28:21.515Z"},"__v":0}
+{"_id":{"$oid":"64a321644242c6b54b1fa189"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:28:36.236Z"},"__v":0}
+{"_id":{"$oid":"64a3216b4242c6b54b1fa18e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:28:43.675Z"},"__v":0}
+{"_id":{"$oid":"64a322364242c6b54b1fa1af"},"usuario":"64989d5cf804a519c0fe12ad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:32:06.764Z"},"__v":0}
+{"_id":{"$oid":"64a322b54242c6b54b1fa202"},"usuario":"64989d5cf804a519c0fe12ad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:34:13.318Z"},"__v":0}
+{"_id":{"$oid":"64a322c74242c6b54b1fa207"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:34:31.334Z"},"__v":0}
+{"_id":{"$oid":"64a323584242c6b54b1fa20c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:36:56.653Z"},"__v":0}
+{"_id":{"$oid":"64a324404242c6b54b1fa212"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Cannot read properties of undefined (reading 'campo')"},"fecha":{"$date":"2023-07-03T19:40:48.274Z"},"__v":0}
+{"_id":{"$oid":"64a3247b4242c6b54b1fa265"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:41:47.444Z"},"__v":0}
+{"_id":{"$oid":"64a324934242c6b54b1fa26a"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:42:11.932Z"},"__v":0}
+{"_id":{"$oid":"64a324a04242c6b54b1fa26f"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:42:24.437Z"},"__v":0}
+{"_id":{"$oid":"64a324a74242c6b54b1fa274"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:42:30.997Z"},"__v":0}
+{"_id":{"$oid":"64a324ab4242c6b54b1fa279"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:42:35.165Z"},"__v":0}
+{"_id":{"$oid":"64a324af4242c6b54b1fa27e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:42:39.374Z"},"__v":0}
+{"_id":{"$oid":"64a324e94242c6b54b1fa3d1"},"usuario":"64989d5cf804a519c0fe12ad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:43:37.166Z"},"__v":0}
+{"_id":{"$oid":"64a324fd4242c6b54b1fa3d6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-03T19:43:57.424Z"},"__v":0}
+{"_id":{"$oid":"64a3251e4242c6b54b1fa3da"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:44:30.275Z"},"__v":0}
+{"_id":{"$oid":"64a3259d4242c6b54b1fa3e0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:46:37.438Z"},"__v":0}
+{"_id":{"$oid":"64a325a14242c6b54b1fa3e4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:46:41.733Z"},"__v":0}
+{"_id":{"$oid":"64a325a34242c6b54b1fa3e8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:46:43.813Z"},"__v":0}
+{"_id":{"$oid":"64a325a64242c6b54b1fa3ec"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:46:46.598Z"},"__v":0}
+{"_id":{"$oid":"64a325af4242c6b54b1fa3f1"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:46:55.285Z"},"__v":0}
+{"_id":{"$oid":"64a325b64242c6b54b1fa3f7"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-03T19:47:02.405Z"},"__v":0}
+{"_id":{"$oid":"64a325bd4242c6b54b1fa3fc"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-03T19:47:09.79Z"},"__v":0}
+{"_id":{"$oid":"64a325c54242c6b54b1fa401"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:47:17.104Z"},"__v":0}
+{"_id":{"$oid":"64a325cb4242c6b54b1fa405"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:47:23.215Z"},"__v":0}
+{"_id":{"$oid":"64a325ce4242c6b54b1fa409"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:47:26.598Z"},"__v":0}
+{"_id":{"$oid":"64a326944242c6b54b1fa4af"},"usuario":"64989d5cf804a519c0fe12ad","fecha":{"$date":"2023-07-03T19:50:44.693Z"},"__v":0}
+{"_id":{"$oid":"64a326d64242c6b54b1fa4b3"},"usuario":"64772061fdb6c331528e78b6","fecha":{"$date":"2023-07-03T19:51:50.672Z"},"__v":0}
+{"_id":{"$oid":"64a327064242c6b54b1fa4b9"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-03T19:52:38.329Z"},"__v":0}
+{"_id":{"$oid":"64a3271c4242c6b54b1fa4be"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-03T19:53:00.473Z"},"__v":0}
+{"_id":{"$oid":"64a3275c4242c6b54b1fa4c3"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","fecha":{"$date":"2023-07-03T19:54:04.787Z"},"__v":0}
+{"_id":{"$oid":"64a327644242c6b54b1fa4c8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:54:12.939Z"},"__v":0}
+{"_id":{"$oid":"64a327784242c6b54b1fa4cd"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:54:32.845Z"},"__v":0}
+{"_id":{"$oid":"64a3277d4242c6b54b1fa4d1"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-03T19:54:37.804Z"},"__v":0}
+{"_id":{"$oid":"64a327944242c6b54b1fa4d7"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-03T19:55:00.422Z"},"__v":0}
+{"_id":{"$oid":"64a327984242c6b54b1fa4db"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"nombre","fecha":{"$date":"2023-07-03T19:55:04.124Z"},"__v":0}
+{"_id":{"$oid":"64a3279f4242c6b54b1fa4e1"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-03T19:55:11.006Z"},"__v":0}
+{"_id":{"$oid":"64a327da4242c6b54b1fa4e6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:56:10.262Z"},"__v":0}
+{"_id":{"$oid":"64a328614242c6b54b1fa523"},"usuario":"64989d5cf804a519c0fe12ad","fecha":{"$date":"2023-07-03T19:58:25.804Z"},"__v":0}
+{"_id":{"$oid":"64a328664242c6b54b1fa527"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:58:30.26Z"},"__v":0}
+{"_id":{"$oid":"64a328674242c6b54b1fa52b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:58:31.315Z"},"__v":0}
+{"_id":{"$oid":"64a328684242c6b54b1fa52f"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:58:32.795Z"},"__v":0}
+{"_id":{"$oid":"64a3286a4242c6b54b1fa533"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T19:58:34.483Z"},"__v":0}
+{"_id":{"$oid":"64a329134242c6b54b1fa538"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T20:01:23.065Z"},"__v":0}
+{"_id":{"$oid":"64a3291c4242c6b54b1fa53d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-03T20:01:32.825Z"},"__v":0}
+{"_id":{"$oid":"64a329274242c6b54b1fa542"},"usuario":"64772061fdb6c331528e78b6","fecha":{"$date":"2023-07-03T20:01:43.588Z"},"__v":0}
+{"_id":{"$oid":"64a329314242c6b54b1fa547"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-03T20:01:52.977Z"},"__v":0}
+{"_id":{"$oid":"64a329364242c6b54b1fa54c"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-03T20:01:58.322Z"},"__v":0}
+{"_id":{"$oid":"64a476f3abfc43db853254ce"},"usuario":"64989d5cf804a519c0fe12ad","fecha":{"$date":"2023-07-04T19:45:55.624Z"},"__v":0}
+{"_id":{"$oid":"64a47714abfc43db853254d3"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-04T19:46:28.201Z"},"__v":0}
+{"_id":{"$oid":"64a4771babfc43db853254d8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-04T19:46:35.208Z"},"__v":0}
+{"_id":{"$oid":"64a5b1f8ab1da46f8a1a1d04"},"usuario":"64989d5cf804a519c0fe12ad","fecha":{"$date":"2023-07-05T18:09:59.973Z"},"__v":0}
+{"_id":{"$oid":"64a5b22bab1da46f8a1a1d28"},"usuario":"64772061fdb6c331528e78b6","fecha":{"$date":"2023-07-05T18:10:51.669Z"},"__v":0}
+{"_id":{"$oid":"64a5b236ab1da46f8a1a1d2d"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-05T18:11:02.052Z"},"__v":0}
+{"_id":{"$oid":"64a5b247ab1da46f8a1a1d32"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-05T18:11:19.845Z"},"__v":0}
+{"_id":{"$oid":"64a5b286ab1da46f8a1a1d5b"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-05T18:12:22.014Z"},"__v":0}
+{"_id":{"$oid":"64a5b2b0ab1da46f8a1a1d60"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-05T18:13:04.617Z"},"__v":0}
+{"_id":{"$oid":"64a5b2baab1da46f8a1a1d65"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-05T18:13:14.921Z"},"__v":0}
+{"_id":{"$oid":"64a5b59fab1da46f8a1a2532"},"usuario":"64772061fdb6c331528e78b6","fecha":{"$date":"2023-07-05T18:25:35.928Z"},"__v":0}
+{"_id":{"$oid":"64a5b5a4ab1da46f8a1a2536"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-05T18:25:40.816Z"},"__v":0}
+{"_id":{"$oid":"64a5b624ab1da46f8a1a253c"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-05T18:27:48.484Z"},"__v":0}
+{"_id":{"$oid":"64a5b681ab1da46f8a1a255d"},"usuario":"64989d5cf804a519c0fe12ad","fecha":{"$date":"2023-07-05T18:29:21.568Z"},"__v":0}
+{"_id":{"$oid":"64a5b69bab1da46f8a1a2562"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-05T18:29:47.12Z"},"__v":0}
+{"_id":{"$oid":"64a5b89aab1da46f8a1a2608"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","fecha":{"$date":"2023-07-05T18:38:18.655Z"},"__v":0}
+{"_id":{"$oid":"64a5b986ab1da46f8a1a2719"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-05T18:42:14.273Z"},"__v":0}
+{"_id":{"$oid":"64a5b9d2ab1da46f8a1a2745"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-05T18:43:30.24Z"},"__v":0}
+{"_id":{"$oid":"64a8431395bef0f8ba9673d6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T16:53:38.99Z"},"__v":0}
+{"_id":{"$oid":"64a8431495bef0f8ba9673da"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:53:40.686Z"},"__v":0}
+{"_id":{"$oid":"64a8431595bef0f8ba9673de"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:53:41.886Z"},"__v":0}
+{"_id":{"$oid":"64a8431a95bef0f8ba9673e2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:53:46.262Z"},"__v":0}
+{"_id":{"$oid":"64a8432195bef0f8ba9673e6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:53:53.006Z"},"__v":0}
+{"_id":{"$oid":"64a8432395bef0f8ba9673eb"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:53:55.693Z"},"__v":0}
+{"_id":{"$oid":"64a8432b95bef0f8ba9673f0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T16:54:03.909Z"},"__v":0}
+{"_id":{"$oid":"64a8432c95bef0f8ba9673f4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T16:54:04.557Z"},"__v":0}
+{"_id":{"$oid":"64a8433095bef0f8ba9673f8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T16:54:08.413Z"},"__v":0}
+{"_id":{"$oid":"64a8439495bef0f8ba9673fe"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Amenazas persistentes avanzadas"},"fecha":{"$date":"2023-07-07T16:55:48.875Z"},"__v":0}
+{"_id":{"$oid":"64a843f595bef0f8ba967402"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T16:57:25.124Z"},"__v":0}
+{"_id":{"$oid":"64a8441c95bef0f8ba967462"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T16:58:04.373Z"},"__v":0}
+{"_id":{"$oid":"64a8442195bef0f8ba967468"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:58:09.782Z"},"__v":0}
+{"_id":{"$oid":"64a8442595bef0f8ba96746c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:58:13.47Z"},"__v":0}
+{"_id":{"$oid":"64a8444d95bef0f8ba96748c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Amenazas persistentes avanzadas"},"fecha":{"$date":"2023-07-07T16:58:53.159Z"},"__v":0}
+{"_id":{"$oid":"64a8445095bef0f8ba967490"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Ciberinteligencia"},"fecha":{"$date":"2023-07-07T16:58:56.329Z"},"__v":0}
+{"_id":{"$oid":"64a8445395bef0f8ba967496"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-07T16:58:59.344Z"},"__v":0}
+{"_id":{"$oid":"64a8445695bef0f8ba96749a"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-07T16:59:02.351Z"},"__v":0}
+{"_id":{"$oid":"64a8445c95bef0f8ba9674a0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Computación evolutiva"},"fecha":{"$date":"2023-07-07T16:59:08.281Z"},"__v":0}
+{"_id":{"$oid":"64a8446195bef0f8ba9674a4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"nombre":"Minería información social"},"fecha":{"$date":"2023-07-07T16:59:13.256Z"},"__v":0}
+{"_id":{"$oid":"64a8447595bef0f8ba9674a9"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-07T16:59:33.555Z"},"__v":0}
+{"_id":{"$oid":"64a8448095bef0f8ba9674ae"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T16:59:44.68Z"},"__v":0}
+{"_id":{"$oid":"64a8448495bef0f8ba9674b3"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T16:59:48.248Z"},"__v":0}
+{"_id":{"$oid":"64a844c195bef0f8ba9674d2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:00:49.57Z"},"__v":0}
+{"_id":{"$oid":"64a844c695bef0f8ba9674d7"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Administración electrónica"},"fecha":{"$date":"2023-07-07T17:00:54.038Z"},"__v":0}
+{"_id":{"$oid":"64a844cb95bef0f8ba9674dc"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:00:59.796Z"},"__v":0}
+{"_id":{"$oid":"64a844f995bef0f8ba9674ee"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T17:01:45.756Z"},"__v":0}
+{"_id":{"$oid":"64a8451695bef0f8ba96751a"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-07T17:02:14.112Z"},"__v":0}
+{"_id":{"$oid":"64a8451995bef0f8ba96751f"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-07T17:02:17.846Z"},"__v":0}
+{"_id":{"$oid":"64a8451d95bef0f8ba967524"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Contenidos multimedia para la educación"},"fecha":{"$date":"2023-07-07T17:02:21.725Z"},"__v":0}
+{"_id":{"$oid":"64a845a395bef0f8ba967583"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":"Segundo","fecha":{"$date":"2023-07-07T17:04:35.906Z"},"__v":0}
+{"_id":{"$oid":"64a845a995bef0f8ba967587"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":"Segundo","fecha":{"$date":"2023-07-07T17:04:41.37Z"},"__v":0}
+{"_id":{"$oid":"64a845ab95bef0f8ba96758b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":"Segundo","fecha":{"$date":"2023-07-07T17:04:43.178Z"},"__v":0}
+{"_id":{"$oid":"64a845be95bef0f8ba96759c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-07T17:05:02.236Z"},"__v":0}
+{"_id":{"$oid":"64a845c195bef0f8ba9675a0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-07T17:05:05.091Z"},"__v":0}
+{"_id":{"$oid":"64a845e195bef0f8ba9675a4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:05:37.043Z"},"__v":0}
+{"_id":{"$oid":"64a8463395bef0f8ba9675e9"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:06:59.567Z"},"__v":0}
+{"_id":{"$oid":"64a8463595bef0f8ba9675ed"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:07:01.119Z"},"__v":0}
+{"_id":{"$oid":"64a8463695bef0f8ba9675f1"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:07:02.958Z"},"__v":0}
+{"_id":{"$oid":"64a8464395bef0f8ba9675f5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:07:15.383Z"},"__v":0}
+{"_id":{"$oid":"64a8464e95bef0f8ba9675f9"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:07:26.087Z"},"__v":0}
+{"_id":{"$oid":"64a8467295bef0f8ba9675fd"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:08:02.041Z"},"__v":0}
+{"_id":{"$oid":"64a846a795bef0f8ba967602"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:08:55.722Z"},"__v":0}
+{"_id":{"$oid":"64a846b495bef0f8ba967607"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:09:08.274Z"},"__v":0}
+{"_id":{"$oid":"64a846c795bef0f8ba96760b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:09:27.596Z"},"__v":0}
+{"_id":{"$oid":"64a8471895bef0f8ba967644"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:10:48.023Z"},"__v":0}
+{"_id":{"$oid":"64a8472395bef0f8ba967648"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:10:59.798Z"},"__v":0}
+{"_id":{"$oid":"64a8472695bef0f8ba96764d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:11:02.286Z"},"__v":0}
+{"_id":{"$oid":"64a8472995bef0f8ba967652"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:11:05.501Z"},"__v":0}
+{"_id":{"$oid":"64a8472c95bef0f8ba967657"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:11:08.966Z"},"__v":0}
+{"_id":{"$oid":"64a8473295bef0f8ba96765d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Aplicaciones de la IA para el desarrollo humano y sostenible"},"fecha":{"$date":"2023-07-07T17:11:14.454Z"},"__v":0}
+{"_id":{"$oid":"64a8473595bef0f8ba967662"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Aplicaciones de la IA para el desarrollo humano y sostenible"},"fecha":{"$date":"2023-07-07T17:11:17.334Z"},"__v":0}
+{"_id":{"$oid":"64a8473895bef0f8ba967666"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T17:11:20.134Z"},"__v":0}
+{"_id":{"$oid":"64a8480195bef0f8ba967826"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:14:41.181Z"},"__v":0}
+{"_id":{"$oid":"64a8480795bef0f8ba96782b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:14:47.011Z"},"__v":0}
+{"_id":{"$oid":"64a8481495bef0f8ba967830"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:00.942Z"},"__v":0}
+{"_id":{"$oid":"64a8481d95bef0f8ba967835"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tipo","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:08.975Z"},"__v":0}
+{"_id":{"$oid":"64a8482095bef0f8ba967839"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:12.63Z"},"__v":0}
+{"_id":{"$oid":"64a8483895bef0f8ba96783e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:36.166Z"},"__v":0}
+{"_id":{"$oid":"64a8483a95bef0f8ba967844"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:38.879Z"},"__v":0}
+{"_id":{"$oid":"64a8483e95bef0f8ba967849"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:42.23Z"},"__v":0}
+{"_id":{"$oid":"64a8484495bef0f8ba96784e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Accesibilidad del elearning"},"fecha":{"$date":"2023-07-07T17:15:48.087Z"},"__v":0}
+{"_id":{"$oid":"64a848a195bef0f8ba967852"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:17:21.038Z"},"__v":0}
+{"_id":{"$oid":"64a848e595bef0f8ba9678b2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":5},"fecha":{"$date":"2023-07-07T17:18:29.052Z"},"__v":0}
+{"_id":{"$oid":"64a8491895bef0f8ba9678d2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":6},"fecha":{"$date":"2023-07-07T17:19:20.317Z"},"__v":0}
+{"_id":{"$oid":"64a8492b95bef0f8ba9678f3"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":5},"fecha":{"$date":"2023-07-07T17:19:39.312Z"},"__v":0}
+{"_id":{"$oid":"64a8493095bef0f8ba9678f7"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":10},"fecha":{"$date":"2023-07-07T17:19:44.063Z"},"__v":0}
+{"_id":{"$oid":"64a8498695bef0f8ba967971"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:21:10.444Z"},"__v":0}
+{"_id":{"$oid":"64a8498a95bef0f8ba967976"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:21:14.858Z"},"__v":0}
+{"_id":{"$oid":"64a84b5b95bef0f8ba9679b0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:28:59.306Z"},"__v":0}
+{"_id":{"$oid":"64a84b6195bef0f8ba9679b5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:29:05.497Z"},"__v":0}
+{"_id":{"$oid":"64a84b6595bef0f8ba9679ba"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:29:09.593Z"},"__v":0}
+{"_id":{"$oid":"64a84beb95bef0f8ba9679e6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:31:23.843Z"},"__v":0}
+{"_id":{"$oid":"64a84bee95bef0f8ba9679eb"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:31:26.108Z"},"__v":0}
+{"_id":{"$oid":"64a84c1b95bef0f8ba9679f0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:32:11.037Z"},"__v":0}
+{"_id":{"$oid":"64a84c1d95bef0f8ba9679f5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:32:13.254Z"},"__v":0}
+{"_id":{"$oid":"64a84c2895bef0f8ba9679fa"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-07T17:32:24.303Z"},"__v":0}
+{"_id":{"$oid":"64a84cf095bef0f8ba9679ff"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:35:44.823Z"},"__v":0}
+{"_id":{"$oid":"64a84d1295bef0f8ba967a03"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:36:18.397Z"},"__v":0}
+{"_id":{"$oid":"64a84d1795bef0f8ba967a08"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:36:22.989Z"},"__v":0}
+{"_id":{"$oid":"64a84d6b95bef0f8ba967a28"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:37:47.747Z"},"__v":0}
+{"_id":{"$oid":"64a84d6e95bef0f8ba967a2c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:37:50.768Z"},"__v":0}
+{"_id":{"$oid":"64a84d7195bef0f8ba967a32"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:37:53.849Z"},"__v":0}
+{"_id":{"$oid":"64a84dcd95bef0f8ba967a45"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:39:24.963Z"},"__v":0}
+{"_id":{"$oid":"64a84dd395bef0f8ba967a4b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:39:31.829Z"},"__v":0}
+{"_id":{"$oid":"64a84dd695bef0f8ba967a50"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:39:34.645Z"},"__v":0}
+{"_id":{"$oid":"64a84dea95bef0f8ba967a56"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:39:54.588Z"},"__v":0}
+{"_id":{"$oid":"64a84df095bef0f8ba967a5b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:40:00.206Z"},"__v":0}
+{"_id":{"$oid":"64a84e2595bef0f8ba967a5f"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Ambos"},"fecha":{"$date":"2023-07-07T17:40:53.503Z"},"__v":0}
+{"_id":{"$oid":"64a84e2e95bef0f8ba967a65"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":10},"fecha":{"$date":"2023-07-07T17:41:02.487Z"},"__v":0}
+{"_id":{"$oid":"64a84fae95bef0f8ba967cc0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tipo","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-07T17:47:26.707Z"},"__v":0}
+{"_id":{"$oid":"64a84fb395bef0f8ba967cc4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":5},"fecha":{"$date":"2023-07-07T17:47:31.123Z"},"__v":0}
+{"_id":{"$oid":"64a84fb795bef0f8ba967cca"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Ciberinteligencia y Ciberterrorismo"},"fecha":{"$date":"2023-07-07T17:47:34.995Z"},"__v":0}
+{"_id":{"$oid":"64a84fba95bef0f8ba967cce"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-07T17:47:38.811Z"},"__v":0}
+{"_id":{"$oid":"64a84fbf95bef0f8ba967cd4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Fundamentos de la ciberseguridad"},"fecha":{"$date":"2023-07-07T17:47:43.043Z"},"__v":0}
+{"_id":{"$oid":"64a84fc395bef0f8ba967cd8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Técnicas y gestión de la Ciberseguridad"},"fecha":{"$date":"2023-07-07T17:47:47.9Z"},"__v":0}
+{"_id":{"$oid":"64a84fc895bef0f8ba967cde"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"M.U. en Ingeniería de las tecnologías educativas"},"fecha":{"$date":"2023-07-07T17:47:52.045Z"},"__v":0}
+{"_id":{"$oid":"64a84fcc95bef0f8ba967ce2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Inteligencia artificial"},"fecha":{"$date":"2023-07-07T17:47:56.541Z"},"__v":0}
+{"_id":{"$oid":"64a84fd295bef0f8ba967ce8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T17:48:02.909Z"},"__v":0}
+{"_id":{"$oid":"64a84fd695bef0f8ba967cec"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T17:48:06.028Z"},"__v":0}
+{"_id":{"$oid":"64a84fda95bef0f8ba967cf3"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T17:48:10.028Z"},"__v":0}
+{"_id":{"$oid":"64a84fe495bef0f8ba967cfa"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T17:48:20.54Z"},"__v":0}
+{"_id":{"$oid":"64a8505795bef0f8ba967d27"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T17:50:15.041Z"},"__v":0}
+{"_id":{"$oid":"64a8507095bef0f8ba967d53"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:50:40.064Z"},"__v":0}
+{"_id":{"$oid":"64a8507495bef0f8ba967d57"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:50:44.507Z"},"__v":0}
+{"_id":{"$oid":"64a8507895bef0f8ba967d5d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:50:48.241Z"},"__v":0}
+{"_id":{"$oid":"64a8508195bef0f8ba967d62"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:50:57.229Z"},"__v":0}
+{"_id":{"$oid":"64a8520e95bef0f8ba967d93"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"imparticion","campo":{"imparticion":"Distancia"},"fecha":{"$date":"2023-07-07T17:57:34.877Z"},"__v":0}
+{"_id":{"$oid":"64a8521195bef0f8ba967d97"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"imparticion":"Distancia"},"fecha":{"$date":"2023-07-07T17:57:37.453Z"},"__v":0}
+{"_id":{"$oid":"64a8521d95bef0f8ba967d9d"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"afinidad","campo":{"imparticion":"Distancia"},"fecha":{"$date":"2023-07-07T17:57:49.429Z"},"__v":0}
+{"_id":{"$oid":"64a8524495bef0f8ba967dc1"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:58:28.018Z"},"__v":0}
+{"_id":{"$oid":"64a8524995bef0f8ba967dc6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Aplicaciones de la IA para el desarrollo humano y sostenible"},"fecha":{"$date":"2023-07-07T17:58:33.143Z"},"__v":0}
+{"_id":{"$oid":"64a8526d95bef0f8ba967de7"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:59:09.896Z"},"__v":0}
+{"_id":{"$oid":"64a8527995bef0f8ba967dec"},"usuario":"64772061fdb6c331528e78b9","tipoConsulta":"afinidad","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-07T17:59:21.344Z"},"__v":0}
+{"_id":{"$oid":"64a8561395bef0f8ba968619"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T18:14:43.453Z"},"__v":0}
+{"_id":{"$oid":"64a8561695bef0f8ba96861e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T18:14:46.619Z"},"__v":0}
+{"_id":{"$oid":"64a8561f95bef0f8ba968623"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-07T18:14:55.4Z"},"__v":0}
+{"_id":{"$oid":"64a8562495bef0f8ba968628"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T18:15:00.526Z"},"__v":0}
+{"_id":{"$oid":"64a8562995bef0f8ba96862d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-07T18:15:05.25Z"},"__v":0}
+{"_id":{"$oid":"64a8566295bef0f8ba96864c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Andrés Duque Fernández"},"fecha":{"$date":"2023-07-07T18:16:02.121Z"},"__v":0}
+{"_id":{"$oid":"64a8566295bef0f8ba968651"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Andrés Duque Fernández"},"fecha":{"$date":"2023-07-07T18:16:02.831Z"},"__v":0}
+{"_id":{"$oid":"64a8566695bef0f8ba968656"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Andrés Duque Fernández"},"fecha":{"$date":"2023-07-07T18:16:06.848Z"},"__v":0}
+{"_id":{"$oid":"64a8567195bef0f8ba96865b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Covadonga Rodrigo San Juan"},"fecha":{"$date":"2023-07-07T18:16:17.114Z"},"__v":0}
+{"_id":{"$oid":"64a98eedda536180cca0823c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-08T16:29:33.534Z"},"__v":0}
+{"_id":{"$oid":"64a9905cda536180cca08280"},"usuario":"64772061fdb6c331528e78b6","tipoConsulta":"creditos","campo":{"creditos":6},"fecha":{"$date":"2023-07-08T16:35:40.53Z"},"__v":0}
+{"_id":{"$oid":"64a9bb3be9302cb73b6cb031"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tipo","campo":{"tipo":"Abierto"},"fecha":{"$date":"2023-07-08T19:38:35.254Z"},"__v":0}
+{"_id":{"$oid":"64a9bb47e9302cb73b6cb036"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Ciberinteligencia y Ciberterrorismo"},"fecha":{"$date":"2023-07-08T19:38:47.325Z"},"__v":0}
+{"_id":{"$oid":"64a9bb6ce9302cb73b6cb03b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Fundamentos de la ciberseguridad"},"fecha":{"$date":"2023-07-08T19:39:24.502Z"},"__v":0}
+{"_id":{"$oid":"64a9bb71e9302cb73b6cb041"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Tácticas de intrusión"},"fecha":{"$date":"2023-07-08T19:39:29.799Z"},"__v":0}
+{"_id":{"$oid":"64a9bb8be9302cb73b6cb046"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"titulo":"Tácticas de intrusión"},"fecha":{"$date":"2023-07-08T19:39:55.528Z"},"__v":0}
+{"_id":{"$oid":"64a9bb8fe9302cb73b6cb04a"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"titulo":"Tácticas de intrusión"},"fecha":{"$date":"2023-07-08T19:39:59.631Z"},"__v":0}
+{"_id":{"$oid":"64a9bb96e9302cb73b6cb050"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"rrrr"},"fecha":{"$date":"2023-07-08T19:40:06.855Z"},"__v":0}
+{"_id":{"$oid":"64a9c0f0e9302cb73b6cb0ba"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Andrés Duque Fernández"},"fecha":{"$date":"2023-07-08T20:02:56.114Z"},"__v":0}
+{"_id":{"$oid":"64a9c0f4e9302cb73b6cb0bf"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-08T20:03:00.13Z"},"__v":0}
+{"_id":{"$oid":"64a9c0f6e9302cb73b6cb0c5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Ciberinteligencia y Ciberterrorismo"},"fecha":{"$date":"2023-07-08T20:03:02.459Z"},"__v":0}
+{"_id":{"$oid":"64a9c0fae9302cb73b6cb0c9"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"imparticion","campo":{"imparticion":"Distancia"},"fecha":{"$date":"2023-07-08T20:03:06.235Z"},"__v":0}
+{"_id":{"$oid":"64a9c0fce9302cb73b6cb0ce"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"imparticion":"Distancia"},"fecha":{"$date":"2023-07-08T20:03:08.669Z"},"__v":0}
+{"_id":{"$oid":"64a9c0ffe9302cb73b6cb0d3"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Covadonga Rodrigo San Juan"},"fecha":{"$date":"2023-07-08T20:03:11.554Z"},"__v":0}
+{"_id":{"$oid":"64a9c108e9302cb73b6cb0d8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Inteligencia artificial"},"fecha":{"$date":"2023-07-08T20:03:20.348Z"},"__v":0}
+{"_id":{"$oid":"64aa87ae9ed68fafda03a560"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Lenguajes y sistemas informáticos"},"fecha":{"$date":"2023-07-09T10:10:54.498Z"},"__v":0}
+{"_id":{"$oid":"64aaa280e62312040b531d21"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":3},"fecha":{"$date":"2023-07-09T12:05:20.938Z"},"__v":0}
+{"_id":{"$oid":"64aaa288e62312040b531d26"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Informática y automática"},"fecha":{"$date":"2023-07-09T12:05:28.873Z"},"__v":0}
+{"_id":{"$oid":"64aaa28ce62312040b531d2a"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Lenguajes y siatemas informáticos"},"fecha":{"$date":"2023-07-09T12:05:32.785Z"},"__v":0}
+{"_id":{"$oid":"64aaa293e62312040b531d2f"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Inteligencia artificial"},"fecha":{"$date":"2023-07-09T12:05:39.075Z"},"__v":0}
+{"_id":{"$oid":"64aaa297e62312040b531d34"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Sistemas de comunicación y control"},"fecha":{"$date":"2023-07-09T12:05:43.514Z"},"__v":0}
+{"_id":{"$oid":"64aaa29ce62312040b531d39"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Amenazas persistentes avanzadas"},"fecha":{"$date":"2023-07-09T12:05:48.619Z"},"__v":0}
+{"_id":{"$oid":"64b2ea6dbed6df2d68098d6b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Lenguajes y sistemas informáticos"},"fecha":{"$date":"2023-07-15T18:50:21.928Z"},"__v":0}
+{"_id":{"$oid":"64b2ea76bed6df2d68098d70"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tematica":"Lenguajes y sistemas informáticos"},"fecha":{"$date":"2023-07-15T18:50:30.943Z"},"__v":0}
+{"_id":{"$oid":"64b2ea7abed6df2d68098d75"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"tematica":"Lenguajes y sistemas informáticos"},"fecha":{"$date":"2023-07-15T18:50:34.696Z"},"__v":0}
+{"_id":{"$oid":"64b440d55c158076187035ec"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Andrés Duque Fernández"},"fecha":{"$date":"2023-07-16T19:11:17.128Z"},"__v":0}
+{"_id":{"$oid":"64b6f01864795b724a87b8f2"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Inteligencia artificial"},"fecha":{"$date":"2023-07-18T20:03:36.293Z"},"__v":0}
+{"_id":{"$oid":"64b6f03264795b724a87b8f8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"creditos","campo":{"creditos":5},"fecha":{"$date":"2023-07-18T20:04:02.829Z"},"__v":0}
+{"_id":{"$oid":"64bc33a8200dccc3de80063c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Inteligencia artificial"},"fecha":{"$date":"2023-07-22T19:53:12.72Z"},"__v":0}
+{"_id":{"$oid":"64bc3408261f5ccc3225ca0b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-22T19:54:48.671Z"},"__v":0}
+{"_id":{"$oid":"64bc3424f4efafa1232eb3ab"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"director","campo":{"director":"Agustín Carlos Caminero Herráez"},"fecha":{"$date":"2023-07-22T19:55:16.192Z"},"__v":0}
+{"_id":{"$oid":"64bc3474bddb9451c15c06bf"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Ana Mª García Serrano"},"fecha":{"$date":"2023-07-22T19:56:36.164Z"},"__v":0}
+{"_id":{"$oid":"64bc348ce4dc7886fbe9bb9d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"profesor","campo":{"profesor":"Andrés Duque Fernández"},"fecha":{"$date":"2023-07-22T19:57:00.124Z"},"__v":0}
+{"_id":{"$oid":"64bc34b1d4bcf218cf6dbf80"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"imparticion","campo":{"imparticion":"Distancia"},"fecha":{"$date":"2023-07-22T19:57:37.348Z"},"__v":0}
+{"_id":{"$oid":"64bc34bcd4bcf218cf6dbf84"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tematica","campo":{"tematica":"Informática y automática"},"fecha":{"$date":"2023-07-22T19:57:48.951Z"},"__v":0}
+{"_id":{"$oid":"64bd01318cfbd528e4e21d7d"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"semestre","campo":{"semestre":"Primero"},"fecha":{"$date":"2023-07-23T10:30:09.167Z"},"__v":0}
+{"_id":{"$oid":"64bd03e68cfbd528e4e21e74"},"usuario":"64989d5cf804a519c0fe12ad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-23T10:41:42.214Z"},"__v":0}
+{"_id":{"$oid":"64bd041e8cfbd528e4e21e85"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-23T10:42:38.151Z"},"__v":0}
+{"_id":{"$oid":"64bd04428cfbd528e4e21e9b"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":null,"creditos":5,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T10:43:14.968Z"},"__v":0}
+{"_id":{"$oid":"64bd049d8cfbd528e4e21ea0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":"Ambos","creditos":5,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T10:44:45.896Z"},"__v":0}
+{"_id":{"$oid":"64bd04aa8cfbd528e4e21ea5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":"Primero","creditos":5,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T10:44:58.274Z"},"__v":0}
+{"_id":{"$oid":"64bd08a48cfbd528e4e21ef8"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"nombre","campo":{"nombre":"Acceso inteligente a la información"},"fecha":{"$date":"2023-07-23T11:01:56.635Z"},"__v":0}
+{"_id":{"$oid":"64bd0bfd8cfbd528e4e222a4"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Analista de Ciberseguridad"},"fecha":{"$date":"2023-07-23T11:16:13.67Z"},"__v":0}
+{"_id":{"$oid":"64bd0c508cfbd528e4e222d0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Analista de Ciberseguridad"},"fecha":{"$date":"2023-07-23T11:17:36.734Z"},"__v":0}
+{"_id":{"$oid":"64bd0cea8cfbd528e4e22319"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":null,"creditos":10,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T11:20:10.878Z"},"__v":0}
+{"_id":{"$oid":"64bd0d188cfbd528e4e2231e"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":null,"creditos":null,"tipo":null,"titulo":null,"nombre":"Tácticas de ataque del Equipo Rojo","imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T11:20:55.989Z"},"__v":0}
+{"_id":{"$oid":"64bd0f158cfbd528e4e223a0"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":null,"creditos":10,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T11:29:25.554Z"},"__v":0}
+{"_id":{"$oid":"64bd0f418cfbd528e4e223a5"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"texto libre","campo":{"semestre":null,"creditos":10,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T11:30:09.832Z"},"__v":0}
+{"_id":{"$oid":"64bd14bca6e8d4081ee2a32c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Not Found","error":{"message":"Not Found"}},"fecha":{"$date":"2023-07-23T11:53:32.137Z"},"__v":0}
+{"_id":{"$oid":"64bd14bfa6e8d4081ee2a330"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Not Found","error":{"message":"Not Found"}},"fecha":{"$date":"2023-07-23T11:53:35.893Z"},"__v":0}
+{"_id":{"$oid":"64bd14c4a6e8d4081ee2a334"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Not Found","error":{"message":"Not Found"}},"fecha":{"$date":"2023-07-23T11:53:40.111Z"},"__v":0}
+{"_id":{"$oid":"64bd14caa6e8d4081ee2a338"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Not Found","error":{"message":"Not Found"}},"fecha":{"$date":"2023-07-23T11:53:46.293Z"},"__v":0}
+{"_id":{"$oid":"64bd14f4a6e8d4081ee2a33c"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"message":"Not Found","error":{"message":"Not Found"}},"fecha":{"$date":"2023-07-23T11:54:28.735Z"},"__v":0}
+{"_id":{"$oid":"64bd4f33cebfaef69bfad0ca"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":null,"creditos":null,"tipo":null,"titulo":null,"nombre":null,"imparticion":null,"tematica":null,"profesor":null,"director":null},"fecha":{"$date":"2023-07-23T16:02:59.217Z"},"__v":0}
+{"_id":{"$oid":"64bd4f45cebfaef69bfad0ef"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"afinidad","campo":{"semestre":"Segundo"},"fecha":{"$date":"2023-07-23T16:03:17.136Z"},"__v":0}
+{"_id":{"$oid":"64bf9b8df50bc5652fd521b6"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"tipo","campo":{"tipo":"Reglado"},"fecha":{"$date":"2023-07-25T09:53:17.517Z"},"__v":0}
+{"_id":{"$oid":"64bf9b90f50bc5652fd521b9"},"usuario":"64989d5cf804a519c0fe12ad","tipoConsulta":"titulo","campo":{"titulo":"Algoritmos criptográficos computacionales"},"fecha":{"$date":"2023-07-25T09:53:20.434Z"},"__v":0}

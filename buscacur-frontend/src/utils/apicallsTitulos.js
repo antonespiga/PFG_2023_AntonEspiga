@@ -5,7 +5,8 @@ export {
     addTitulo,
     delTitulo,
     modTitulo,
-    getTitulo
+    getTitulo,
+    getArrayTitulos
 }
 
 function getTitulos() {
@@ -38,3 +39,8 @@ function modTitulo(titulo) {
         .catch((error) => error.response.data)
 }
 
+function getArrayTitulos(codigos) {
+    return API.get('/titulos/list/' , { params :{ codigos } })
+        .then((response) => response.data)
+        .catch((error) => error.response.data)
+}

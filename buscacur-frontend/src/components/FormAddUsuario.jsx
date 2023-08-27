@@ -10,9 +10,10 @@ export default function FormAddUsuario({
     const [apellido1, setApellido1] = useState()
     const [apellido2, setApellido2] = useState()
     const [poblacion, setPoblacion] = useState()
-    const [codPostal, setCodPostal] = useState()
+    const [codigoPostal, setCodigoPostal] = useState()
     const [email, setEmail] = useState()
     const [titulacion, setTitulacion] = useState()
+    const [clave, setClave] = useState()
     const [rol, setRol] = useState()
     const [msg, setMsg] = useState('')
     const [isOpenErrorModal, setIsOpenErrorModal] = useState(false)
@@ -84,9 +85,9 @@ export default function FormAddUsuario({
                     </Col>
                     <Col md="2">
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="codPostal" id="codPostal" value="codPostal">CodPostal</Label>
-                            <Input type="text" name="codPostal" readOnly={readOnly} id="codPostal" placeholder="CodPostal"
-                                value={readOnly ? usuario.codPostal : codPostal} onChange={handleInputChange}></Input>
+                            <Label style={{ color: "black" }} for="codigoPostal" id="codigoPostal" value="codigoPostal">CodPostal</Label>
+                            <Input type="text" name="codigoPostal" readOnly={readOnly} id="codigoPostal" placeholder="CodPostal"
+                                value={readOnly ? usuario.codigoPostal : codigoPostal} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>
@@ -101,6 +102,13 @@ export default function FormAddUsuario({
                             <Label style={{ color: "black" }} for="email" >Email</Label>
                             <Input id="email" name="email" type="email" readOnly={readOnly} placeholder="Email"
                                 value={readOnly ? usuario.email : email} onChange={handleInputChange}></Input>
+                        </FormGroup>
+                    </Col>
+                    <Col md={6}>
+                        <FormGroup >
+                            <Label style={{ color: "black" }} for="clave" >Clave</Label>
+                            <Input id="clave" name="clave" type="password" readOnly={readOnly} placeholder="Clave"
+                                value={readOnly ? usuario.clave : clave} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>
