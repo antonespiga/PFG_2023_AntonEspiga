@@ -52,7 +52,12 @@ export default function ListadoTabla({ cursos, opt }) {
                                 </Button>
                             </td>
 
-                            {isOpen && (opt === "del") && <FormDelCurso
+                            
+                        </tr>
+                    )
+                })}
+            </Table>
+            {isOpen && (opt === "del") && <FormDelCurso
                                 isOpen={isOpen}
                                 closeModal={closeModal}
                                 curso={selCurso}
@@ -78,10 +83,6 @@ export default function ListadoTabla({ cursos, opt }) {
                                 readOnly={true}
                                 opt={'ver'}
                             />}
-                        </tr>
-                    )
-                })}
-            </Table>
             </CardBody>
         </Card>
     )

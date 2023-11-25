@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
+    "dev": "nodemon npm start",
     "restart": "npm run stop && npm start",
     "stop": "kill all node"
   },
@@ -23,7 +24,9 @@
     "moment": "^2.29.4",
     "mongoose": "^7.0.3",
     "mongoose-type-email": "^1.1.2",
-    "morgan": "~1.9.1",
+    "morgan": "~1.9.1"
+  },
+  "devDependencies": {
     "nodemon": "^3.0.1"
   }
 }

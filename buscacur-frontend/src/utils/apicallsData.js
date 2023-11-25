@@ -9,7 +9,9 @@ export {
     getSemestres,
     getCreditos,
     getTitulos,
-    getImparticions
+    getImparticions,
+    getTitulacionCursos,
+    getTitulacionUniversitarias
 }
 
 function getNombres() {
@@ -60,8 +62,20 @@ function getTitulos() {
         .catch((error) => error.response.data)
 }
 
+function getTitulacionCursos() {
+    return API.get('consultas/data/titulacionCursos')
+        .then((response) => (response.data))
+        .catch((error) => error.response.data)
+}
+
 function getImparticions() {
     return API.get('consultas/data/imparticions')
         .then((response) => (response.data))
         .catch((error) => error.response.data)
+}
+
+function getTitulacionUniversitarias() {
+    return API.get('consultas/data/titulacionUniversitarias')
+    .then((response) => (response.data))
+    .catch((error) => error.response.data)
 }

@@ -9,13 +9,14 @@ exports.getUsers = async(req, res, next) => {
 }
 
 exports.getUserById = async(req, res, next) => {
-    await User.findById({'_id': req.params._id})
-    
-    .then((listUser) => {
-            if(listUser) res.status(200).json(listUser)
-            else (res.status(500).json({message:error.message}))
-    })
-    .catch(next)
+    try {
+        await User.findById({'_id': req.params._id})
+        .then((listUser) => {console.log(listUser)
+            res.status(200).json(listUser)
+            })}
+    catch(error) {
+        res.status(500).json({message: 'Error en el servidor'})
+    }
 }
 
 exports.addUser = async(req, res, next) => {
@@ -31,7 +32,7 @@ exports.addUser = async(req, res, next) => {
 
 exports.deleteUser = async(req, res, next) => {
     await User.findByIdAndDelete( {'_id': req.params.id} )
-    .then(() => res.status(200).json('Usuario eliminado:'+req.params.id))
+    .then(() => res.status(200).json('Usuario eliminado:' + req.params.id))
     .catch(next)
 }
 
@@ -64,7 +65,7 @@ exports.loginUser = async(req, res, next) => {
     }
 }
 
-exports.privateUser = async(req, res, next) => {
+exports.privateUser = async(req, res, next) => {console.log(req.user)
     const userId = req.user.id
     const userRol = req.user.rol
     const usuario = await User.findById({'_id':userId})
@@ -84,7 +85,7 @@ exports.registroUser = async(req, res, next) => {
         return res.status(500).json({message: `usuario ya registrado: ${user.email}`})
     }
     catch(error){
-        return res.status(500).json({message:"Error en el servidor"})
+        return res.status(500).json({message:`${error}`})
     }
     }
 

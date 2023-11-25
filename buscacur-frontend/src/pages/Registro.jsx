@@ -1,8 +1,9 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useNavigate, Link } from 'react-router-dom'
 import { Container, Form, FormGroup, Input, Label, Col, Row, Card, CardFooter, Button, Alert } from "reactstrap";
 import './Registro.css'
 import { registroUsuario } from "../utils/apicallsUsuarios";
+import { getTitulacionUniversitarias } from "../utils/apicallsData";
 
 function Registro() {
 
@@ -13,16 +14,15 @@ function Registro() {
     const [ codigoPostal, setCodigoPostal ] = useState()
     const [ email, setEmail ] = useState()
     const [ clave, setClave ] = useState()
-    const [ titulacion, setTitulacion ] = useState()
+    const [ titulacionUsuarioGrado, setTitulacionUsuarioGrado ] = useState()
+    const [ titulacionUsuarioEspecialidad, setTitulacionUsuarioEspecialidad ] = useState()
     const [ usuario, setUsuario ] = useState(
         {
-            nombre, apellido1, apellido2, poblacion, codigoPostal, titulacion, email, clave 
+            nombre, apellido1, apellido2, poblacion, codigoPostal, titulacionUsuarioGrado,titulacionUsuarioEspecialidad, email, clave 
         }
     )
     const [msg, setMsg] = useState('')
-
-    const navigate = useNavigate()
-
+    
     const handleInputChange = (e) => {
         setUsuario({...usuario, [e.target.name]: e.target.value})
     }
@@ -78,8 +78,26 @@ function Registro() {
                         </Col>
                         <Col md="4">
                             <FormGroup>
-                                <Label value="Titulacion" for="titulacion" >Titulación</Label>
-                                <Input placeholder="Titulación" name="titulacion" value={titulacion} onChange={ handleInputChange } ></Input>
+                                <Label value="Titulacion-grado" for="titulacion-grado" >Titulación: Grado</Label>
+                                <Input type='select' value={titulacionUsuarioGrado} placeholder="Titulación-Grado" name="titulacionUsuarioGrado"  onChange={ handleInputChange } >
+                                   <option>
+                                    FP Grado Medio
+                                   </option>
+                                   <option>
+                                    FP Grado Superior
+                                   </option>
+                                   <option>
+                                    Grado 
+                                   </option>
+                                   <option>
+                                    Máster
+                                   </option>
+                                   <option>
+                                    Otro
+                                   </option>
+                                </Input>
+                                <Label value="Titulacion-especialidad" for="titulacion-especialidad" >Titulación: Especialidad</Label>
+                                <Input placeholder="Titulación-especialidad" name="titulacionUsuarioEspecialidad" value={titulacionUsuarioEspecialidad} onChange={ handleInputChange } ></Input>
                             </FormGroup>
                         </Col>
                     </Row>

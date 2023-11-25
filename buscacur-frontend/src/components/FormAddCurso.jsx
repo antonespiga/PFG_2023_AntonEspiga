@@ -10,6 +10,7 @@ export default function FormAddCurso({
     const [identificador, setIdentificador] = useState()
     const [tipo, setTipo] = useState()
     const [tematica, setTematica] = useState()
+    const [titulacion, setTitulacion] = useState()
     const [titulo, setTitulo] = useState()
     const [semestre, setSemestre] = useState()
     const [creditos, setCreditos] = useState()
@@ -88,6 +89,13 @@ export default function FormAddCurso({
                     </Col>
                     <Col md="2">
                         <FormGroup >
+                            <Label style={{ color: "black" }} className="form-label-color" for="titulacion" value="Titulacion">Tipo</Label>
+                            <Input type="text" name="titulacion" readOnly={readOnly} id="titulacion" placeholder="Titulacion"
+                                value={readOnly ? curso.titulacion : titulacion} onChange={handleInputChange}></Input>
+                        </FormGroup>
+                    </Col>
+                    <Col md="2">
+                        <FormGroup >
                             <Label style={{ color: "black" }} className="form-label-color" for="identificador" value="Identificador">Identificador</Label>
                             <Input type="text" name="identificador" readOnly={readOnly} id="identificador" placeholder="Identificador:"
                                 value={readOnly ? curso.identificador : identificador} onChange={handleInputChange}></Input>
@@ -148,8 +156,6 @@ export default function FormAddCurso({
                             <Input type="text" name="titulosOfertan" readOnly={readOnly} placeholder="Titulos que la ofertan"
                                 value={readOnly ? curso.titulosOfertan : titulosOfertan} onChange={handleInputChange}></Input>
                         </FormGroup>
-                    </Col>
-                    <Col md="2">
                     </Col>
                     <Col md="12">
                         <FormGroup >

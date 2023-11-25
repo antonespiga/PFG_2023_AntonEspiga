@@ -53,7 +53,7 @@ exports.getArrayTitulos = async (req, res, next) => {
    try { 
     await Promise.all(arr.map(async(element) => {
         const ttl = await Titulo.findOne( {id:Number(element) }, {'_id':0 , 'titulo':1})
-            titulos.push(ttl.titulo)
+            titulos.push(' '+ttl.titulo)
             }))
             if(titulos.length>0) res.status(200).json(titulos)
             else res.status(500).json({message:'error.message'})

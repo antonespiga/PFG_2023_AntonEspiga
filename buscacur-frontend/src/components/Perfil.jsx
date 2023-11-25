@@ -114,8 +114,12 @@ export default function Perfil({ usuario }) {
                                         <Input type="text" placeHolder="codigo postal" readOnly={readOnly} value={selUsuario.codigoPostal}></Input>
                                     </DropdownItem>
                                     <DropdownItem>
-                                        <Label id="form-label" for="titulacion">Titulación</Label>
-                                        <Input type="text" placeHolder="titulación" readOnly={readOnly} value={selUsuario.titulacion}></Input>
+                                        <Label id="form-label" for="titulacion-grado">Titulación: Grado</Label>
+                                        <Input type="text" placeHolder="titulación-grado" readOnly={readOnly} value={selUsuario.titulacionUsuarioGrado}></Input>
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <Label id="form-label" for="titulacion-especialidad">Titulación: Especialidad</Label>
+                                        <Input type="text" placeHolder="titulación-especialidad" readOnly={readOnly} value={selUsuario.titulacionUsuarioEspecialidad}></Input>
                                     </DropdownItem>
                                     {(rol!=='admin') && <>
                                     <DropdownItem>

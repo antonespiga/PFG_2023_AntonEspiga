@@ -36,7 +36,7 @@ export default function FormDelUsuario({
                     </Col>
                     <Col md="6">
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="apellido2" value="apellido2">Apellido1</Label>
+                            <Label style={{ color: "black" }} for="apellido1" value="apellido1">Apellido1</Label>
                             <Input type="text" name="apellido1" readOnly={readOnly} id="apellido1" placeholder="Apellido1"
                                 value={usuario.apellido1} onChange={handleInputChange}></Input>
                         </FormGroup>
@@ -51,14 +51,14 @@ export default function FormDelUsuario({
                     <Col md="4">
                         <FormGroup >
                             <Label style={{ color: "black" }} for="poblacion">Poblacion</Label>
-                            <Input type="text" name="poblacion" readOnly={readOnly} placeholder="Poblacion"
+                            <Input id="poblacion" type="text" name="poblacion" readOnly={readOnly} placeholder="Poblacion"
                                 value={usuario.poblacion} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md="2">
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="codPostal" id="codPostal" value="codPostal">CodPostal</Label>
-                            <Input type="text" name="codigoPostal" readOnly={readOnly} id="codPostal" placeholder="CodPostal"
+                            <Label style={{ color: "black" }} for="codigoPostal" id="codPostal" value="codPostal">CodPostal</Label>
+                            <Input type="text" name="codigoPostal" readOnly={readOnly} id="codigoPostal" placeholder="CodPostal"
                                 value={usuario.codigoPostal} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
@@ -78,16 +78,19 @@ export default function FormDelUsuario({
                     </Col>
                     <Col md={6}>
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="email" >Rol</Label>
+                            <Label style={{ color: "black" }} for="rol" >Rol</Label>
                             <Input id="rol" name="rol" type="rol" readOnly={readOnly} placeholder="Rol"
                                 value={usuario.rol} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="titulacion" >Titulación</Label>
-                            <Input id="titulacion" name="titulacion" type="text" readOnly={readOnly} placeholder="Titulación"
-                                value={usuario.titulacion} onChange={handleInputChange}></Input>
+                            <Label style={{ color: "black" }} for="titulacion-grado" >Titulación: Grado</Label>
+                            <Input id="titulacion-grado" name="titulacion-grado" type="text" readOnly={readOnly} placeholder="Titulación-grado"
+                                value={usuario.titulacionUsuario.grado} onChange={handleInputChange}></Input>
+                            <Label style={{ color: "black" }} for="titulacion-especialidad" >Titulación</Label>
+                            <Input id="titulacion-especialidad" name="titulacion-especialidad" type="text" readOnly={readOnly} placeholder="Titulación-especialidad"
+                                value={usuario.titulacionUsuario.especialidad} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                 </Row>

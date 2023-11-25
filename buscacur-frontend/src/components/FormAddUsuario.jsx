@@ -1,7 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input }
     from 'reactstrap'
 import { addUsuario } from "../utils/apicallsUsuarios"
+
 
 export default function FormAddUsuario({
     isOpen, closeModal, usuario, setUsuario, readOnly }) {
@@ -12,11 +13,13 @@ export default function FormAddUsuario({
     const [poblacion, setPoblacion] = useState()
     const [codigoPostal, setCodigoPostal] = useState()
     const [email, setEmail] = useState()
-    const [titulacion, setTitulacion] = useState()
+    const [titulacionUsuarioGrado, setTitulacionUsuarioGrado] = useState()
+    const [titulacionUsuarioEspecialidad, setTitulacionUsuarioEspecialidad] = useState()
     const [clave, setClave] = useState()
     const [rol, setRol] = useState()
     const [msg, setMsg] = useState('')
     const [isOpenErrorModal, setIsOpenErrorModal] = useState(false)
+    const [titulacionUniversitaria, setTitulacionUniversitaria] = useState([])
 
     const handleInputChange = (e) => {
         setUsuario({ ...usuario, [e.target.name]: e.target.value })
@@ -92,9 +95,26 @@ export default function FormAddUsuario({
                     </Col>
                     <Col md={6}>
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="titulacion" >Titulación</Label>
-                            <Input id="titulacion" name="titulacion" type="text" readOnly={readOnly} placeholder="Titulación"
-                                value={readOnly ? usuario.titulacion : titulacion} onChange={handleInputChange}></Input>
+                        <Label value="Titulacion-grado" for="titulacion-grado" >Titulación: Grado</Label>
+                                <Input type='select' value={titulacionUsuarioGrado} placeholder="Titulación-Grado" name="titulacionUsuarioGrado"  onChange={ handleInputChange } >
+                                   <option>
+                                    FP Grado Medio
+                                   </option>
+                                   <option>
+                                    FP Grado Superior
+                                   </option>
+                                   <option>
+                                    Grado 
+                                   </option>
+                                   <option>
+                                    Máster
+                                   </option>
+                                   <option>
+                                    Otro
+                                   </option>
+                                </Input>
+                                <Label value="Titulacion-especialidad" for="titulacion-especialidad" >Titulación: Especialidad</Label>
+                                <Input placeholder="Titulación-especialidad" name="titulacionUsuarioEspecialidad" value={titulacionUsuarioEspecialidad} onChange={ handleInputChange } ></Input> 
                         </FormGroup>
                     </Col>
                     <Col md={6}>

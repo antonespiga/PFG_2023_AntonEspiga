@@ -25,7 +25,7 @@ function Header() {
             </Col>
             <Col md="8" className="cabecera-texto">
                 <h1>Buscador de cursos</h1>
-                <Button color="none" onClick={volver} ><h8> < FaArrowLeft />{' '}{location.pathname}</h8></Button>
+                <Button color="none" onClick={volver} ><h6> < FaArrowLeft />{' '}{location.pathname}</h6></Button>
             </Col>
             <Col md="2" className="menu" >
                 <Button id="expand-btn" onClick={openModal}>

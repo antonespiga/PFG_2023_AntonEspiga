@@ -14,7 +14,8 @@ export {
     getVisualizacionesUsuario,
     modUsuarioCont,
     getVisualizacionesByImparticion,
-    getVisualizacionMasFrecuente
+    getVisualizacionMasFrecuente,
+    getVisualizacionMasFrecuenteTextoLibre
 }
 
 function addVisualizacion(visualizacion) {
@@ -97,6 +98,12 @@ function modUsuarioCont({ user, tipoConsulta }) {
 
 function getVisualizacionMasFrecuente(id) {
     return API.get('/visualizaciones/frec/' + id)
+        .then((response) => response.data)
+        .catch((error) => error.response.data)
+}
+
+function getVisualizacionMasFrecuenteTextoLibre(id) {
+    return API.get('/visualizaciones/frec/libre/' + id)
         .then((response) => response.data)
         .catch((error) => error.response.data)
 }

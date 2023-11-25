@@ -1,11 +1,212 @@
-{"_id":{"$oid":"64772061fdb6c331528e78b5"},"email":"alejandro.perez@hotmail.com","nombre":"Alejandro","apellido1":"Pérez","apellido2":"García","titulacion":"Derecho","poblacion":"Barcelona","codigoPostal":8008,"rol":"socio","clave":"$2b$10$dn/SODMq2xq.HiRNPgUr3O3fMG2F/P.HTCC3Ad8XSoEFmCmN.HhaO","cont":5}
-{"_id":{"$oid":"64772061fdb6c331528e78b6"},"email":"ana.torres@yahoo.com","nombre":"Ana","apellido1":"Torres","apellido2":"Rodríguez","titulacion":"Periodismo","poblacion":"Valencia","codigoPostal":46002,"rol":"socio","clave":"$2b$10$BVxNRpTLcHNW/uMOT6Dan.7w3bZrafvbr9ia49wugSK1LaPsrvJ2O","cont":29,"contDirector":1,"contProfesor":1,"contCreditos":3,"contSemestre":58,"contTematica":3,"contTipo":1,"contTitulo":1,"contNombre":6,"contImparticion":1,"contAfinidad":2}
-{"_id":{"$oid":"64772061fdb6c331528e78b7"},"email":"carlos.ruiz@gmail.com","nombre":"Carlos","apellido1":"Ruiz","apellido2":"González","titulacion":"Ingeniería  Industrial","poblacion":"Sevilla","codigoPostal":41001,"rol":"Socio","clave":"$2b$10$d4k7jQzb7R0y.noiDRhuC.lwAi9EV7fh8mPSIUHirQvWuKOSuWnP2","cont":11,"contSemestre":5,"contAfinidad":0,"contCreditos":0,"contDirector":0,"contImparticion":0,"contNombre":0,"contProfesor":0,"contTematica":0,"contTipo":0,"contTitulo":0}
-{"_id":{"$oid":"64772061fdb6c331528e78b8"},"email":"isabel.fernandez@gmail.com","nombre":"Isabel","apellido1":"Fernández","apellido2":"López","titulacion":"Psicología","poblacion":"Málaga","codigoPostal":29001,"rol":"Socio","clave":"$2b$10$F4cBwrMgps9aWUTXrO0M5uJ3nNYGIrqgXz1hhBXlWS2jA5mJhtmcW","cont":6,"contAfinidad":0,"contCreditos":0,"contDirector":0,"contImparticion":0,"contNombre":0,"contProfesor":0,"contSemestre":0,"contTematica":0,"contTipo":0,"contTitulo":0}
-{"_id":{"$oid":"64772061fdb6c331528e78b9"},"email":"david.sanchez@hotmail.com","nombre":"David","apellido1":"Sánchez","apellido2":"García","titulacion":"Economía","poblacion":"Madrid","codigoPostal":28004,"rol":"socio","clave":"$2b$10$hhmZotquQf8UY2gukwiDNOU7h8po8y3xIOjZp4e5UejIjRauciEga","cont":8,"contSemestre":32,"contAfinidad":2}
-{"_id":{"$oid":"64772061fdb6c331528e78ba"},"email":"maria.rodriguez@yahoo.com","nombre":"María","apellido1":"Rodríguez","apellido2":"Pérez","titulacion":"Medicina","poblacion":"Barcelona","codigoPostal":8009,"rol":"Socio","clave":"$2b$10$hhmZotquQf8UY2gukwiDNOU7h8po8y3xIOjZp4e5UejIjRauciEga","cont":0,"contAfinidad":0,"contCreditos":0,"contDirector":0,"contImparticion":0,"contNombre":0,"contProfesor":0,"contSemestre":0,"contTematica":0,"contTipo":0,"contTitulo":0}
-{"_id":{"$oid":"64772061fdb6c331528e78bb"},"email":"antonio.gonzalez@gmail.com","nombre":"Antonio","apellido1":"González","apellido2":"García","titulacion":"Arquitectura","poblacion":"Valencia","codigoPostal":46001,"rol":"socio","clave":"$2b$10$goVB.nc/xEIw5pMPM5IRTuQJlLuTy54zr2kGo.NNxTwmKdZZ45062","cont":0}
-{"_id":{"$oid":"64772061fdb6c331528e78bc"},"email":"laura.martin@hotmail.com","nombre":"Laura","apellido1":"Martín","apellido2":"López","titulacion":"Psicología","poblacion":"Zaragoza","codigoPostal":50001,"rol":"socio","clave":"$2b$10$goVB.nc/xEIw5pMPM5IRTuQJlLuTy54zr2kGo.NNxTwmKdZZ45062","cont":9,"contSemestre":6,"contProfesor":2,"contTitulo":1}
-{"_id":{"$oid":"64772061fdb6c331528e78bd"},"email":"javier.lopez@yahoo.com","nombre":"Javier","apellido1":"López","apellido2":"Sánchez","titulacion":"Ingeniería Civil","poblacion":"Bilbao","codigoPostal":48001,"rol":"socio","clave":"$2b$10$fSnKJTOrsvFsxb6Y4U3Hruy0Q2vAApAnmNZH3DrnuWFRWGgGMmuFG","cont":19,"contTitulo":3,"contNombre":3,"contTipo":1,"contCreditos":4,"contDirector":1,"contSemestre":1}
-{"_id":{"$oid":"64772061fdb6c331528e78be"},"email":"admin@admin.es","nombre":"admin","apellido1":"admin","apellido2":"admin","titulacion":"admin","poblacion":"admin","codigoPostal":1234,"rol":"admin","clave":"$2b$10$LlHONKoqKcfI3fDjvNaYeusI1y8hDxpfpOjh9OvK/7xlv1V3ivqQO","cont":0}
-{"_id":{"$oid":"64989d5cf804a519c0fe12ad"},"email":"laura.garcia@gmail.com","nombre":"Laura","apellido1":"García","apellido2":"Martínez","poblacion":"Madrid","codigoPostal":28027,"titulacion":"Medicina","clave":"$2b$10$5qwGkyZQWxjLO3yKJYWWxOECoaopSfRruIG2r5Qu01SAW4RXZi6Oy","rol":"Socio","contSemestre":169,"contCreditos":11,"contTipo":6,"contNombre":54,"contImparticion":3,"contTitulo":20,"contTematica":20,"contProfesor":13,"contDirector":16,"__v":0,"cont":228,"contAfinidad":21}
+[{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78b5"
+  },
+  "email": "alejandro.perez@hotmail.com",
+  "nombre": "Alejandro",
+  "apellido1": "Pérez",
+  "apellido2": "García",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Derecho"
+  },
+  "poblacion": "Barcelona",
+  "codigoPostal": 8008,
+  "rol": "socio",
+  "clave": "$2b$10$dn/SODMq2xq.HiRNPgUr3O3fMG2F/P.HTCC3Ad8XSoEFmCmN.HhaO"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78b6"
+  },
+  "email": "ana.torres@yahoo.com",
+  "nombre": "Ana",
+  "apellido1": "Torres",
+  "apellido2": "Rodríguez",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Periodismo"
+  },
+  "poblacion": "Valencia",
+  "codigoPostal": 46002,
+  "rol": "socio",
+  "clave": "$2b$10$BVxNRpTLcHNW/uMOT6Dan.7w3bZrafvbr9ia49wugSK1LaPsrvJ2O"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78b7"
+  },
+  "email": "carlos.ruiz@gmail.com",
+  "nombre": "Carlos",
+  "apellido1": "Ruiz",
+  "apellido2": "González",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Ingeniería en Organización Industrial"
+  },
+  "poblacion": "Sevilla",
+  "codigoPostal": 41001,
+  "rol": "Socio",
+  "clave": "$2b$10$d4k7jQzb7R0y.noiDRhuC.lwAi9EV7fh8mPSIUHirQvWuKOSuWnP2"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78b8"
+  },
+  "email": "isabel.fernandez@gmail.com",
+  "nombre": "Isabel",
+  "apellido1": "Fernández",
+  "apellido2": "López",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Psicología"
+  },
+  "poblacion": "Málaga",
+  "codigoPostal": 29001,
+  "rol": "Socio",
+  "clave": "$2b$10$F4cBwrMgps9aWUTXrO0M5uJ3nNYGIrqgXz1hhBXlWS2jA5mJhtmcW"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78b9"
+  },
+  "email": "david.sanchez@hotmail.com",
+  "nombre": "David",
+  "apellido1": "Sánchez",
+  "apellido2": "García",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Economía"
+  },
+  "poblacion": "Madrid",
+  "codigoPostal": 28004,
+  "rol": "socio",
+  "clave": "$2b$10$hhmZotquQf8UY2gukwiDNOU7h8po8y3xIOjZp4e5UejIjRauciEga"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78ba"
+  },
+  "email": "maria.rodriguez@yahoo.com",
+  "nombre": "María",
+  "apellido1": "Rodríguez",
+  "apellido2": "Pérez",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Medicina"
+  },
+  "poblacion": "Barcelona",
+  "codigoPostal": 8009,
+  "rol": "Socio",
+  "clave": "$2b$10$hhmZotquQf8UY2gukwiDNOU7h8po8y3xIOjZp4e5UejIjRauciEga"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78bb"
+  },
+  "email": "antonio.gonzalez@gmail.com",
+  "nombre": "Antonio",
+  "apellido1": "González",
+  "apellido2": "García",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Arquitectura"
+  },
+  "poblacion": "Valencia",
+  "codigoPostal": 46001,
+  "rol": "socio",
+  "clave": "$2b$10$goVB.nc/xEIw5pMPM5IRTuQJlLuTy54zr2kGo.NNxTwmKdZZ45062"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78bc"
+  },
+  "email": "laura.martin@hotmail.com",
+  "nombre": "Laura",
+  "apellido1": "Martín",
+  "apellido2": "López",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Psicología"
+  },
+  "poblacion": "Zaragoza",
+  "codigoPostal": 50001,
+  "rol": "socio",
+  "clave": "$2b$10$goVB.nc/xEIw5pMPM5IRTuQJlLuTy54zr2kGo.NNxTwmKdZZ45062"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78bd"
+  },
+  "email": "javier.lopez@yahoo.com",
+  "nombre": "Javier",
+  "apellido1": "López",
+  "apellido2": "Sánchez",
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Ingeniería Civil"
+  },
+  "poblacion": "Bilbao",
+  "codigoPostal": 48001,
+  "rol": "socio",
+  "clave": "$2b$10$fSnKJTOrsvFsxb6Y4U3Hruy0Q2vAApAnmNZH3DrnuWFRWGgGMmuFG"
+},{
+  "_id": {
+    "$oid": "64772061fdb6c331528e78be"
+  },
+  "email": "admin@admin.es",
+  "nombre": "admin",
+  "apellido1": "admin",
+  "apellido2": "admin",
+  "titulacionUsuario": {
+    "grado": "Otro",
+    "especialidad": "admin"
+  },
+  "poblacion": "admin",
+  "codigoPostal": 1234,
+  "rol": "admin",
+  "clave": "$2b$10$LlHONKoqKcfI3fDjvNaYeusI1y8hDxpfpOjh9OvK/7xlv1V3ivqQO",
+  "cont": 0
+},{
+  "_id": {
+    "$oid": "64989d5cf804a519c0fe12ad"
+  },
+  "email": "laura.garcia@gmail.com",
+  "nombre": "Laura",
+  "apellido1": "García",
+  "apellido2": "Martínez",
+  "poblacion": "Madrid",
+  "codigoPostal": 28027,
+  "titulacionUsuario": {
+    "grado": "Grado",
+    "especialidad": "Medicina"
+  },
+  "clave": "$2b$10$5qwGkyZQWxjLO3yKJYWWxOECoaopSfRruIG2r5Qu01SAW4RXZi6Oy",
+  "rol": "Socio"
+},{
+  "_id": {
+    "$oid": "653c10e7c40683c60532e368"
+  },
+  "email": "juan@juan.com",
+  "nombre": "juanito",
+  "apellido1": "juan",
+  "apellido2": "juan",
+  "poblacion": "juan",
+  "codigoPostal": 123,
+  "titulacion": {
+    "grado": "FP Grado Medio",
+    "especialidad": "vdfdv"
+  },
+  "clave": "$2b$10$ApWf/1RAzNFu.YmTGFE3neCprDGg372OS4e.D7gZoOAgu6DjOcGma",
+  "rol": "Socio",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "653d5bb4a0571335fd95f8bb"
+  },
+  "email": "pepe@pepe.com",
+  "nombre": "pepe",
+  "apellido1": "pepe",
+  "apellido2": "pepe",
+  "poblacion": "pepe",
+  "codigoPostal": 12324,
+  "titulacionUsuario": {
+    "grado": "Otro",
+    "especialidad": "eso"
+  },
+  "clave": "$2b$10$BDjZ6J3yefqq7G6kgRD0iOLkWKR09E15nM8X0tFV6/BsnqdwAAL9W",
+  "rol": "Socio",
+  "__v": 0
+}]

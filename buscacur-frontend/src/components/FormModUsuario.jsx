@@ -14,6 +14,12 @@ export default function FormModUsuario({
         setUsuario({ ...usuario, [e.target.name]: e.target.value })
     }
 
+    const handleInputChangeTitulacion = (e) => {
+        setUsuario({ ... usuario, titulacionUsuario: {
+            ...usuario.titulacionUsuario, [e.target.name]: e.target.value
+        } })
+    }
+
     const openErrorModal = (mnsj) => {
         setMsg(mnsj)
         setIsOpenErrorModal(true)
@@ -84,29 +90,50 @@ export default function FormModUsuario({
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="email" >Email</Label>
-                            <Input id="email" name="email" type="email" readOnly={readOnly} placeholder="Email"
+                            <Input id="email" name="email" type="email" readOnly={true} placeholder="Email"
                                 value={usuario.email} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="clave" >Clave</Label>
-                            <Input id="clave" name="clave" type="password" readOnly={readOnly} placeholder="Clave"
+                            <Input id="clave" name="clave" type="password" readOnly={true} placeholder="Clave"
                                 value={ usuario.clave } onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>
                         <FormGroup >
                             <Label style={{ color: "black" }} for="email" >Rol</Label>
-                            <Input id="rol" name="rol" type="rol" readOnly={readOnly} placeholder="Rol"
-                                value={usuario.rol} onChange={handleInputChange}></Input>
+                            <Input id="rol" name="rol" type="select" 
+                            disabled={sessionStorage.getItem('rol')==="Socio"} readOnly={readOnly} placeholder="Rol"
+                                value={usuario.rol} onChange={handleInputChange}>
+                                <option>Socio</option>
+                                <option>Administrador</option>
+                            </Input>
                         </FormGroup>
                     </Col>
                     <Col md={6}>
                         <FormGroup >
-                            <Label style={{ color: "black" }} for="titulacion" >Titulación</Label>
-                            <Input id="titulacion" name="titulacion" type="text" readOnly={readOnly} placeholder="Titulación"
-                                value={usuario.titulacion} onChange={handleInputChange}></Input>
+                        <Label style={{ color: "black" }} value="Titulacion-grado" for="titulacion-grado" >Titulación: Grado</Label>
+                                <Input type='select' value={usuario.titulacionUsuarioGrado} placeholder="Titulación-Grado" name="titulacionUsuarioGrado"  onChange={ handleInputChangeTitulacion } >
+                                   <option>
+                                    FP Grado Medio
+                                   </option>
+                                   <option>
+                                    FP Grado Superior
+                                   </option>
+                                   <option>
+                                    Grado 
+                                   </option>
+                                   <option>
+                                    Máster
+                                   </option>
+                                   <option>
+                                    Otro
+                                   </option>
+                                </Input>
+                                <Label style={{ color: "black" }} value="Titulacion-especialidad" for="titulacion-especialidad" >Titulación: Especialidad</Label>
+                                <Input placeholder="Titulación-especialidad" name="titulacionUsuarioEspecialidad" value={usuario.titulacionUsuarioEspecialidad} onChange={ handleInputChangeTitulacion } ></Input>
                         </FormGroup>
                     </Col>
                 </Row>

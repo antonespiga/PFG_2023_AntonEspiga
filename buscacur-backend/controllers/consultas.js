@@ -1,5 +1,6 @@
 const Cursos = require('../models/cursos')
 
+
 exports.getCursos = async (req, res, next) => {
      await Cursos.find({}).then(function (listCursos) {
           res.status(200).json(listCursos);
@@ -85,6 +86,14 @@ exports.getTitulos = async (req, res, next) => {
           .catch(next)
 }
 
+exports.getTitulacionCursos = async (req, res, next) => {
+     await Cursos.find({}, { 'titulacionCurso': 1, _id: 0 }).distinct('titulacionCurso')
+          .then(function (listCursos) {
+               res.status(200).json(listCursos)
+          })
+          .catch(next)
+}
+
 exports.getImparticions = async (req, res, next) => {
      await Cursos.find({}, { 'imparticion': 1, _id: 0 }).distinct('imparticion')
           .then(function (listCursos) {
@@ -97,15 +106,16 @@ exports.getCursosFilter = async (req, res, next) => {
 
      if((req.query.tipo==='texto libre') && (req.query.params)){
           const filter = Object.keys(req.query.params).map(key=>({[key]: req.query.params[key]}))
-          console.log(filter)
-               await Cursos.find({ $or: filter })
+          console.log(req.query.params)
+          const qFilter =  req.query.yQuery === 'true'? req.query.params : { $or: filter }
+               await Cursos.find(qFilter).sort('tematica')
                .then(function (listCursos) {
                     res.status(200).json(listCursos) 
                })
                .catch(next)
                 }
-     else {console.log('else')
-          await Cursos.find(req.query.params)
+     else {console.log(req.query.params)
+          await Cursos.find(req.query.params).sort('tematica')
           .then(function (listCursos) {
                res.status(200).json(listCursos)
           })

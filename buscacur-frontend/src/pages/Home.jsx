@@ -38,16 +38,16 @@ export default function Home() {
             </CardHeader>
             <CardBody>
               <ListGroup id="listgroup" horizontal>
-                <ListGroupItem id="listgrouptitle" >Nombre</ListGroupItem>
-                <ListGroupItem id="listgrouptitle">Título</ListGroupItem>
-                <ListGroupItem id="listgrouptitle">Impartición</ListGroupItem>
-                <ListGroupItem id="listgrouptitle">Temática</ListGroupItem>
-                <ListGroupItem id="listgrouptitle">Créditos</ListGroupItem>
-                <ListGroupItem id="listgrouptitle">Director</ListGroupItem>
-                <ListGroupItem id="listgrouptitle">Profesor</ListGroupItem>
+                <ListGroupItem id="btn-1" >Nombre</ListGroupItem>
+                <ListGroupItem id="inline-2">Título</ListGroupItem>
+                <ListGroupItem id="inline-3">Impartición</ListGroupItem>
+                <ListGroupItem id="inline-4">Temática</ListGroupItem>
+                <ListGroupItem id="inline-5">Créditos</ListGroupItem>
+                <ListGroupItem id="inline-6">Director</ListGroupItem>
+                <ListGroupItem id="inline-7">Profesor</ListGroupItem>
               </ListGroup>
               {data?.map((curso) => (
-
+              <Card>
                 <ListGroup horizontal id="listgroup" >
                   <ListGroupItem id="btn-1" action active href="#" tag="button" title="Ver detalle" onClick={() => handleCurso(curso)} key={curso._id} >{curso.nombre}</ListGroupItem>
                   <ListGroupItem id="inline-2" action key={curso._id} >{curso.titulo}</ListGroupItem>
@@ -56,8 +56,10 @@ export default function Home() {
                   <ListGroupItem id="inline-5" action key={curso._id} >{curso.creditos}</ListGroupItem>
                   <ListGroupItem id="inline-6" action key={curso._id} >{curso.director}</ListGroupItem>
                   <ListGroupItem id="inline-7" action key={curso._id} >{curso.profesor}</ListGroupItem>
-
-                  {detalle && <FormDetalleCurso
+                </ListGroup>
+                </Card>  
+              ))}
+              {detalle && <FormDetalleCurso
                     isOpen={detalle}
                     closeModal={closeDetalle}
                     curso={selcurso}
@@ -65,8 +67,6 @@ export default function Home() {
                     opt={"ver"}
                     readOnly={true}
                   />}
-                </ListGroup>
-              ))}
             </CardBody>
             <CardFooter>
             </CardFooter>

@@ -11,7 +11,9 @@ const UsuarioSchema = new mongoose.Schema({
     apellido2: { type: String, required:true },
     poblacion: { type: String, required:true },
     codigoPostal: { type: Number, required: true },
-    titulacion: { type: String, required:true },
+    titulacionUsuarioGrado: { type: String, required:true, 
+            enum: ['FP Grado Medio', 'FP Grado Superior', 'Grado', 'Máster', 'Otro' ] },
+    titulacionUsuarioEspecialidad: { type: String, required: true },
     clave: { type: String, required: true },
     rol: { type: String, enum: ['Socio', 'Administrador'], default: "Socio", required:true },
 })

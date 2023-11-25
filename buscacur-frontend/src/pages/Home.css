@@ -10,45 +10,41 @@
 	  background: #ffffff;
 	  border-color: rgb(0, 0, 0);
 	  margin-top: 0px;
+   
     }
+   
    
   h1 {
     font-size: 38px;
     text-align: center;
   }
   
-  .list-group {
-    list-style-type: none;
-    align-content: center;
   
-  }
 
   .pagination {
     align-items: bottom;
     
   }
 
-  #lista-inline {
-   display:flex;
+  .listgroup {
+   display:inline-flex;
   }
 
-
-  #inline-1 {
-    background-color: rgb(173, 173, 236);
-    width:30vw;
+#btn-1 {
+    background-color:#007bff;
+    
   }
- 
+
   #inline-2 {
     background-color: rgb(178, 204, 173);
-   
-  }
+   }
 
   #inline-3 {
     background-color: rgb(167, 231, 226);
-  }
+    }
   #inline-4 {
     background-color: rgb(221, 147, 203);
-  }
+     }
   #inline-5 {
     background-color: rgb(192, 238, 192);
   }
@@ -67,5 +63,9 @@
 
 #listgroup {
   justify-content: space-around;
- 
+  z-index:1;
+}
+
+.form-control:hover {
+  background-color: aquamarine;
 }

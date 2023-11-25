@@ -66,14 +66,7 @@ export default function MenuCRUDCursos() {
                         Eliminar
                     </Button>
                     {/* ------------  Eliminar curso     -----------------  */}
-                    {verLista &&
-                        <Modal fullscreen isOpen={verLista} toggle={closeModal}>
-                            <ModalHeader toggle={modalLista}>
-                                <h3>Listado de cursos</h3>
-                                <Button style={{ color: "blue" }} onClick={() => actualizar()}>Actualiza</Button>
-                            </ModalHeader>
-                            <ListadoTabla cursos={cursos} opt={opt} />
-                        </Modal>}
+                    
                 </Col>
                 <Col>
                     <Button color="light" onClick={() => modalLista("mod")}>
@@ -84,9 +77,9 @@ export default function MenuCRUDCursos() {
                         <Modal fullscreen isOpen={verLista} toggle={closeModal}>
                             <ModalHeader toggle={modalLista}>
                                 <h3>Listado de cursos</h3>
-                                <Button onClick={() => actualizar(cursos)}>Actualizar</Button>
+                                <Button onClick={() => actualizar()}>Actualizar</Button>
                             </ModalHeader>
-                            <ListadoTabla cursos={cursos} setCurso={setCurso} opt={opt} />
+                            <ListadoTabla cursos={cursos} opt={opt} />
                         </Modal>}
                 </Col>
             </Row>

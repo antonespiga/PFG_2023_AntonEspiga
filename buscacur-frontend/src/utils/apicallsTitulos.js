@@ -44,3 +44,5 @@ function getArrayTitulos(codigos) {
         .then((response) => response.data)
         .catch((error) => error.response.data)
 }
+
+

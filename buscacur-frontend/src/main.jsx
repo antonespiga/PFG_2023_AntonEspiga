@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/registro' element={<Registro />} />
         <Route exact path='/socio' element={<Socio />} />
-        <Route exact path='/admin' element={<Admin />} />
+        <Route exact path='/administrador' element={<Admin />} />
         <Route exact path='/error' element={<Error />} />
       </Routes>
     </BrowserRouter>

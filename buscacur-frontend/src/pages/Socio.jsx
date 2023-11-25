@@ -9,11 +9,12 @@ import { getCursos } from '../utils/apicallsCursos'
 import { getCursosFilter } from '../utils/apicallsConsultas'
 import ListadoTabla from '../components/ListadoTabla'
 import ListadoCards from '../components/ListadoCards'
+import { filtrarTitulacion } from '../utils/filtrarTitulacion'
 import {
     getNombres, getTipos, getTitulos, getSemestres, getDirectores,
-    getProfesores, getTematicas, getCreditos, getImparticions
+    getProfesores, getTematicas, getCreditos, getImparticions, getTitulacionCursos, getTitulacionUniversitarias
 } from '../utils/apicallsData'
-import { addVisualizacion, getVisualizacionMasFrecuente, modUsuarioCont } from '../utils/apicallsVisualizaciones'
+import { addVisualizacion, getVisualizacionMasFrecuente, getVisualizacionMasFrecuenteTextoLibre, modUsuarioCont } from '../utils/apicallsVisualizaciones'
 import Perfil from '../components/Perfil'
 import Error from "./Error"
 import { getUsuarioById } from '../utils/apicallsUsuarios'
@@ -24,7 +25,8 @@ export default function Consultas() {
 
     const [listado, setListado] = useState(true)
     const [afinidad, setAfinidad] = useState()
-    const [user, setUser] = useState({})
+    const [usuario, setUsuario] = useState({})
+    const [grado, setGrado] = useState()
     const [cursos, setCursos] = useState([])
     const [nombres, setNombres] = useState([])
     const [tipos, setTipos] = useState([])
@@ -34,8 +36,10 @@ export default function Consultas() {
     const [tematicas, setTematicas] = useState([])
     const [semestres, setSemestres] = useState([])
     const [titulos, setTitulos] = useState([])
+    const [titulacionCursos, setTitulacionCursos] = useState([])
     const [imparticions, setImparticions] = useState([])
-    const [afinidades, setAfinidades] = useState(['Consultas más repetidas', 'Titulación'])
+    const [afinidades, setAfinidades] = useState(['Consultas más repetidas', 'Consultas más repetidas en texto libre', 'Titulación'])
+    const [claves, setClaves] = useState(['FP Grado Medio', 'FP Grado Superior', 'Grado', 'Máster', 'Otro'])
 
     const [tipoConsulta, setTipoConsulta] = useState()
     const [isOpenTematicas, setIsOpenTematicas] = useState(false)
@@ -46,6 +50,7 @@ export default function Consultas() {
     const [isOpenDirectores, setIsOpenDirectores] = useState(false)
     const [isOpenNombres, setIsOpenNombres] = useState(false)
     const [isOpenTitulos, setIsOpenTitulos] = useState(false)
+    const [isOpenTitulacions, setIsOpenTitulacions] = useState(false)
     const [isOpenImparticions, setIsOpenImparticions] = useState(false)
     const [isOpenAfinidades, setIsOpenAfinidades] = useState(false)
 
@@ -57,17 +62,19 @@ export default function Consultas() {
     const toggleProfesores = () => setIsOpenProfesores(!isOpenProfesores)
     const toggleDirectores = () => setIsOpenDirectores(!isOpenDirectores)
     const toggleTitulos = () => setIsOpenTitulos(!isOpenTitulos)
+    const toggleTitulacions = () => setIsOpenTitulacions(!isOpenTitulacions)
     const toggleImparticions = () => setIsOpenImparticions(!isOpenImparticions)
     const toggleAfinidades = () => setIsOpenAfinidades(!isOpenAfinidades)
 
     const [logged, setLogged] = useState(sessionStorage.getItem('isLogged'))
     const [searchText, setSearchText] = useState('')
-       const [parametros, setParametros] = useState({
-        semestre: null, creditos: null, tipo: null, titulo: null, nombre: null, imparticion: null,
+    const [parametros, setParametros] = useState({
+        semestre: null, creditos: null, tipo: null, titulo: null, titulacionCurso: null, nombre: null, imparticion: null,
         tematica: null, profesor: null, director: null
     })
     const [campoConsultaMasFrec, setCampoConsultaMasFrec] = useState()
-    const [campoConsultaTitulacionAfin, setcampoConsultaTitulacionAfin] = useState()
+    const [campoConsultaMasFrecTextoLibre, setCampoConsultaMasFrecTextoLibre] = useState()
+    const [campoConsultaTitulacionAfin, setcampoConsultaTitulacionAfin] = useState([])
     const [campoConsulta, setCampoConsulta] = useState()
     const [yQuery, setYQuery] = useState(false)
 
@@ -83,8 +90,9 @@ export default function Consultas() {
 
     useEffect(() => {
         getUsuarioById(sessionStorage.getItem('id'))
-            .then(res => setUser(res))
-    }, [])
+            .then(res => {setUsuario(res);
+            setGrado(res.titulacionUsuarioGrado)})
+    }, [sessionStorage.getItem('id')])
 
     useEffect(() => {
         getCursos()
@@ -151,6 +159,13 @@ export default function Consultas() {
     }, [])
 
     useEffect(() => {
+        getTitulacionCursos()
+            .then((alltitulacionCursos) => {
+                setTitulacionCursos(alltitulacionCursos)
+            })
+    }, [])
+
+    useEffect(() => {
         getImparticions()
             .then((allimparticions) => {
                 setImparticions(allimparticions)
@@ -163,24 +178,29 @@ export default function Consultas() {
     }, [])
 
     useEffect(() => {
-        filtroTitulacion()
+        getVisualizacionMasFrecuenteTextoLibre(sessionStorage.getItem('id'))
+            .then((campo) => setCampoConsultaMasFrecTextoLibre(campo))
     }, [])
+
+    useEffect(() => {
+        filtroTitulacion()
+    }, [usuario])
 
     // *********************   Consultas por atributos de los cursos   **********//
     // **********************                                          **********//
 
     const filtroTitulacion = () => {
-        const claves = ['Licenciatura', 'Ingenieria', 'Máster', 'Medicina']
-        if (claves.includes(user.titulacion)) {
-            setcampoConsultaTitulacionAfin({ tipo: 'Reglado' })
+           setcampoConsultaTitulacionAfin(filtrarTitulacion(grado, claves))
         }
-        else {
-            setcampoConsultaTitulacionAfin({ tipo: 'Abierto' })
-        }
-    }
-
+       
     const consMasFrecuente = () => {
         getCursosFilter(campoConsultaMasFrec).then((selCursos) => {
+            setCursos(selCursos)
+        })
+    }
+
+    const consMasFrecuenteTextoLibre = () => {
+        getCursosFilter(campoConsultaMasFrecTextoLibre).then((selCursos) => {
             setCursos(selCursos)
         })
     }
@@ -207,7 +227,7 @@ export default function Consultas() {
 useEffect(() => {
     setParametros((prevParametros) => ({
         ...prevParametros,
-        semestre: null, creditos: null, tipo: null, titulo: null, nombre: null, imparticion: null,
+        semestre: null, creditos: null, tipo: null, titulo: null, titulacionCurso: null,  nombre: null, imparticion: null,
         tematica: null, profesor: null, director: null
     }))
 
@@ -218,11 +238,11 @@ useEffect(() => {
     const handleFind = () => {
         setParametros((prevParametros) => ({
             ...prevParametros,
-            semestre: null, creditos: null, tipo: null, titulo: [], nombre: null, imparticion: null,
+            semestre: null, creditos: null, tipo: null, titulo: [], titulacionCurso: null, nombre: null, imparticion: null,
             tematica: null, profesor: null, director: null
         }))
        
-        const filtro = ['', 'de', 'a', 'y', 'por', 'para', 'en', 'del', 'e']
+        const filtro = ['', 'de', 'a', 'y', 'por', 'para', 'en', 'del', 'e', 'o']
         const searchWords = searchText.trim().split(' ').filter(word =>
             !filtro.includes(word));
         if(searchWords.includes('&')) setYQuery(true); else setYQuery(false)
@@ -252,6 +272,17 @@ useEffect(() => {
                     setParametros((prevParametros) => ({
                         ...prevParametros,
                         nombre: qNombres
+                    }))
+                }
+            })
+
+            const qTitulacionCursos = []
+            titulacionCursos.forEach(word => {
+                if (normalizarTexto(word).toLowerCase().includes(normalizarTexto(String(element.toLowerCase())))) {
+                    qTitulacionCursos.push(word)
+                    setParametros((prevParametros) => ({
+                        ...prevParametros,
+                        titulacionCurso: qTitulacionCursos
                     }))
                 }
             })
@@ -335,6 +366,7 @@ useEffect(() => {
                 visualizacion.campo.tipo===null &&
                 visualizacion.campo.semestre===null &&
                 visualizacion.campo.imparticion===null &&
+                visualizacion.campo.titulacionCurso===null &&
                 visualizacion.campo.titulo===null &&
                 visualizacion.campo.profesor===null &&
                 visualizacion.campo.director===null &&
@@ -365,6 +397,7 @@ useEffect(() => {
                     visualizacion.campo.tipo===null &&
                     visualizacion.campo.semestre===null &&
                     visualizacion.campo.imparticion===null &&
+                    visualizacion.campo.titulacionCurso===null &&
                     visualizacion.campo.titulo===null &&
                     visualizacion.campo.profesor===null &&
                     visualizacion.campo.director===null &&
@@ -395,6 +428,11 @@ useEffect(() => {
         }
         else if (afinidad === afinidades[1]) {
             // setTipoConsulta('afinidad')
+            consMasFrecuenteTextoLibre()
+            setAfinidad('')
+        }
+        else if (afinidad === afinidades[2]) {
+            // setTipoConsulta('afinidad')
             consAfinTitulo()
             setAfinidad('')
         }
@@ -408,7 +446,7 @@ useEffect(() => {
         const visualizacion = {
             usuario: sessionStorage.getItem('id'),
             tipoConsulta: tipoConsulta,
-            campo: campoConsulta || campoConsultaMasFrec || campoConsultaTitulacionAfin,
+            campo: campoConsulta || campoConsultaMasFrec || campoConsultaTitulacionAfin || campoConsultaMasFrecTextoLibre,
             fecha: Date.now()
         }
         if(tipoConsulta)
@@ -525,6 +563,21 @@ useEffect(() => {
                     </Dropdown>
                 </Navbar>
                 <Navbar>
+                <Dropdown isOpen={isOpenTitulacions} toggle={toggleTitulacions}>
+                        <DropdownToggle caret>Titulación</DropdownToggle>
+                        <DropdownMenu>
+                            {titulacionCursos.map((titulacionCursos) => {
+                                return (
+                                    <DropdownItem onClick={() => {
+                                        setCampoConsulta({ titulacionCurso: titulacionCursos })
+                                        setTipoConsulta('titulacionCurso')
+                                    }}>
+                                        {titulacionCursos}
+                                    </DropdownItem>
+                                )
+                            })}
+                        </DropdownMenu>
+                    </Dropdown>
                     <Dropdown isOpen={isOpenTitulos} toggle={toggleTitulos}>
                         <DropdownToggle caret>Titulo</DropdownToggle>
                         <DropdownMenu>

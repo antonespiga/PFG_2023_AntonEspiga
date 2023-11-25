@@ -19,7 +19,7 @@ export default function Admin() {
 	}
 
 	if (!logged) return (<Error error="Usuario no logado" />)
-	else if (sessionStorage.getItem('rol') !== "admin") return (<Error error="No tiene acceso"></Error>)
+	else if (sessionStorage.getItem('rol') !== "Administrador") return (<Error error="No tiene acceso"></Error>)
 	return (
 		<Container id="content">
 			<Col >

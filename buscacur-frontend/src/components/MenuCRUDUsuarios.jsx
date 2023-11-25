@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Button, Modal, ModalHeader } from 'reactstrap'
 import FormAddUsuario from "./FormAddUsuario";
-import { addUsuario, delUsuario, modUsuario, getUsuarios } from "../utils/apicallsUsuarios";
+import { addUsuario, getUsuarios } from "../utils/apicallsUsuarios";
 import ListaUsuarios from "./ListaUsuarios";
 
 export default function MenuCRUDUsuarios() {
@@ -67,14 +67,7 @@ export default function MenuCRUDUsuarios() {
                         Eliminar
                     </Button>
                     
-                    {verLista &&
-                        <Modal fullscreen isOpen={verLista} toggle={closeModal}>
-                            <ModalHeader toggle={modalLista}>
-                                <h3>Listado de usuarios</h3>
-                                <Button onClick={() => actualizar()}>Actualiza</Button>
-                            </ModalHeader>
-                            <ListaUsuarios usuarios={usuarios} opt={opt} />
-                        </Modal>}
+                    
                 </Col>
                 <Col>
                     <Button color="light" onClick={() => modalLista("mod")}>
@@ -85,7 +78,7 @@ export default function MenuCRUDUsuarios() {
                         <Modal fullscreen isOpen={verLista} toggle={closeModal}>
                             <ModalHeader toggle={modalLista}>
                                 <h3>Listado de usuarios</h3>
-                                <Button onClick={() => actualizar(usuarios)}>Actualizar</Button>
+                                <Button onClick={() => actualizar()}>Actualizar</Button>
                             </ModalHeader>
                             <ListaUsuarios usuarios={usuarios} opt={opt} />
                         </Modal>}
