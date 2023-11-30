@@ -1,10 +1,71 @@
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eef4"},"id":201700,"tipo":"Máster ded formación permanente","titulo":"Ciberinteligencia y ciberterrorismo"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eef5"},"id":201600,"tipo":"Máster ded formación permanente","titulo":"Analista de ciberseguridad"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eef6"},"id":201500,"tipo":"Diploma de experto universitario","titulo":"Técnicas y gestión de la ciberseguridad"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eef7"},"id":201400,"tipo":"Diploma de experto profesional","titulo":"Técnicas informáticas para peritaje"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eef8"},"id":201300,"tipo":"Diploma de experto profesional","titulo":"Tácticas de intrusión"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eef9"},"id":201200,"tipo":"Certificado de enseñanza abierta","titulo":"Algoritmos criptográficos computacionales"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eefa"},"id":201100,"tipo":"Certificado de enseñanza abierta","titulo":"Fundamentos de la ciberseguridad"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eefb"},"id":311201,"tipo":"Máster universitario","titulo":"M.U. en Ingeniería de las tecnologías educativas"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eefc"},"id":310701,"tipo":"Máster universitario","titulo":"M.U. en tecnologías del lenguaje"}
-{"_id":{"$oid":"64860fb913b6e7e2d6b4eefd"},"id":310801,"tipo":"Máster universitario","titulo":"M.U. en Investigación en Inteligencia Artificial"}
+[{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eef4"
+  },
+  "id": 201700,
+  "tipo": "Máster de formación permanente",
+  "titulo": "Ciberinteligencia y ciberterrorismo"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eef5"
+  },
+  "id": 201600,
+  "tipo": "Máster de formación permanente",
+  "titulo": "Analista de ciberseguridad"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eef6"
+  },
+  "id": 201500,
+  "tipo": "Diploma de experto universitario",
+  "titulo": "Técnicas y gestión de la ciberseguridad"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eef7"
+  },
+  "id": 201400,
+  "tipo": "Diploma de experto profesional",
+  "titulo": "Técnicas informáticas para peritaje"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eef8"
+  },
+  "id": 201300,
+  "tipo": "Diploma de experto profesional",
+  "titulo": "Tácticas de intrusión"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eef9"
+  },
+  "id": 201200,
+  "tipo": "Certificado de enseñanza abierta",
+  "titulo": "Algoritmos criptográficos computacionales"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eefa"
+  },
+  "id": 201100,
+  "tipo": "Certificado de enseñanza abierta",
+  "titulo": "Fundamentos de la ciberseguridad"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eefb"
+  },
+  "id": 311201,
+  "tipo": "Máster universitario",
+  "titulo": "M.U. en Ingeniería de las tecnologías educativas"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eefc"
+  },
+  "id": 310701,
+  "tipo": "Máster universitario",
+  "titulo": "M.U. en tecnologías del lenguaje"
+},{
+  "_id": {
+    "$oid": "64860fb913b6e7e2d6b4eefd"
+  },
+  "id": 310801,
+  "tipo": "Máster universitario",
+  "titulo": "M.U. en Investigación en Inteligencia Artificial"
+}]

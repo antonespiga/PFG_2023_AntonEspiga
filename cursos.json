@@ -1,11 +1,11 @@
 [{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a2"
+    "$oid": "653d6a0a0219c63fa2639a7e"
   },
   "nombre": "Contenidos multimedia para la educación",
   "identificador": 31120011,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Agustín Carlos Caminero Herráez",
@@ -20,19 +20,19 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a3"
+    "$oid": "653d6a0a0219c63fa2639a7f"
   },
   "nombre": "Estándares y diseño de objetos educativos",
   "identificador": 311020028,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Miguel Rodriguez Artacho",
   "profesor": "Miguel Rodriguez Artacho",
   "imparticion": "Distancia",
   "descripcion": "Estudio de normas y estándares que permitan el uso de mecanismos instruccionales para el diseño de material educativo digital.",
-  "tematica": "Lenguajes y siatemas informáticos",
+  "tematica": "Lenguajes y sistemas informáticos",
   "creditos": 6,
   "semestre": "Primero",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31120028&idTitulacion=311201",
@@ -40,12 +40,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a4"
+    "$oid": "653d6a0a0219c63fa2639a80"
   },
   "nombre": "Servicios e infraestructuras digitales para la educación",
   "identificador": 31120034,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Rafael Pastor Vargas",
@@ -60,12 +60,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a5"
+    "$oid": "653d6a0a0219c63fa2639a81"
   },
   "nombre": "Minería de datos en educación y modelado del estudiante",
   "identificador": 31120040,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Antonio Rodriguez Anaya",
@@ -80,12 +80,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a6"
+    "$oid": "653d6a0a0219c63fa2639a82"
   },
   "nombre": "Soporte tecnológico a procesos de enseñanza y aprendizaje",
   "identificador": 31120057,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "José Luis Fernández Vindel",
@@ -100,12 +100,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a7"
+    "$oid": "653d6a0a0219c63fa2639a83"
   },
   "nombre": "Producción y gestión de contenidos en abierto",
   "identificador": 31120063,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Covadonga Rodrigo San Juan",
@@ -120,12 +120,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a8"
+    "$oid": "653d6a0a0219c63fa2639a84"
   },
   "nombre": "Integración de componentes y laboratorios en línea",
   "identificador": "3112007-",
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Luis De la Torre Cubillo",
@@ -140,12 +140,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155a9"
+    "$oid": "653d6a0a0219c63fa2639a85"
   },
   "nombre": "Juegos serios para el aprendizaje",
   "identificador": 31120086,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Antonio Robles Gómez",
@@ -160,12 +160,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155aa"
+    "$oid": "653d6a0a0219c63fa2639a86"
   },
   "nombre": "Robótica educativa",
   "identificador": 31120092,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Ängel Pérez de Madrid y Pablo",
@@ -180,12 +180,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155ab"
+    "$oid": "653d6a0a0219c63fa2639a87"
   },
   "nombre": "Accesibilidad del elearning",
   "identificador": 31120100,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en Ingeniería de las tecnologías educativas",
   "director": "Alejandro Rodriguez Ascaso",
@@ -200,12 +200,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155ac"
+    "$oid": "653d6a0a0219c63fa2639a88"
   },
   "nombre": "Redes neuronales para el procesamiento del lenguaje natural",
   "identificador": 31070017,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Álvaro Rodrigo Yuste",
@@ -220,12 +220,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155ad"
+    "$oid": "653d6a0a0219c63fa2639a89"
   },
   "nombre": "Representación de textos en espacios vectoriales y probabilísticos",
   "identificador": 31070023,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Enrique Amigó Cabrera",
@@ -240,12 +240,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155ae"
+    "$oid": "653d6a0a0219c63fa2639a8a"
   },
   "nombre": "Acceso inteligente a la información",
   "identificador": 31101019,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Fernando López Ostenero",
@@ -256,16 +256,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101019&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201",
+  "titulosOfertan": "310701, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155af"
+    "$oid": "653d6a0a0219c63fa2639a8b"
   },
   "nombre": "Minería de la Web",
   "identificador": 31101023,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Anselmo Peñas Padilla",
@@ -276,16 +276,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101023&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201",
+  "titulosOfertan": "310701, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b0"
+    "$oid": "653d6a0a0219c63fa2639a8c"
   },
   "nombre": "Motores de búsqueda web",
   "identificador": 31101042,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Julio Antonio Gonzalo Arroyo",
@@ -296,16 +296,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101042&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201",
+  "titulosOfertan": "310701, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b1"
+    "$oid": "653d6a0a0219c63fa2639a8d"
   },
   "nombre": "Minería de datos",
   "identificador": 31101061,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Luis Manuel Sarro Baro",
@@ -316,16 +316,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101061&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201, 310801",
+  "titulosOfertan": "310701, 311201, 310801",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b2"
+    "$oid": "653d6a0a0219c63fa2639a8e"
   },
   "nombre": "Descubrimiento de información en textos",
   "identificador": 31101076,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Raquel Martínez Unanue",
@@ -336,16 +336,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101076&idTitulacion=310701",
-  "titulosOfertan": "310701, 310101",
+  "titulosOfertan": "310701, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b3"
+    "$oid": "653d6a0a0219c63fa2639a8f"
   },
   "nombre": "Métodos probabilístas",
   "identificador": 31101199,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Manuel Arias Calleja",
@@ -360,12 +360,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b4"
+    "$oid": "653d6a0a0219c63fa2639a90"
   },
   "nombre": "Procesamiento del lenguaje natural",
   "identificador": 31101269,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Enrique Amigó Cabrera",
@@ -376,16 +376,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101269&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201, 310801",
+  "titulosOfertan": "310701, 311201, 310801",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b5"
+    "$oid": "653d6a0a0219c63fa2639a91"
   },
   "nombre": "Tecnicas basadas en grafos aplicados al procesamiento del lenguaje",
   "identificador": 31101305,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "M. Lourdes Araujo Serna",
@@ -396,16 +396,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101305&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201",
+  "titulosOfertan": "310701, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b6"
+    "$oid": "653d6a0a0219c63fa2639a92"
   },
   "nombre": "Semántica y pragmática en la Web",
   "identificador": "3110131-",
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Juan Manuel Cigarran Recuero",
@@ -420,12 +420,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b7"
+    "$oid": "653d6a0a0219c63fa2639a93"
   },
   "nombre": "Minería información social",
   "identificador": 31101324,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en tecnologías del lenguaje",
   "director": "Víctor Diego Fresno Fernández",
@@ -436,16 +436,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101324&idTitulacion=310701",
-  "titulosOfertan": "310701, 310201",
+  "titulosOfertan": "310701, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b8"
+    "$oid": "653d6a0a0219c63fa2639a94"
   },
   "nombre": "Metodología de investigación en sistemas inteligentes",
   "identificador": 31108041,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Olga C. Santos Martín-Moreno",
@@ -460,12 +460,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155b9"
+    "$oid": "653d6a0a0219c63fa2639a95"
   },
   "nombre": "Sistemas adaptativos en educación",
   "identificador": 31101095,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Jesús González Boticariio",
@@ -476,16 +476,16 @@
   "creditos": 6,
   "semestre": "Ambos",
   "enlace": "http://portal.uned.es/pls/portal/url/page/UNED_MAIN/Posgrados/Listado%20de%20Asignaturas/2023/ConsultaGuiaCurso?idAsignatura=31101095&idTitulacion=310801",
-  "titulosOfertan": "310801, 310201",
+  "titulosOfertan": "310801, 311201",
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155ba"
+    "$oid": "653d6a0a0219c63fa2639a96"
   },
   "nombre": "Métodos simbólicos",
   "identificador": "3110117-",
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Rafael Martínez Tomás",
@@ -500,12 +500,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155bb"
+    "$oid": "653d6a0a0219c63fa2639a97"
   },
   "nombre": "Computación evolutiva",
   "identificador": 31101220,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Enrique Javier Carmona Suárez",
@@ -520,12 +520,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155bc"
+    "$oid": "653d6a0a0219c63fa2639a98"
   },
   "nombre": "Visión artificial",
   "identificador": 31101235,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Mariano Rincón Zamorano",
@@ -540,12 +540,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155bd"
+    "$oid": "653d6a0a0219c63fa2639a99"
   },
-  "nombre": "Descubrimiento dde información en textos",
+  "nombre": "Descubrimiento de información en textos",
   "identificador": 31101254,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Raquel Martínez Unanue",
@@ -560,12 +560,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155be"
+    "$oid": "653d6a0a0219c63fa2639a9a"
   },
   "nombre": "Aplicaciones de la IA para el desarrollo humano y sostenible",
   "identificador": 31101273,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Ángeles Manjarrés Riesco",
@@ -580,12 +580,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155bf"
+    "$oid": "653d6a0a0219c63fa2639a9b"
   },
   "nombre": "Web semántica y enlazado de datos",
   "identificador": 31108018,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "José Luis Fernández Vindel",
@@ -600,12 +600,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c0"
+    "$oid": "653d6a0a0219c63fa2639a9c"
   },
   "nombre": "Métodos de aprendizaje automático",
   "identificador": 31108037,
   "tipo": "Reglado",
-  "titulacion": "Máster Universitario",
+  "titulacionCurso": "Máster Universitario",
   "requisitos": "Sí",
   "titulo": "M.U. en investigación en inteligencia artificial ",
   "director": "Félix Hernández del Olmo",
@@ -620,12 +620,12 @@
   "titulaciones recomendables": "Ingeniería informática"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c1"
+    "$oid": "653d6a0a0219c63fa2639a9d"
   },
   "nombre": "Fundamentos de la ciberseguridad",
   "identificador": 201001,
   "tipo": "Abierto",
-  "titulacion": "Certificado de enseñanza abierta",
+  "titulacionCurso": "Certificado de enseñanza abierta",
   "requisitos": "No",
   "titulo": "Fundamentos de la ciberseguridad",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -640,12 +640,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c2"
+    "$oid": "653d6a0a0219c63fa2639a9e"
   },
   "nombre": "Algoritmos criptográficos computacionales",
   "identificador": 201002,
   "tipo": "Abierto",
-  "titulacion": "Certificado de enseñanza abierta",
+  "titulacionCurso": "Certificado de enseñanza abierta",
   "requisitos": "No",
   "titulo": "Algoritmos criptográficos computacionales",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -660,12 +660,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c3"
+    "$oid": "653d6a0a0219c63fa2639a9f"
   },
   "nombre": "Técnicas informáticas para peritaje I",
   "identificador": 201003,
   "tipo": "Abierto",
-  "titulacion": "Diploma de experto profesional",
+  "titulacionCurso": "Diploma de experto profesional",
   "requisitos": "No",
   "titulo": "Técnicas informáticas para peritaje",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -680,12 +680,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c4"
+    "$oid": "653d6a0a0219c63fa2639aa0"
   },
   "nombre": "Pentesting",
   "identificador": 201004,
   "tipo": "Abierto",
-  "titulacion": "Diploma de experto profesional",
+  "titulacionCurso": "Diploma de experto profesional",
   "requisitos": "No",
   "titulo": "Tácticas de intrusión",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -700,12 +700,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c5"
+    "$oid": "653d6a0a0219c63fa2639aa1"
   },
   "nombre": "Administración electrónica",
   "identificador": 201005,
   "tipo": "Abierto",
-  "titulacion": "Diploma de experto universitario",
+  "titulacionCurso": "Diploma de experto universitario",
   "requisitos": "Si",
   "titulo": "Técnicas y gestión de la Ciberseguridad",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -720,12 +720,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c6"
+    "$oid": "653d6a0a0219c63fa2639aa2"
   },
   "nombre": "Tácticas de ataque del Equipo Rojo",
   "identificador": 201006,
   "tipo": "Abierto",
-  "titulacion": "Diploma de experto profesional",
+  "titulacionCurso": "Diploma de experto profesional",
   "requisitos": "No",
   "titulo": "Tácticas de intrusión",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -740,12 +740,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c7"
+    "$oid": "653d6a0a0219c63fa2639aa3"
   },
   "nombre": "Técnicas informáticas para peritaje II",
   "identificador": 201007,
   "tipo": "Abierto",
-  "titulacion": "Diploma de experto profesional",
+  "titulacionCurso": "Diploma de experto profesional",
   "requisitos": "No",
   "titulo": "Técnicas informáticas para peritaje",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -760,12 +760,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c8"
+    "$oid": "653d6a0a0219c63fa2639aa4"
   },
   "nombre": "Amenazas persistentes avanzadas",
   "identificador": 201008,
   "tipo": "Abierto",
-  "titulacion": "Máster de formación permanente",
+  "titulacionCurso": "Máster de formación permanente",
   "requisitos": "Si",
   "titulo": "Analista de Ciberseguridad",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -780,12 +780,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155c9"
+    "$oid": "653d6a0a0219c63fa2639aa5"
   },
   "nombre": "Trabajo Fin de Máster en Analista de Ciberseguridad",
   "identificador": 201009,
   "tipo": "Abierto",
-  "titulacion": "Máster de formación permanente",
+  "titulacionCurso": "Máster de formación permanente",
   "requisitos": "Si",
   "titulo": "Analista de Ciberseguridad",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -800,12 +800,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155ca"
+    "$oid": "653d6a0a0219c63fa2639aa6"
   },
   "nombre": "Ciberinteligencia",
   "identificador": 201010,
   "tipo": "Abierto",
-  "titulacion": "Máster de formación permanente",
+  "titulacionCurso": "Máster de formación permanente",
   "requisitos": "Si",
   "titulo": "Ciberinteligencia y Ciberterrorismo",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -820,12 +820,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155cb"
+    "$oid": "653d6a0a0219c63fa2639aa7"
   },
   "nombre": "Defensa nacional y ciberterrorismo",
   "identificador": 201011,
   "tipo": "Abierto",
-  "titulacion": "Máster de formación permanente",
+  "titulacionCurso": "Máster de formación permanente",
   "requisitos": "Si",
   "titulo": "Ciberinteligencia y Ciberterrorismo",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -840,12 +840,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155cc"
+    "$oid": "653d6a0a0219c63fa2639aa8"
   },
   "nombre": "Crimen digital",
   "identificador": 201012,
   "tipo": "Abierto",
-  "titulacion": "Máster de formación permanente",
+  "titulacionCurso": "Máster de formación permanente",
   "requisitos": "Si",
   "titulo": "Ciberinteligencia y Ciberterrorismo",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
@@ -860,12 +860,12 @@
   "titulaciones recomendables": "Ingeniería informática, industrial, telecomunicaciones, Fisicas, Matemáticas"
 },{
   "_id": {
-    "$oid": "64ef9d32745fb8d2b8f155cd"
+    "$oid": "653d6a0a0219c63fa2639aa9"
   },
   "nombre": "Trabajo Fin de Máster en Ciberinteligencia y Ciberterrorismo",
   "identificador": 201013,
   "tipo": "Abierto",
-  "titulacion": "Máster de formación permanente",
+  "titulacionCurso": "Máster de formación permanente",
   "requisitos": "Si",
   "titulo": "Ciberinteligencia y Ciberterrorismo",
   "director": "Luis Grau Fernández, Roberto Hernández Berlinches, Rafael Pastor Vargas",
