@@ -1,212 +1,170 @@
 [{
   "_id": {
-    "$oid": "64772061fdb6c331528e78b5"
+    "$oid": "65591a5d08cde06a5edbf616"
+  },
+  "email": "laura.garcia@gmail.com",
+  "nombre": "Laura",
+  "apellido1": "García",
+  "apellido2": "Martínez",
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Medicina",
+  "poblacion": "Madrid",
+  "codigoPostal": 28001,
+  "rol": "Socio",
+  "clave": "$2b$10$5qwGkyZQWxjLO3yKJYWWxOECoaopSfRruIG2r5Qu01SAW4RXZi6Oy"
+},{
+  "_id": {
+    "$oid": "65591a5d08cde06a5edbf617"
   },
   "email": "alejandro.perez@hotmail.com",
   "nombre": "Alejandro",
   "apellido1": "Pérez",
   "apellido2": "García",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Derecho"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Derecho",
   "poblacion": "Barcelona",
   "codigoPostal": 8008,
-  "rol": "socio",
+  "rol": "Socio",
   "clave": "$2b$10$dn/SODMq2xq.HiRNPgUr3O3fMG2F/P.HTCC3Ad8XSoEFmCmN.HhaO"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78b6"
+    "$oid": "65591a5d08cde06a5edbf618"
   },
   "email": "ana.torres@yahoo.com",
   "nombre": "Ana",
   "apellido1": "Torres",
   "apellido2": "Rodríguez",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Periodismo"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Periodismo",
   "poblacion": "Valencia",
   "codigoPostal": 46002,
-  "rol": "socio",
+  "rol": "Socio",
   "clave": "$2b$10$BVxNRpTLcHNW/uMOT6Dan.7w3bZrafvbr9ia49wugSK1LaPsrvJ2O"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78b7"
+    "$oid": "65591a5d08cde06a5edbf619"
   },
-  "email": "carlos.ruiz@gmail.com",
+  "email": "carlos.ruiz@outlook.com",
   "nombre": "Carlos",
   "apellido1": "Ruiz",
   "apellido2": "González",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Ingeniería en Organización Industrial"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Ingenieria en Organización Industrial",
   "poblacion": "Sevilla",
   "codigoPostal": 41001,
   "rol": "Socio",
   "clave": "$2b$10$d4k7jQzb7R0y.noiDRhuC.lwAi9EV7fh8mPSIUHirQvWuKOSuWnP2"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78b8"
+    "$oid": "65591a5d08cde06a5edbf61a"
   },
   "email": "isabel.fernandez@gmail.com",
   "nombre": "Isabel",
   "apellido1": "Fernández",
   "apellido2": "López",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Psicología"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Psicología",
   "poblacion": "Málaga",
   "codigoPostal": 29001,
   "rol": "Socio",
   "clave": "$2b$10$F4cBwrMgps9aWUTXrO0M5uJ3nNYGIrqgXz1hhBXlWS2jA5mJhtmcW"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78b9"
+    "$oid": "65591a5d08cde06a5edbf61b"
   },
   "email": "david.sanchez@hotmail.com",
   "nombre": "David",
   "apellido1": "Sánchez",
   "apellido2": "García",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Economía"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Economía",
   "poblacion": "Madrid",
   "codigoPostal": 28004,
-  "rol": "socio",
+  "rol": "Socio",
   "clave": "$2b$10$hhmZotquQf8UY2gukwiDNOU7h8po8y3xIOjZp4e5UejIjRauciEga"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78ba"
+    "$oid": "65591a5d08cde06a5edbf61c"
   },
   "email": "maria.rodriguez@yahoo.com",
   "nombre": "María",
   "apellido1": "Rodríguez",
   "apellido2": "Pérez",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Medicina"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Medicina",
   "poblacion": "Barcelona",
   "codigoPostal": 8009,
   "rol": "Socio",
   "clave": "$2b$10$hhmZotquQf8UY2gukwiDNOU7h8po8y3xIOjZp4e5UejIjRauciEga"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78bb"
+    "$oid": "65591a5d08cde06a5edbf61d"
   },
   "email": "antonio.gonzalez@gmail.com",
   "nombre": "Antonio",
   "apellido1": "González",
   "apellido2": "García",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Arquitectura"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Arquitectura",
   "poblacion": "Valencia",
   "codigoPostal": 46001,
-  "rol": "socio",
+  "rol": "Socio",
   "clave": "$2b$10$goVB.nc/xEIw5pMPM5IRTuQJlLuTy54zr2kGo.NNxTwmKdZZ45062"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78bc"
+    "$oid": "65591a5d08cde06a5edbf61e"
   },
   "email": "laura.martin@hotmail.com",
   "nombre": "Laura",
   "apellido1": "Martín",
   "apellido2": "López",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Psicología"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Psicología",
   "poblacion": "Zaragoza",
   "codigoPostal": 50001,
-  "rol": "socio",
+  "rol": "Socio",
   "clave": "$2b$10$goVB.nc/xEIw5pMPM5IRTuQJlLuTy54zr2kGo.NNxTwmKdZZ45062"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78bd"
+    "$oid": "65591a5d08cde06a5edbf61f"
   },
   "email": "javier.lopez@yahoo.com",
   "nombre": "Javier",
   "apellido1": "López",
   "apellido2": "Sánchez",
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Ingeniería Civil"
-  },
+  "titulacionUsuarioGrado": "Grado",
+  "titulacionUsuarioEspecialidad": "Ingeniería Civil",
   "poblacion": "Bilbao",
   "codigoPostal": 48001,
-  "rol": "socio",
+  "rol": "Socio",
   "clave": "$2b$10$fSnKJTOrsvFsxb6Y4U3Hruy0Q2vAApAnmNZH3DrnuWFRWGgGMmuFG"
 },{
   "_id": {
-    "$oid": "64772061fdb6c331528e78be"
+    "$oid": "65591a5d08cde06a5edbf620"
   },
   "email": "admin@admin.es",
   "nombre": "admin",
   "apellido1": "admin",
   "apellido2": "admin",
-  "titulacionUsuario": {
-    "grado": "Otro",
-    "especialidad": "admin"
-  },
+  "titulacionUsuarioGrado": "Otro",
+  "titulacionUsuarioEspecialidad": "admin",
   "poblacion": "admin",
-  "codigoPostal": 1234,
-  "rol": "admin",
-  "clave": "$2b$10$LlHONKoqKcfI3fDjvNaYeusI1y8hDxpfpOjh9OvK/7xlv1V3ivqQO",
-  "cont": 0
+  "codigoPostal": 4321,
+  "rol": "Administrador",
+  "clave": "$2b$10$LlHONKoqKcfI3fDjvNaYeusI1y8hDxpfpOjh9OvK/7xlv1V3ivqQO"
 },{
   "_id": {
-    "$oid": "64989d5cf804a519c0fe12ad"
+    "$oid": "655a4a15051bc7cdb1c90502"
   },
-  "email": "laura.garcia@gmail.com",
-  "nombre": "Laura",
-  "apellido1": "García",
-  "apellido2": "Martínez",
-  "poblacion": "Madrid",
-  "codigoPostal": 28027,
-  "titulacionUsuario": {
-    "grado": "Grado",
-    "especialidad": "Medicina"
-  },
-  "clave": "$2b$10$5qwGkyZQWxjLO3yKJYWWxOECoaopSfRruIG2r5Qu01SAW4RXZi6Oy",
-  "rol": "Socio"
-},{
-  "_id": {
-    "$oid": "653c10e7c40683c60532e368"
-  },
-  "email": "juan@juan.com",
-  "nombre": "juanito",
-  "apellido1": "juan",
-  "apellido2": "juan",
-  "poblacion": "juan",
-  "codigoPostal": 123,
-  "titulacion": {
-    "grado": "FP Grado Medio",
-    "especialidad": "vdfdv"
-  },
-  "clave": "$2b$10$ApWf/1RAzNFu.YmTGFE3neCprDGg372OS4e.D7gZoOAgu6DjOcGma",
-  "rol": "Socio",
-  "__v": 0
-},{
-  "_id": {
-    "$oid": "653d5bb4a0571335fd95f8bb"
-  },
-  "email": "pepe@pepe.com",
+  "email": "pepe@pepe.es",
   "nombre": "pepe",
   "apellido1": "pepe",
   "apellido2": "pepe",
   "poblacion": "pepe",
-  "codigoPostal": 12324,
-  "titulacionUsuario": {
-    "grado": "Otro",
-    "especialidad": "eso"
-  },
-  "clave": "$2b$10$BDjZ6J3yefqq7G6kgRD0iOLkWKR09E15nM8X0tFV6/BsnqdwAAL9W",
+  "codigoPostal": 1234,
+  "titulacionUsuarioGrado": "Otro",
+  "titulacionUsuarioEspecialidad": "ESO",
+  "clave": "$2b$10$9.m.ii8WisycTPTB.dWd3uqkDY5sZxyjEh2gRh9JXgw1P1rMrXZiK",
   "rol": "Socio",
   "__v": 0
 }]
