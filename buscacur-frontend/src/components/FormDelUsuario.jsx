@@ -87,10 +87,10 @@ export default function FormDelUsuario({
                         <FormGroup >
                             <Label style={{ color: "black" }} for="titulacion-grado" >Titulación: Grado</Label>
                             <Input id="titulacion-grado" name="titulacion-grado" type="text" readOnly={readOnly} placeholder="Titulación-grado"
-                                value={usuario.titulacionUsuario.grado} onChange={handleInputChange}></Input>
+                                value={usuario.titulacionUsuarioGrado} onChange={handleInputChange}></Input>
                             <Label style={{ color: "black" }} for="titulacion-especialidad" >Titulación</Label>
                             <Input id="titulacion-especialidad" name="titulacion-especialidad" type="text" readOnly={readOnly} placeholder="Titulación-especialidad"
-                                value={usuario.titulacionUsuario.especialidad} onChange={handleInputChange}></Input>
+                                value={usuario.titulacionUsuarioEspecialidad} onChange={handleInputChange}></Input>
                         </FormGroup>
                     </Col>
                 </Row>
