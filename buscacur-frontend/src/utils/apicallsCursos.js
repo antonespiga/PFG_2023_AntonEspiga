@@ -2,15 +2,30 @@ import API from './api'
 
 export {
     getCursos,
+    getCursosFiltrados,
     addCurso,
     delCurso,
     modCurso,
+    getCursosNumber,
 }
 
-function getCursos() {
+ function getCursos() {
     return API.get('/cursos')
         .then((response) => response.data)
         .catch((error) => error.response.data)
+}
+
+
+function getCursosFiltrados(offset, limit) {
+    return API.get('/cursos/filtrados', {params:{offset, limit}})
+        .then((response) => response.data)
+        .catch((error) => error.response.data)
+}
+
+function getCursosNumber() {
+    return API.get('/cursos/count')
+    .then((response) => response.data)
+    .catch((error) => error.response.data)
 }
 
 function addCurso(curso) {

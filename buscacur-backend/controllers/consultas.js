@@ -114,7 +114,7 @@ exports.getCursosFilter = async (req, res, next) => {
                })
                .catch(next)
                 }
-     else {console.log(req.query.params)
+     else {console.log( req.query.params )
           await Cursos.find(req.query.params).sort('tematica')
           .then(function (listCursos) {
                res.status(200).json(listCursos)

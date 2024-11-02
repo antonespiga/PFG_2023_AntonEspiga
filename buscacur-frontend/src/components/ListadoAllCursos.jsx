@@ -10,7 +10,8 @@ export default function ListadoAllCursos() {
 
     const [isOpen, setIsOpen] = useState(false)
     const [selCurso, setSelCurso] = useState([])
-    const [cursos, setCursos] = useState(() => getCursos())
+    const [cursos, setCursos] = useState([])
+    const [opt, setOpt] = useState()
 
     const openModal = (curso) => {
         setIsOpen(true)
@@ -23,7 +24,9 @@ export default function ListadoAllCursos() {
 
     useEffect(() => {
         getCursos()
-    })
+        .then((response) => 
+            setCursos(response))
+    },[])
 
     return (
         <Card>

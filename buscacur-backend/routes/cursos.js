@@ -2,9 +2,11 @@ const express = require('express');
 const router = express.Router();
 const auth = require('../middlewares/auth')
 
-const { getCursos, getCursoById, addCurso, deleteCursoById, updateCursoById} = require ('../controllers/cursos');
+const { getCursos, getCursosFiltrados, getCursoById, addCurso, deleteCursoById, updateCursoById, getCursosNumber} = require ('../controllers/cursos');
 
 router.get('/', getCursos);
+router.get('/count', getCursosNumber)
+router.get('/filtrados', getCursosFiltrados)
 router.get('/:_id', auth, getCursoById);
 router.post('/', auth, addCurso);
 router.delete('/:id', auth, deleteCursoById);

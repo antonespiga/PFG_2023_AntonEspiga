@@ -10,12 +10,13 @@ import xIcon from '/x-social-media-logo-icon.svg'
 
 const imgStyle = {
     height: "25px",
+    backgroundColor:"#04073a",
 };
 
 export default function Footer() {
     return (
 
-        <Card className="container footer">
+        <Card className="container footer" id="container-footer">
             <Row>
                 <CardBody >
                     <a href="https://www.instagram.com/uneduniv/" target="_blank" ><img src={instagramIcon} style={imgStyle} alt="instagram" /></a>

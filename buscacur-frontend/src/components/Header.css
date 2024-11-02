@@ -2,16 +2,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	background: #ffffff;
-	height:fit-content;
+	background: rgba(56, 70, 84, 0.834);
+	height:60px;
 	width: 100%;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-color: rgb(0, 0, 0);
 	border-radius: 15px;
 	margin-top: 0px;
-	padding: 0px 0px;
+	padding: 5px 10px;
 	top: 0px;
-	
+	color:rgb(216, 200, 227)
 }
 
 .sticky-top {
@@ -26,7 +26,7 @@
 .logo {
 	display: inline-flex;
 	border-radius: 40px;
-	height: 8em;
+	max-height: 6em;
 	padding: 1.5em;
 	will-change: filter;
 	transition: filter 300ms;
@@ -43,8 +43,13 @@
 }
 
 .cabecera-texto h1 {
-	font-size: 38px;
-	margin: 10;
+	font-size: 1.6rem;
+	margin: 0;
+}
+
+.cabecera-texto h6 {
+	font-size: 1rem;
+	margin: 0;
 }
 
 .menu {
@@ -56,10 +61,10 @@
 #expand-btn {
 	display: inline-flex;
 	margin-right: 0px;
-	background-color: rgb(233, 209, 29);
+	background-color: rgb(158, 140, 7);
 	color:black;
 	border:none;
-	border-radius: 5px;
+	border-radius: 8px;
 	cursor: pointer;
 	
 	}

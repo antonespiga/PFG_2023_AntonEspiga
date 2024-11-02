@@ -8,6 +8,23 @@ exports.getCursos = async (req, res, next) => {
         .catch(next)
 }
 
+exports.getCursosNumber = async (req, res , next) => {
+    await Curso.count({})
+    .then((numberOfCursos)  => {
+        res.status(200).json(numberOfCursos);
+    })
+    .catch(next)
+}
+
+exports.getCursosFiltrados = async (req, res, next) => {
+    //console.log(`buscando... + ${req.query.params.offset}`)
+    await Curso.find({}).limit(req.query.limit).skip(req.query.offset)
+    .then((listCursos)  => {
+        res.status(200).json(listCursos);
+    })
+    .catch(next)
+}
+
 exports.getCursoById = async (req, res, next) => {
     await Curso.findById({ '_id': req.params._id })
         .then((curso)  => {
