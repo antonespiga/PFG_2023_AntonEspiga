@@ -14,7 +14,7 @@
     margin-bottom: 0;
     }
 
-    .container-fluid {
+    .container-fluid{
       padding:0;
       padding-bottom:0;
     }
@@ -27,7 +27,7 @@
     #body{
       background-color: #04073a;
     }
-    #root, #home {
+    #root, #home, #header {
       background-color: #04073a;
     }
    
@@ -40,6 +40,7 @@
  
 
   .pagination {
+    display:flex;
     justify-content: center;
     margin:0;
   }

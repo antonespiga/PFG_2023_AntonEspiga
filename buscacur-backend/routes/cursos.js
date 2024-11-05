@@ -6,7 +6,7 @@ const { getCursos, getCursosFiltrados, getCursoById, addCurso, deleteCursoById, 
 
 router.get('/', getCursos);
 router.get('/count', getCursosNumber)
-router.get('/filtrados', getCursosFiltrados)
+router.get('/page/', getCursosFiltrados)
 router.get('/:_id', auth, getCursoById);
 router.post('/', auth, addCurso);
 router.delete('/:id', auth, deleteCursoById);

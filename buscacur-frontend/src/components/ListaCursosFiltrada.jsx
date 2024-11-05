@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, lazy } from "react"
 import FormDetalleCurso from "./FormDetalleCurso"
 import { Card, ListGroup, ListGroupItem, CardBody, CardTitle, Button } from 'reactstrap'
 import { useSearchParams, useLocation } from 'react-router-dom'
 import '../components/Header.css'
 import { useListaFiltrada } from '../utils/useListaFiltrada'
 
-export default function ListaCursosFiltrada() {
+export default function ListaCursosFiltrada({cursos}) {
     const [detalle, setDetalle] = useState(false)
     const [searchParams] = useSearchParams()
     const [selcurso, setSelCurso] = useState({})
-    const [totalCursos, setTotalCursos] = useState()
-    const currentPage = Number(searchParams.get('page')) || 1;
+    //const [cursos, setCursos] = useState([])
+    //const [offset, setOffset] = useState()
+    //const [limit, setLimit] = useState()
+    //const currentPage = Number(searchParams.get('page')) || 1;
     const pathname = useLocation().pathname;
-    const PERPAGE = 6;
-    let page = 1;
+    
+    //let page = 1;
     const params = new URLSearchParams(searchParams);
 
     const generateUrl = (pageNumber) => {
@@ -21,13 +23,11 @@ export default function ListaCursosFiltrada() {
         params.set('page', pageNumber);
         return (`${pathname}?${params}`);
     }
-
-    let offset = ((currentPage - 1) * PERPAGE);
-    let limit = (PERPAGE);
     const query = useLocation().search;
-    const cursos = useListaFiltrada(offset, limit)
-
-    const handleCurso = (curso) => {
+       // let offset = ((currentPage - 1) * perPage);
+       // let limit = (perPage);
+        //const cursos = useListaFiltrada(page)
+        const handleCurso = (curso) => {
         setSelCurso(curso)
         setDetalle(true)
     }

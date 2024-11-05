@@ -32,11 +32,11 @@ function Header() {
                     &#9776;
                 </Button>
                 <Modal contentClassName="modal-iniciar" size="sm" isOpen={showModal}>
-                    <ModalHeader toggle={openModal} isOpen={showModal} closeButton>Opciones</ModalHeader>
+                    <ModalHeader toggle={openModal} isOpen={showModal} >Opciones</ModalHeader>
                     <ModalBody>
                         <Row>
                             <Col >
-                                <Link to="/registro">
+                                <Link to="/registro" >
                                     <Button color="success" onClick={openModal}>Registro</Button>
                                 </Link>
                             </Col>

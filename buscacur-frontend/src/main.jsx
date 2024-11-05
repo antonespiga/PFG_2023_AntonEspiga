@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './index.css'
-
 import Header from './components/Header'
 import Home from './pages/Home'
 import Footer from './components/Footer'
@@ -15,9 +14,9 @@ import Error from './pages/Error'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Header />
+    <Header />
       <Routes>
-        <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<Home />} />
         <Route exact path='/login' element={<Login />} />
         <Route exact path='/registro' element={<Registro />} />
         <Route exact path='/socio' element={<Socio />} />
@@ -25,11 +24,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route exact path='/error' element={<Error />} />
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>,
+  </React.StrictMode>
 )
-
 ReactDOM.createRoot(document.getElementById('footer')).render(
   <React.StrictMode>
-    <Footer />
-  </React.StrictMode>,
+    <BrowserRouter>
+      <Footer />
+    </BrowserRouter>
+  </React.StrictMode>
 )
+

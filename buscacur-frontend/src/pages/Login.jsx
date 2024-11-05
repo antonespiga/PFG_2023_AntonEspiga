@@ -3,7 +3,7 @@ import {
     Container, Card, Input, InputGroup, Label, Button, CardTitle, CardBody,
     FormGroup, Form, CardFooter, Alert, Modal, ModalHeader, ModalBody
 } from "reactstrap"
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import './Login.css'
 import { FaKey, FaUser } from 'react-icons/fa'
 import { loginUsuario, verificarToken } from '../utils/apicallsUsuarios'
@@ -76,7 +76,7 @@ export default function Login() {
                     <Button id="login-btn" value="Submit" onClick={handleLogin}>Login</Button>
                     {isOpen &&
                         <Modal backdrop={false} isOpen={isOpen} toggle={toggleModal}>
-                            <ModalHeader toggle={toggleModal}>
+                            <ModalHeader isOpen={isOpen} toggle={toggleModal}>
                             </ModalHeader>
                             <ModalBody>
                                 <h5 id="h-5">{msg}</h5>
@@ -84,8 +84,10 @@ export default function Login() {
                         </Modal>}
                 </CardBody>
                 <CardFooter >
+                    <Link className="enlace-registro" to="/registro">
                     <span>¿Estas registrado?</span>
-                    <a href="./registro" className="enlace-registro">Registro</a>
+                    </Link>
+                    
                 </CardFooter>
                 <span>{msg}</span>
             </Card>

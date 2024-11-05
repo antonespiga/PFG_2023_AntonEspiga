@@ -21,7 +21,7 @@ function getTitulo() {
         .catch((error) => error.response.data)
 }
 
-function addTitulo(curso) {
+function addTitulo(titulo) {
     return API.post('/titulos/', titulo)
         .then((response) => response.data)
         .catch((error) => error.response.data)

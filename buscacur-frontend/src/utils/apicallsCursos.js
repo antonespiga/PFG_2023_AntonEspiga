@@ -16,8 +16,8 @@ export {
 }
 
 
-function getCursosFiltrados(offset, limit) {
-    return API.get('/cursos/filtrados', {params:{offset, limit}})
+function getCursosFiltrados(page) {
+    return API.get('/cursos/page/' , {params: {page}} )
         .then((response) => response.data)
         .catch((error) => error.response.data)
 }

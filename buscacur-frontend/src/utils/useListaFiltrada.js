@@ -1,17 +1,21 @@
 import { getCursosFiltrados } from "../utils/apicallsCursos"
 import { useState, useEffect } from 'react'
 
-export function useListaFiltrada(offset, limit) {
+export function useListaFiltrada(page) {
 
     const [cursosFiltrados, setCursosFiltrados] = useState([])
+    // let offset =  ((page - 1) * perPage);
+    //let limit = (perPage);
+    
+    
+
     useEffect(() => {
-        const listCursosFiltrados = () => {
-            getCursosFiltrados(offset, limit)
-                .then((response) => {
-                    setCursosFiltrados(response)
-                })
+        const cursosFiltrados = (page) => {
+            getCursosFiltrados(page)
+                .then((response) => {setCursosFiltrados(response)})
         }
-        listCursosFiltrados()
-    }, []);
-    return cursosFiltrados;
+        cursosFiltrados(page)
+}, []);
+
+return cursosFiltrados;
 }

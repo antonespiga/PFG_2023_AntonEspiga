@@ -1,4 +1,5 @@
 const Curso = require('../models/cursos')
+const config = require('../config')
 
 exports.getCursos = async (req, res, next) => {
     await Curso.find({})
@@ -17,8 +18,12 @@ exports.getCursosNumber = async (req, res , next) => {
 }
 
 exports.getCursosFiltrados = async (req, res, next) => {
-    //console.log(`buscando... + ${req.query.params.offset}`)
-    await Curso.find({}).limit(req.query.limit).skip(req.query.offset)
+   // console.log(req.query.page)
+    let perPage = config.perPage
+    let offset = (req.query.page -1) * perPage
+    let limit =perPage
+    
+    await Curso.find({}).limit(limit).skip(offset)
     .then((listCursos)  => {
         res.status(200).json(listCursos);
     })
