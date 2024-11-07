@@ -1,8 +1,7 @@
-import React, { useCallback } from "react"
-import { Pagination, PaginationItem, PaginationLink, Button } from "reactstrap"
-import { useSearchParams, useLocation, Link, Navigate } from 'react-router-dom'
+import React, { useCallback, useEffect } from "react"
+import { Nav } from "reactstrap"
+import { useSearchParams, useLocation, Link, useNavigate } from 'react-router-dom'
 import '../Pages/Home.css'
-import { redirect } from "react-router-dom"
 
 export default React.memo(function CursosPagination({ totalPages }) {
 
@@ -10,8 +9,8 @@ export default React.memo(function CursosPagination({ totalPages }) {
 
     const currentPage = Number(searchParams.get('page')) || 1;
     const pathname = useLocation().pathname;
-    const PERPAGE = 6;
     const params = new URLSearchParams(searchParams);
+    const navigate = useNavigate()
 
     const generateUrl = useCallback((pageNumber) => {
         params.delete('page');
@@ -23,17 +22,37 @@ export default React.memo(function CursosPagination({ totalPages }) {
         [1, 2, 3, '...', totalPages - 2, totalPages - 1, totalPages] :
         [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages]
 
+        useEffect(() => {
+            window.scrollTo(top)
+        },[params.get('page')])
+
     const handleNavigation = (pageNumber) => {
-        generateUrl(pageNumber)
-        params.set('page', pageNumber);
-        redirect(`${pathname}?${params}`);
+        navigate(`${generateUrl(pageNumber)}`);
+        
     };
 
-
     return (
+        <Nav className="pagination">
+            <button className="button" disabled={currentPage===1} onClick={(()=> handleNavigation(1))} >
+              first
+            </button>
+            {pagination.map((page, index) => (
+                <button className="button"
+                        style={currentPage===page? {backgroundColor:"blue"}: {}}
+                        key={index} 
+                        disabled={page === '...'}
+                        onClick={(()=> handleNavigation(page))}
+                 >{page} 
+                </button>
+            ))}
+            <button className="button"
+                    disabled={currentPage === totalPages}
+                    onClick={(()=> handleNavigation(totalPages))}>
+              last
+            </button>
+        </Nav>
 
-
-        <Pagination >
+        /*<Pagination >
             <PaginationItem disabled={currentPage===1} >
                 <PaginationLink
                     href={`${generateUrl(1)}`}
@@ -57,7 +76,7 @@ export default React.memo(function CursosPagination({ totalPages }) {
                     last
                 />
             </PaginationItem>
-        </Pagination>
+        </Pagination>*/
 
     )
 })

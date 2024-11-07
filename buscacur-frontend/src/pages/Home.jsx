@@ -10,7 +10,6 @@ import { getCursos } from '../utils/apicallsCursos'
 
 export default function Home() {
 
-  const [isLoaded, setIsLoaded] = useState(false)
   const [searchParams] = useSearchParams()
   const [cursos, setCursos] = useState([])
   const PERPAGE = 6;
@@ -19,7 +18,6 @@ export default function Home() {
   useEffect(() => {
     getCursos()
       .then((response) => setCursos(response))
-    setIsLoaded(true)
   }, [currentPage])
 
   const cursosNumber = cursos.length

@@ -5,7 +5,6 @@ import {
 
 import { getArrayTitulos } from "../utils/apicallsTitulos"
 
-
 export default function FormDetalleCurso({
     isOpen, closeModal, curso, setCurso, readOnly, opt, handleCurso }) {
 

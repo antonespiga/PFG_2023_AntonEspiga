@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from "react"
-import {useParams} from 'react-router-dom'
+import React, { useState } from "react"
 import {
     Row, Col, Alert, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
 } from 'reactstrap'
 import { modCurso } from "../utils/apicallsCursos"
-
-
 
 export default function FormModCurso({
     isOpen, closeModal, curso, setCurso, readOnly }) {
@@ -35,7 +32,6 @@ export default function FormModCurso({
     return (
 
         <Modal fullscreen isOpen={isOpen} toggle={closeModal} >
-           
             <ModalHeader isOpen={isOpen} toggle={closeModal} >
                 <h4 >{"Modificar curso"}</h4>
             </ModalHeader>

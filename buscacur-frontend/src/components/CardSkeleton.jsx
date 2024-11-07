@@ -1,13 +1,8 @@
 import React from "react";
-import {
-  Container, Row, Col, Card, ListGroup, CardHeader, ListGroupItem, CardFooter, CardBody, CardTitle, CardText, Button, Pagination,
-  PaginationItem, PaginationLink
-} from 'reactstrap'
+import { Card, ListGroup, ListGroupItem,  CardBody, CardTitle, Button } from 'reactstrap'
 import Skeleton from '@mui/material/Skeleton'
 import '../pages/Home.css'
 
-const shimmer =
-  'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent';
 export default function CardSkeleton() {
     return (
       <Card className='home' id="home">
@@ -17,7 +12,6 @@ export default function CardSkeleton() {
                         <Card key={i} id="course-card">
                             <CardBody>
                                 <CardTitle id="course-title">
-                                    
                                 </CardTitle>
                                 <ListGroup flush id="course-details" >
                                     <ListGroupItem id="course-details"><strong>Título: </strong><Skeleton variant="rectangular" width={210} height={20} /></ListGroupItem>
@@ -33,10 +27,8 @@ export default function CardSkeleton() {
                             </CardBody>
                         </Card>
                     ))}
-                    
                 </div>
             </CardBody>
-            
         </Card>
     )
   }

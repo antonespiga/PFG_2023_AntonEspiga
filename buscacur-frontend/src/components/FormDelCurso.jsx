@@ -7,8 +7,6 @@ import { delCurso } from "../utils/apicallsCursos"
 export default function FormDelCurso({
     isOpen, closeModal, curso, setCurso, readOnly }) {
 
-    
-
     const handleInputChange = (e) => {
         setCurso({ ...curso, [e.target.name]: e.target.value })
     }

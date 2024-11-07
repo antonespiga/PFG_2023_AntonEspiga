@@ -3,7 +3,6 @@ import { Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup
     from 'reactstrap'
 import { addUsuario } from "../utils/apicallsUsuarios"
 
-
 export default function FormAddUsuario({
     isOpen, closeModal, usuario, setUsuario, readOnly }) {
 

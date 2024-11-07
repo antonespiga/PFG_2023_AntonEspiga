@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import {
-    Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input, Alert
-} from 'reactstrap'
+        Row, Col, Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Label, Input
+        } from 'reactstrap'
 import { modUsuario } from "../utils/apicallsUsuarios"
 
 export default function FormModUsuario({
