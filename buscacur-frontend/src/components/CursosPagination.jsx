@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from "react"
 import { Nav } from "reactstrap"
 import { useSearchParams, useLocation, Link, useNavigate } from 'react-router-dom'
-import '../Pages/Home.css'
+import '../pages/Home.css'
 
 export default React.memo(function CursosPagination({ totalPages }) {
 
