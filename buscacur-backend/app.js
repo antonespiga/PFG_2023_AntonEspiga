@@ -15,8 +15,8 @@ var titulosRouter = require('./routes/titulos')
 const { default: mongoose } = require('mongoose');
 
 //mongoose.connect(config.db )
-// config.db = mongodb://127.0.0.1:27017/dbCursos
-mongoose.connect ('mongodb+srv://anton:EspiMin%40LoSus%231969@cluster0.wkdq7.mongodb.net/dbCursos')
+//config.db = mongodb://127.0.0.1:27017/dbCursos
+mongoose.connect ('mongodb+srv://anton:AEM%40mongo%239691@cluster0.wkdq7.mongodb.net/dbCursos')
 .then(() => console.log(`Conectado a la base de datos: ${mongoose.connection.host}:${mongoose.connection.port}/${mongoose.connection.name}`))
 .catch((err) => console.error(err));
 
